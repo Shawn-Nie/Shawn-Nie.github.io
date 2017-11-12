@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://yoursite.com/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
-        <pubTime>2017-11-10T08:30:21.000Z</pubTime>
+        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
@@ -26,12 +26,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://yoursite.com/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
-        <pubTime>2017-11-10T08:30:21.000Z</pubTime>
+        <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
