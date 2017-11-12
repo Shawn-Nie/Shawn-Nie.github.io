@@ -1,104 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[MySQL数据库安装与配置_适用于Windows7系统]]></title>
-      <url>/2017/11/12/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</url>
-      <content type="html"><![CDATA[<h1 id="安装环境及文件准备"><a href="#安装环境及文件准备" class="headerlink" title=" 安装环境及文件准备"></a><strong> 安装环境及文件准备</strong></h1><h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>Windows 7_SP1 旗舰版 64位。</p>
-<h2 id="Mysql数据库安装文件"><a href="#Mysql数据库安装文件" class="headerlink" title="Mysql数据库安装文件"></a>Mysql数据库安装文件</h2><p>MySQL官网提供的安装包有两种格式：一个是msi格式，一个是zip格式的。前者可以直接点击，按照它给出的安装提示进行安装；后者zip格式是自己解压，解压缩之后进行配置即可使用。<br>文件下载地址：<a href="http://www.mysql.com/downloads/mysql/(为保证版本稳定可用，请尽量下载官网提供的最新版本）" target="_blank" rel="external">http://www.mysql.com/downloads/mysql/(为保证版本稳定可用，请尽量下载官网提供的最新版本）</a><br><img src="https://i.imgur.com/nQwOZq7.png" alt=""></p>
-<p>文件版本：本文中安装的数据库为5.7.14 x64版本，常用的版本还有MySQL 5.6 ,MySQL 5.5。</p>
-<h2 id="其他辅助工具和插件"><a href="#其他辅助工具和插件" class="headerlink" title="其他辅助工具和插件"></a>其他辅助工具和插件</h2><h3 id="可视化界面工具"><a href="#可视化界面工具" class="headerlink" title="可视化界面工具"></a>可视化界面工具</h3><p>目前相对流行的数据库可视化界面软件有SQLyog、Navicat、Workbench等。</p>
-<h1 id="MySQL数据库主程序的两种安装方式"><a href="#MySQL数据库主程序的两种安装方式" class="headerlink" title=" MySQL数据库主程序的两种安装方式"></a><strong> MySQL数据库主程序的两种安装方式</strong></h1><p>MySQL数据库安装文件分为两种：zip压缩包和msi安装文件。根据安装文件种类，程序可以通过两种方式进行安装：</p>
-<h2 id="zip解压缩方式安装"><a href="#zip解压缩方式安装" class="headerlink" title="zip解压缩方式安装"></a>zip解压缩方式安装</h2><p>zip格式在解压缩之后进行配置即可使用，步骤如下：</p>
-<h3 id="解压和保存文件"><a href="#解压和保存文件" class="headerlink" title="解压和保存文件"></a>解压和保存文件</h3><p>将下载好的压缩包解压并保存在自己选定的系统位置中（可以更改MySQL程序文件夹名称，位置自行指定，一般选择C:\Program Files或D:\Program Files文件夹中）,如图示：<br><img src="https://i.imgur.com/p6C1Lsc.png" alt=""><br><img src="https://i.imgur.com/C5eaQJ8.png" alt=""></p>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><p>1)  点击我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，从“系统变量”中选择“PATH”，点击“编辑”。<br><img src="https://i.imgur.com/k63mBeO.png" alt=""></p>
-<p>2)  在“PATH”中追加(注意是追加,不是覆盖) mysql bin文件夹的路径，与其他路径用”;”隔开。<br><img src="https://i.imgur.com/Pjpl2iE.png" alt=""><br><img src="https://i.imgur.com/wRmjios.png" alt=""></p>
-<h3 id="修改MySQL配置文件"><a href="#修改MySQL配置文件" class="headerlink" title="修改MySQL配置文件"></a>修改MySQL配置文件</h3><p>1)  进入MySQL安装路径中，打开my-default.ini配置文件。<br><img src="https://i.imgur.com/VTbQjkC.png" alt=""><br>2)  配置程序的basedir和datadir属性。在配置文件夹中追加或修改如下属性：<br><code>basedir= mysql所在目录</code></p>
-<p><code>datadir= mysql所在目录\data</code></p>
-<p><img src="https://i.imgur.com/gfI3wuC.png" alt=""></p>
-<h3 id="安装和启动MySQL程序"><a href="#安装和启动MySQL程序" class="headerlink" title="安装和启动MySQL程序"></a>安装和启动MySQL程序</h3><p>1)  以管理员身份运行系统命令提示行(cmd)，进入MySQL的bin文件夹：<br>2)  初始化先初始化data目录（命令：<code>mysqld  --initialize</code>；MySQL 5.7版本如果不经初始化直接安装会出错，而5.6或5.5版本可以不预先初始化data目录）；<br>3)  输入<code>mysqld –install</code>命令，安装服务。如果反馈“Service successfully installed”即为安装成功。<br>4)  输入<code>net start mysql</code>启动服务。<br><img src="https://i.imgur.com/RVkQQ5J.png" alt=""></p>
-<h3 id="常见问题及注意事项"><a href="#常见问题及注意事项" class="headerlink" title="常见问题及注意事项"></a>常见问题及注意事项</h3><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p>1) 用<code>mysqld –install</code>命令安装服务失败。<br>这种情况一般会有“Install/Remove of the Service Denied!”提示，是因为没有以管理员身份运行命令提示行，将会因为权限不够而出现错误。<br>2) 用<code>mysqld –install</code>命令安装成功，启动服务失败。<br>这个时候经常会出现错误2和错误1067。<br>如果出现“错误2 系统找不到文件”，首先检查一下是否修改过配置文件或者是否进入在bin目录下操作。如果配置文件修改正确并且进入了bin文件夹，需要先删除mysql（输入 <code>mysqld -remove</code>）再重新安装（输入 <code>mysqld -install</code>）。<br>如果出现错误1067，是配置文件修改错误，需确认配置文件是否正确。<br><img src="https://i.imgur.com/Udh5avm.png" alt=""></p>
-<p>3) 用<code>mysqld –install</code>命令安装成功，启动服务失败，且没有错误代码提示。<br><img src="https://i.imgur.com/FeofWce.jpg" alt=""></p>
-<p>这个问题只有5.7版本会遇到。原因是程序路径中缺少data文件夹，可以通过自行建立文件夹或初始化文件夹的方式解决，有如下3两种处理方式：<br>1)   在安装之前，使用<code>mysqld  --initialize</code>命令初始化文件路径。<br>2)   在my.ini配置文件中添加：<code>tmpdir=MySQL安装路径\data</code>。<br>3)   改装5.6版本或复制5.6版本的data文件夹到当前程序路径。</p>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>1)  my.ini配置文件的编码必须是英文编码（如windows中的ANSI），不能是UTF-8或GBK等。<br>2)  为了保证系统崩溃等意外情况重做系统盘后数据库数据依然不受影响，Data目录需要安装在非系统盘; 程序目录最好也安装在非系统盘。</p>
-<h2 id="msi安装文件方式安装"><a href="#msi安装文件方式安装" class="headerlink" title="msi安装文件方式安装"></a>msi安装文件方式安装</h2><h3 id="运行安装文件"><a href="#运行安装文件" class="headerlink" title="运行安装文件"></a>运行安装文件</h3><p>直接双击安装文件，运行msi安装向导。按照程序提示进行安装。<br><img src="https://i.imgur.com/1Ehkegz.png" alt=""><br><img src="https://i.imgur.com/XwYqRVX.png" alt=""><img src="https://i.imgur.com/HhlBzj1.png" alt=""></p>
-<p>程序有三种安装模式：Typical(典型安装)、Custom(自定义安装)、Complete(完全安装)，选择Custom，然后选择Mysql程序安装目录和Data目录。<br><img src="https://i.imgur.com/x8AVzam.png" alt=""></p>
-<p>为了保证系统崩溃等意外情况重做系统盘后数据库数据依然不受影响，Data目录需要安装在非系统盘; 程序目录最好也安装在非系统盘。<br><img src="https://i.imgur.com/ga1Zizw.png" alt=""><br><img src="https://i.imgur.com/9yhmpDP.png" alt=""><br><img src="https://i.imgur.com/Vvzk8vv.png" alt=""><br><img src="https://i.imgur.com/U3T4sYV.png" alt=""><br><img src="https://i.imgur.com/OdNFjI4.png" alt=""></p>
-<h3 id="程序配置"><a href="#程序配置" class="headerlink" title="程序配置"></a>程序配置</h3><p><img src="https://i.imgur.com/G3aEfNy.png" alt=""></p>
-<p>程序配置包含Detailed Configuration(详细配置)、Standard Configuration(标准配置)两种，选择Detailed Configuration，下一步;<br><img src="https://i.imgur.com/RBoVJ7i.png" alt=""></p>
-<p>选择Server Machine(服务器模式)，下一步;<br><img src="https://i.imgur.com/AAfAjiZ.png" alt=""></p>
-<p>选择Multifunctional Database(多功能数据库模式)，下一步;<br><img src="https://i.imgur.com/az3m9Yo.png" alt=""></p>
-<p>直接下一步;<br><img src="https://i.imgur.com/g3CwjZw.png" alt=""></p>
-<p>选择Manual Setting(手动设置连接数)，然后输入允许的最大连接数，一般设置为2000;<br><img src="https://i.imgur.com/drvaTuV.png" alt=""></p>
-<p>两个选项都勾选，然后下一步;<br>3306是Mysql的默认端口号为3306，一般不做改动;<br><img src="https://i.imgur.com/Uis6hn7.png" alt=""></p>
-<p>接下来设置编码格式，选择最下面的手动设置，然后选择utf8编码;<br><img src="https://i.imgur.com/RTJVexR.png" alt=""></p>
-<p>勾选下面的允许Windows命令行直接管理数据库，然后下一步;<br><img src="https://i.imgur.com/hz7fsoL.png" alt=""></p>
-<p>输入root的管理密码，下面的允许root从远程主机访问数据库根据自己需要选择;<br><img src="https://i.imgur.com/J3nq4zo.png" alt=""></p>
-<p>点击执行;<br><img src="https://i.imgur.com/kyNka1F.png" alt=""> </p>
-<p>Mysql开始执行配置，下面4项全部出现蓝色对勾后安装结束;<br><img src="https://i.imgur.com/lZoPCXw.png" alt="">   </p>
-<h1 id="MySQL数据库程序的初始密码配置及密码-遗忘-重置-修改的方式"><a href="#MySQL数据库程序的初始密码配置及密码-遗忘-重置-修改的方式" class="headerlink" title=" MySQL数据库程序的初始密码配置及密码(遗忘)重置/修改的方式"></a><strong> MySQL数据库程序的初始密码配置及密码(遗忘)重置/修改的方式</strong></h1><p>如果在数据库采用msi安装文件的方式进行安装，数据库的密码可以直接在配置向导中完成(详见2.2.2)。如果选用解压缩包的方式安装(详见2.1.1)，则使用<code>mysql -uroot –p</code>命令仍无法登陆数据库；需在安装成功后继续设置数据库密码。</p>
-<h2 id="编辑数据库配置文件，修改数据库登陆设置"><a href="#编辑数据库配置文件，修改数据库登陆设置" class="headerlink" title="编辑数据库配置文件，修改数据库登陆设置"></a>编辑数据库配置文件，修改数据库登陆设置</h2><p>编辑程序配置文件(my.ini)，在[mysqld]条目下加入<code>skip-grant-tables</code>(取消登陆权限验证)，保存。<br><img src="https://i.imgur.com/m3RLSEu.png" alt=""></p>
-<h2 id="重新启动MySQL程序"><a href="#重新启动MySQL程序" class="headerlink" title="重新启动MySQL程序"></a>重新启动MySQL程序</h2><p>启动命令提示行，输入 <code>net stop mysql</code>，停止MySQL服务；随后输入<code>net start mysql</code>再次启动MySQL服务。<br><img src="https://i.imgur.com/Q0rpYdr.png" alt=""></p>
-<p>这时候在cmd中输入<code>mysql -u root -p</code>就可以不用密码登录了，出现password：的时候直接回车可以进入。<br><img src="https://i.imgur.com/eO6BrbZ.png" alt=""></p>
-<h2 id="修改”root”用户密码"><a href="#修改”root”用户密码" class="headerlink" title="修改”root”用户密码"></a>修改”root”用户密码</h2><h3 id="进入MySQL数据库"><a href="#进入MySQL数据库" class="headerlink" title="进入MySQL数据库"></a>进入MySQL数据库</h3><p>输入“<code>use mysql</code>”命令，进入mysql 数据库。命令正确将显示：“Database changed”。</p>
-<h3 id="为root用户设置新密码"><a href="#为root用户设置新密码" class="headerlink" title="为root用户设置新密码"></a>为root用户设置新密码</h3><p>如果是MySQL5.7及以上版本，在命令行输入：<br><code>update user set authentication_string=password(&#39;密码&#39;) where user=&#39;root&#39; and Host = &#39;localhost&#39;</code>;</p>
-<p>5.6及以下版本，在命令行输入：<br><code>UPDATE user SET Password = password ( &#39;密码&#39; ) WHERE User = &#39;root&#39;</code> ;</p>
-<p>操作正确，将显示：<br>Query OK, 1 rows affected (0.01 sec)<br>Rows matched: 1 Changed: 1 Warnings: 0</p>
-<h2 id="刷新并退出数据库"><a href="#刷新并退出数据库" class="headerlink" title="刷新并退出数据库"></a>刷新并退出数据库</h2><p>使用“<code>flush privileges</code>”命令刷新数据库;“<code>quit</code>”命令退出数据库。</p>
-<h2 id="重新修改数据库配置文件，启用登陆验证"><a href="#重新修改数据库配置文件，启用登陆验证" class="headerlink" title="重新修改数据库配置文件，启用登陆验证"></a>重新修改数据库配置文件，启用登陆验证</h2><p>再次编辑数据库配置文件，将刚才加入的“<code>skip-grant-tables</code>”去除或注释掉，重新保存配置文件。<br><img src="https://i.imgur.com/pa5a8c2.png" alt=""></p>
-<h2 id="重新启动MySQL数据库，使用已设定密码连接数据库"><a href="#重新启动MySQL数据库，使用已设定密码连接数据库" class="headerlink" title="重新启动MySQL数据库，使用已设定密码连接数据库"></a>重新启动MySQL数据库，使用已设定密码连接数据库</h2><p>重新关闭和打开数据库；使用“mysql -uroot –p`上一步设置的密码”登陆数据库。现在数据库已经可以连接。</p>
-<h2 id="为用户授权"><a href="#为用户授权" class="headerlink" title="为用户授权"></a>为用户授权</h2><p>使用<br><code>alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;密码&#39;</code>;</p>
-<p>或<br><code>set password for &#39;root&#39;@&#39;localhost&#39;=password(&#39;密码&#39;)</code>;</p>
-<p>语句为root用户授权。<br>随后使用“<code>quit</code>”命令退出。<br><img src="https://i.imgur.com/TAnEbrs.png" alt=""></p>
-<p>整个设置密码设置过程已完成，之后使用“<code>mysql -uroot –p 密码</code> ”即可直接登录。</p>
-<h1 id="其他辅助工具的安装及使用（以Navicat为例）"><a href="#其他辅助工具的安装及使用（以Navicat为例）" class="headerlink" title=" 其他辅助工具的安装及使用（以Navicat为例）"></a><strong> 其他辅助工具的安装及使用（以Navicat为例）</strong></h1><h2 id="程序安装"><a href="#程序安装" class="headerlink" title="程序安装"></a>程序安装</h2><p>下载地址：</p>
-<p>Windows版本：<a href="http://navicatformysql.en.softonic.com/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAOVfKRBTMOd68OupUg76dETPYomnEY9qgn84lwyg17rVaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4Yk8QgSpXkauDNeSIZQ3JUPkN4NmFEH3ttq1VWp4upoE06xBC75FR3inLZ5B0w%2BTZXdxSFy7RMMkSIU6gp5pRfA%3D%3D" target="_blank" rel="external">http://navicatformysql.en.softonic.com/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAOVfKRBTMOd68OupUg76dETPYomnEY9qgn84lwyg17rVaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4Yk8QgSpXkauDNeSIZQ3JUPkN4NmFEH3ttq1VWp4upoE06xBC75FR3inLZ5B0w%2BTZXdxSFy7RMMkSIU6gp5pRfA%3D%3D</a></p>
-<p>Mac版本：<a href="http://navicatformysqlmac.en.softonic.com/mac/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAP7F%2FeGrpctXdF6XTnr1dg%2FW1BnrE0lqiSoIUV0YTCBPaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4w6ESznp4J7pA89qy3KVRBt%2BxTEv9LJdqfab43BUsDnc%3D" target="_blank" rel="external">http://navicatformysqlmac.en.softonic.com/mac/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAP7F%2FeGrpctXdF6XTnr1dg%2FW1BnrE0lqiSoIUV0YTCBPaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4w6ESznp4J7pA89qy3KVRBt%2BxTEv9LJdqfab43BUsDnc%3D</a></p>
-<p>安装过程相对简单，按照安装向导的提示完成安装即可。<br><img src="https://i.imgur.com/dgDYcMb.png" alt=""> </p>
-<h2 id="程序的数据库连接"><a href="#程序的数据库连接" class="headerlink" title="程序的数据库连接"></a>程序的数据库连接</h2><p>1、打开Navicat程序，点击“连接”，创建数据库连接。<br><img src="https://i.imgur.com/R2e4HNa.png" alt=""><img src="https://i.imgur.com/MfV5QI6.png" alt=""></p>
-<p>2、设置连接属性。<br>l  连接名：中英文均可，可自行设定；<br>l  主机名/IP地址：输入mysql数据库IP地址，本地数据库则输入“localhost”或“127.0.0.1”；<br>l  数据库连接端口号：输入mysql数据库的端口号，一般是默认值“3306”；<br>l  用户名：mysql登录名；<br>l  密码：mysql登录密码。</p>
-<p>3、mysql相关的连接信息确定之后，单击“连接测试”按扭，如提示“连接成功”即正常，单击确定即可。如不是“连接成功”则需请检测设置相关信息是否正确。<br><img src="https://i.imgur.com/mE4BSKO.png" alt=""></p>
-<p>4、在连接设置窗口确定之后，如下图所示左侧会出现一个刚刚在连接设置中的名称，双击或在此名字上右键“打开连接”即可进入对mysql数据所有操作。<br><img src="https://i.imgur.com/EJRxPB7.png" alt=""> </p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[MySQL数据库安装与配置_适用于Ubuntu 16.4系统]]></title>
-      <url>/2017/11/12/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.4%E7%B3%BB%E7%BB%9F/</url>
-      <content type="html"><![CDATA[<h1 id="安装环境及文件准备"><a href="#安装环境及文件准备" class="headerlink" title=" 安装环境及文件准备 "></a><strong> 安装环境及文件准备 </strong></h1><h2 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h2><p>Ubuntu 16.4。</p>
-<h2 id="查看系统是否已安装MySQL程序"><a href="#查看系统是否已安装MySQL程序" class="headerlink" title="查看系统是否已安装MySQL程序"></a>查看系统是否已安装MySQL程序</h2><p>登录系统终端，并输入 <code>sudo netstat -tap | grep mysql</code>。<br>如系统没有返回信息，则没有安装，需按照下一章节进行安装；若如下显示，则说明系统已安装程序，无需再安装：<br><img src="https://i.imgur.com/b8X6X1m.png" alt=""> </p>
-<h1 id="MySQL数据库主程序的获取与安装"><a href="#MySQL数据库主程序的获取与安装" class="headerlink" title=" MySQL数据库主程序的获取与安装 "></a><strong> MySQL数据库主程序的获取与安装 </strong></h1><h2 id="安装主程序"><a href="#安装主程序" class="headerlink" title="安装主程序"></a>安装主程序</h2><p>在终端输入：<br><code>sudo apt-get install mysql-server mysql-client</code><br>运行结果如下所示：<br><img src="https://i.imgur.com/6mHGAo7.png" alt=""></p>
-<h2 id="root用户的密码设置"><a href="#root用户的密码设置" class="headerlink" title="root用户的密码设置"></a>root用户的密码设置</h2><p>在此安装过程中会让要求输入root用户(管理MySQL数据库用户，非Linux系统用户)密码，按照要求输入即可。<br><img src="https://i.imgur.com/yxFyvtp.png" alt=""></p>
-<h2 id="测试安装是否成功"><a href="#测试安装是否成功" class="headerlink" title="测试安装是否成功"></a>测试安装是否成功</h2><p>在终端输入：<br><code>sudo netstat -tap | grep mysql</code><br>出现如下结果则安装成功：<br><img src="https://i.imgur.com/sUqaBQh.png" alt=""></p>
-<p>也可通过登录MySQL测试：<br>在终端输入： <code>mysql -uroot -p</code><br>接下来会提示输入密码，输入正确密码，即可进入程序。<br><img src="https://i.imgur.com/wNdy35O.png" alt=""></p>
-<h1 id="MySQL的一些常用管理命令"><a href="#MySQL的一些常用管理命令" class="headerlink" title=" MySQL的一些常用管理命令 "></a><strong> MySQL的一些常用管理命令 </strong></h1><h2 id="启动及停止MySQL服务"><a href="#启动及停止MySQL服务" class="headerlink" title="启动及停止MySQL服务"></a>启动及停止MySQL服务</h2><p><table><br>    <tbody><br>        <tr><td>启动服务</td><td><code>sudo start mysql</code></td></tr><br>        <tr><td>停止服务</td><td><code>sudo stop mysql</code></td></tr><br>        <tr><td>重启服务</td><td><code>service mysqld restart</code></td></tr><br>    </tbody><br></table><br>一般情况下，MySQL会在服务器启动时也会自动启动服务。</p>
-<h2 id="修改账户密码"><a href="#修改账户密码" class="headerlink" title="修改账户密码"></a>修改账户密码</h2><p>修改帐户密码    <code>sudo mysqladmin -u &lt;user&gt; password &lt;new password&gt;</code></p>
-<h2 id="设置远程访问"><a href="#设置远程访问" class="headerlink" title="设置远程访问"></a>设置远程访问</h2><p>在初始情况下，mysql占用的3306端口只允许在IP 127.0.0.1上监听，拒绝了其他IP的访问（通过netstat可以查看到）。<br>如需允许其他ip远程访问数据库，则需取消本地监听，修改 my.cnf 文件：<br>命令：<code>sudo vi /etc/mysql/my.cnf</code><br>找到如下命令行并注释掉：<br><code>bind-address = 127.0.0.1</code> </p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/11/09/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F11%2F12%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL数据库安装与配置_适用于Windows7系统]]></title>
+    <url>%2F2017%2F11%2F12%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[安装环境及文件准备系统环境Windows 7_SP1 旗舰版 64位。 Mysql数据库安装文件MySQL官网提供的安装包有两种格式：一个是msi格式，一个是zip格式的。前者可以直接点击，按照它给出的安装提示进行安装；后者zip格式是自己解压，解压缩之后进行配置即可使用。文件下载地址：http://www.mysql.com/downloads/mysql/(为保证版本稳定可用，请尽量下载官网提供的最新版本） 文件版本：本文中安装的数据库为5.7.14 x64版本，常用的版本还有MySQL 5.6 ,MySQL 5.5。 其他辅助工具和插件可视化界面工具目前相对流行的数据库可视化界面软件有SQLyog、Navicat、Workbench等。 MySQL数据库主程序的两种安装方式MySQL数据库安装文件分为两种：zip压缩包和msi安装文件。根据安装文件种类，程序可以通过两种方式进行安装： zip解压缩方式安装zip格式在解压缩之后进行配置即可使用，步骤如下： 解压和保存文件将下载好的压缩包解压并保存在自己选定的系统位置中（可以更改MySQL程序文件夹名称，位置自行指定，一般选择C:\Program Files或D:\Program Files文件夹中）,如图示： 配置环境变量1) 点击我的电脑-&gt;属性-&gt;高级系统设置-&gt;环境变量，从“系统变量”中选择“PATH”，点击“编辑”。 2) 在“PATH”中追加(注意是追加,不是覆盖) mysql bin文件夹的路径，与其他路径用”;”隔开。 修改MySQL配置文件1) 进入MySQL安装路径中，打开my-default.ini配置文件。2) 配置程序的basedir和datadir属性。在配置文件夹中追加或修改如下属性：basedir= mysql所在目录 datadir= mysql所在目录\data 安装和启动MySQL程序1) 以管理员身份运行系统命令提示行(cmd)，进入MySQL的bin文件夹：2) 初始化先初始化data目录（命令：mysqld --initialize；MySQL 5.7版本如果不经初始化直接安装会出错，而5.6或5.5版本可以不预先初始化data目录）；3) 输入mysqld –install命令，安装服务。如果反馈“Service successfully installed”即为安装成功。4) 输入net start mysql启动服务。 常见问题及注意事项常见问题1) 用mysqld –install命令安装服务失败。这种情况一般会有“Install/Remove of the Service Denied!”提示，是因为没有以管理员身份运行命令提示行，将会因为权限不够而出现错误。2) 用mysqld –install命令安装成功，启动服务失败。这个时候经常会出现错误2和错误1067。如果出现“错误2 系统找不到文件”，首先检查一下是否修改过配置文件或者是否进入在bin目录下操作。如果配置文件修改正确并且进入了bin文件夹，需要先删除mysql（输入 mysqld -remove）再重新安装（输入 mysqld -install）。如果出现错误1067，是配置文件修改错误，需确认配置文件是否正确。 3) 用mysqld –install命令安装成功，启动服务失败，且没有错误代码提示。 这个问题只有5.7版本会遇到。原因是程序路径中缺少data文件夹，可以通过自行建立文件夹或初始化文件夹的方式解决，有如下3两种处理方式：1) 在安装之前，使用mysqld --initialize命令初始化文件路径。2) 在my.ini配置文件中添加：tmpdir=MySQL安装路径\data。3) 改装5.6版本或复制5.6版本的data文件夹到当前程序路径。 注意事项1) my.ini配置文件的编码必须是英文编码（如windows中的ANSI），不能是UTF-8或GBK等。2) 为了保证系统崩溃等意外情况重做系统盘后数据库数据依然不受影响，Data目录需要安装在非系统盘; 程序目录最好也安装在非系统盘。 msi安装文件方式安装运行安装文件直接双击安装文件，运行msi安装向导。按照程序提示进行安装。 程序有三种安装模式：Typical(典型安装)、Custom(自定义安装)、Complete(完全安装)，选择Custom，然后选择Mysql程序安装目录和Data目录。 为了保证系统崩溃等意外情况重做系统盘后数据库数据依然不受影响，Data目录需要安装在非系统盘; 程序目录最好也安装在非系统盘。 程序配置 程序配置包含Detailed Configuration(详细配置)、Standard Configuration(标准配置)两种，选择Detailed Configuration，下一步; 选择Server Machine(服务器模式)，下一步; 选择Multifunctional Database(多功能数据库模式)，下一步; 直接下一步; 选择Manual Setting(手动设置连接数)，然后输入允许的最大连接数，一般设置为2000; 两个选项都勾选，然后下一步;3306是Mysql的默认端口号为3306，一般不做改动; 接下来设置编码格式，选择最下面的手动设置，然后选择utf8编码; 勾选下面的允许Windows命令行直接管理数据库，然后下一步; 输入root的管理密码，下面的允许root从远程主机访问数据库根据自己需要选择; 点击执行; Mysql开始执行配置，下面4项全部出现蓝色对勾后安装结束; MySQL数据库程序的初始密码配置及密码(遗忘)重置/修改的方式如果在数据库采用msi安装文件的方式进行安装，数据库的密码可以直接在配置向导中完成(详见2.2.2)。如果选用解压缩包的方式安装(详见2.1.1)，则使用mysql -uroot –p命令仍无法登陆数据库；需在安装成功后继续设置数据库密码。 编辑数据库配置文件，修改数据库登陆设置编辑程序配置文件(my.ini)，在[mysqld]条目下加入skip-grant-tables(取消登陆权限验证)，保存。 重新启动MySQL程序启动命令提示行，输入 net stop mysql，停止MySQL服务；随后输入net start mysql再次启动MySQL服务。 这时候在cmd中输入mysql -u root -p就可以不用密码登录了，出现password：的时候直接回车可以进入。 修改”root”用户密码进入MySQL数据库输入“use mysql”命令，进入mysql 数据库。命令正确将显示：“Database changed”。 为root用户设置新密码如果是MySQL5.7及以上版本，在命令行输入：update user set authentication_string=password(&#39;密码&#39;) where user=&#39;root&#39; and Host = &#39;localhost&#39;; 5.6及以下版本，在命令行输入：UPDATE user SET Password = password ( &#39;密码&#39; ) WHERE User = &#39;root&#39; ; 操作正确，将显示：Query OK, 1 rows affected (0.01 sec)Rows matched: 1 Changed: 1 Warnings: 0 刷新并退出数据库使用“flush privileges”命令刷新数据库;“quit”命令退出数据库。 重新修改数据库配置文件，启用登陆验证再次编辑数据库配置文件，将刚才加入的“skip-grant-tables”去除或注释掉，重新保存配置文件。 重新启动MySQL数据库，使用已设定密码连接数据库重新关闭和打开数据库；使用“mysql -uroot –p`上一步设置的密码”登陆数据库。现在数据库已经可以连接。 为用户授权使用alter user &#39;root&#39;@&#39;localhost&#39; identified by &#39;密码&#39;; 或set password for &#39;root&#39;@&#39;localhost&#39;=password(&#39;密码&#39;); 语句为root用户授权。随后使用“quit”命令退出。 整个设置密码设置过程已完成，之后使用“mysql -uroot –p 密码 ”即可直接登录。 其他辅助工具的安装及使用（以Navicat为例）程序安装下载地址： Windows版本：http://navicatformysql.en.softonic.com/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAOVfKRBTMOd68OupUg76dETPYomnEY9qgn84lwyg17rVaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4Yk8QgSpXkauDNeSIZQ3JUPkN4NmFEH3ttq1VWp4upoE06xBC75FR3inLZ5B0w%2BTZXdxSFy7RMMkSIU6gp5pRfA%3D%3D Mac版本：http://navicatformysqlmac.en.softonic.com/mac/download-tracker?th=1%2F6CH9aeXedl4L8u%2BBHNJXWTW%2BLP1LFlnGQpxqjlxAP7F%2FeGrpctXdF6XTnr1dg%2FW1BnrE0lqiSoIUV0YTCBPaNZZDx3GysMJdB%2Bl9z1SrwWdR4RNM76ZEcA2aiWNSw4w6ESznp4J7pA89qy3KVRBt%2BxTEv9LJdqfab43BUsDnc%3D 安装过程相对简单，按照安装向导的提示完成安装即可。 程序的数据库连接1、打开Navicat程序，点击“连接”，创建数据库连接。 2、设置连接属性。l 连接名：中英文均可，可自行设定；l 主机名/IP地址：输入mysql数据库IP地址，本地数据库则输入“localhost”或“127.0.0.1”；l 数据库连接端口号：输入mysql数据库的端口号，一般是默认值“3306”；l 用户名：mysql登录名；l 密码：mysql登录密码。 3、mysql相关的连接信息确定之后，单击“连接测试”按扭，如提示“连接成功”即正常，单击确定即可。如不是“连接成功”则需请检测设置相关信息是否正确。 4、在连接设置窗口确定之后，如下图所示左侧会出现一个刚刚在连接设置中的名称，双击或在此名字上右键“打开连接”即可进入对mysql数据所有操作。]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL数据库安装与配置_适用于Ubuntu 16.4系统]]></title>
+    <url>%2F2017%2F11%2F12%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.4%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[安装环境及文件准备 系统环境Ubuntu 16.4。 查看系统是否已安装MySQL程序登录系统终端，并输入 sudo netstat -tap | grep mysql。如系统没有返回信息，则没有安装，需按照下一章节进行安装；若如下显示，则说明系统已安装程序，无需再安装： MySQL数据库主程序的获取与安装 安装主程序在终端输入：sudo apt-get install mysql-server mysql-client运行结果如下所示： root用户的密码设置在此安装过程中会让要求输入root用户(管理MySQL数据库用户，非Linux系统用户)密码，按照要求输入即可。 测试安装是否成功在终端输入：sudo netstat -tap | grep mysql出现如下结果则安装成功： 也可通过登录MySQL测试：在终端输入： mysql -uroot -p接下来会提示输入密码，输入正确密码，即可进入程序。 MySQL的一些常用管理命令 启动及停止MySQL服务 启动服务sudo start mysql 停止服务sudo stop mysql 重启服务service mysqld restart 一般情况下，MySQL会在服务器启动时也会自动启动服务。 修改账户密码修改帐户密码 sudo mysqladmin -u &lt;user&gt; password &lt;new password&gt; 设置远程访问在初始情况下，mysql占用的3306端口只允许在IP 127.0.0.1上监听，拒绝了其他IP的访问（通过netstat可以查看到）。如需允许其他ip远程访问数据库，则需取消本地监听，修改 my.cnf 文件：命令：sudo vi /etc/mysql/my.cnf找到如下命令行并注释掉：bind-address = 127.0.0.1]]></content>
+  </entry>
 </search>
