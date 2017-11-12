@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Nginx服务器的安装_适用于Ubuntu 16.04系统]]></title>
+    <url>%2F2017%2F11%2F12%2FNginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F%2F</url>
+    <content type="text"><![CDATA[Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。 安装环境及文件准备系统环境Ubuntu 16.04。 安装Nginx依赖库登录Ubuntu系统，依次安装如下依赖库： 安装gcc g++的依赖库apt-get install build-essentialapt-get install libtool 安装 pcre依赖库sudo apt-get updatesudo apt-get install libpcre3 libpcre3-dev 安装 zlib依赖库apt-get install zlib1g-dev 安装 ssl依赖库apt-get install openssl 安装Nginx程序 下载最新版本Nginx程序进入cd /usr/local/src文件夹，下载并解压最新版本Nginx安装包：wget http://nginx.org/download/nginx-1.11.3.tar.gztar -zxvf nginx-1.11.3.tar.gz 在这里建议安装完成后，仍保留安装文件。后续Nginx相关的各种插件（如ngx_pagespeed）安装过程中可能还会用到。 配置并编译Nginx进入解压后的程序包目录：cd nginx-1.11.3，编译Nginx属性：./configure --prefix=/usr/local/nginx 编辑Nginx并开始安装makesudo make install 启动Nginx并检验安装是否成功输入 sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf命令，启动程序。输入 ps -ef|grep nginx 可查看Nginx进程。如得到正确反馈，则Nginx安装成功。 Nginx的常用命令 Nginx的启动、关闭和重启 启动Nginxcd /usr/local/nginx/sbin/nginx ./sbin/nginx 关闭Nginxcd /usr/local/nginx/sbin/nginx ./sbin/nginx -s stop 重新加载配置/重启cd /usr/local/nginx/sbin/nginx ./sbin/nginx -s reload 查看Nginx版本cd /usr/local/nginx/sbin/nginx ./sbin/nginx -V 检验配置文件是否正确在每次修改Nginx配置文件时，应先检验配置文件是否正确，再进行重启。cd /usr/local/nginx/sbin/nginx ./sbin/nginx -t如显示nginx.conf syntax is ok / nginx.conf test is successful等反馈，则则表示配置文件正确。否则，会有相关提示。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>程序安装</tag>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL数据库安装与配置_适用于Ubuntu 16.04系统]]></title>
     <url>%2F2017%2F03%2F07%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F%2F</url>
     <content type="text"><![CDATA[安装环境及文件准备 系统环境Ubuntu 16.04。 查看系统是否已安装MySQL程序登录系统终端，并输入 sudo netstat -tap | grep mysql。如系统没有返回信息，则没有安装，需按照下一章节进行安装；若如下显示，则说明系统已安装程序，无需再安装： MySQL数据库主程序的获取与安装 安装主程序在终端输入：sudo apt-get install mysql-server mysql-client运行结果如下所示： root用户的密码设置在此安装过程中会让要求输入root用户(管理MySQL数据库用户，非Linux系统用户)密码，按照要求输入即可。 测试安装是否成功在终端输入：sudo netstat -tap | grep mysql出现如下结果则安装成功： 也可通过登录MySQL测试：在终端输入： mysql -uroot -p接下来会提示输入密码，输入正确密码，即可进入程序。 MySQL的一些常用管理命令 启动及停止MySQL服务 启动服务sudo start mysql 停止服务sudo stop mysql 重启服务service mysqld restart 一般情况下，MySQL会在服务器启动时也会自动启动服务。 修改账户密码修改帐户密码 sudo mysqladmin -u &lt;user&gt; password &lt;new password&gt; 设置远程访问在初始情况下，mysql占用的3306端口只允许在IP 127.0.0.1上监听，拒绝了其他IP的访问（通过netstat可以查看到）。如需允许其他ip远程访问数据库，则需取消本地监听，修改 my.cnf 文件：命令：sudo vi /etc/mysql/my.cnf找到如下命令行并注释掉：bind-address = 127.0.0.1]]></content>

@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/12/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2017-11-12T13:09:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx服务器的安装_适用于Ubuntu 16.04系统</title>
+        <pubTime>2017-11-12T13:09:56.000Z</pubTime>
+        
+        <tag>程序安装</tag>
+         
+        <tag>Nginx</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
