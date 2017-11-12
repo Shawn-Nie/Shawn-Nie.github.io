@@ -48,21 +48,6 @@
 
     
     
-  <url>
-    <loc>http://yoursite.com/2017/11/12/hello-world/</loc>
-    <lastmod>2017-11-12T11:05:35.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-11-12T11:05:36.575Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
     
     
 </urlset>
