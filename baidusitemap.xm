@@ -33,9 +33,9 @@
         <title>Nginx服务器的安装_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-11-12T13:09:56.000Z</pubTime>
         
-        <tag>Nginx</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>Nginx</tag>
          
          
            
@@ -55,9 +55,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            
@@ -77,9 +77,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            

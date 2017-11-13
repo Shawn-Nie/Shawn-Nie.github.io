@@ -23,13 +23,14 @@
     <published>2017-11-13T03:35:59.000Z</published>
     <updated>2017-11-13T04:10:36.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="系统命令"><a href="#系统命令" class="headerlink" title=" 系统命令 "></a><strong> 系统命令 </strong></h1><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><table><br>    <tbody><br>        <tr><td><code>reboot</code></td><td>立刻重启</td><td></td></tr><br>        <tr><td><code>shutdown -r now</code></td><td>立刻重启</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -r 10</code></td><td>10分钟后自动重启</td><td>如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启</td></tr><br>        <tr><td><code>shutdown -r 20:35</code></td><td>在时间为20:35时重启</td><td>root用户使用</td></tr><br>    </tbody><br></table><br>&gt; shuntdown为系统安全关机/重启的命令，通过参数-h或-r的配合来完成关机或重启。不过在linux系统中只有拥有root权限才可以使用这个命令。<br><br>## 关机 ##<br><table><br>    <tbody><br>        <tr><td><code>halt</code></td><td>立刻关机</td><td></td></tr><br>        <tr><td><code>poweroff</code></td><td>立刻关机</td><td></td></tr><br>        <tr><td><code>shutdown -h now</code></td><td>立刻关机/td&gt;</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -h 10</code></td><td>10分钟后自动关机</td><td>root用户使用</td></tr><br>    </tbody><br></table><h2 id="查询程序进程或端口占用情况"><a href="#查询程序进程或端口占用情况" class="headerlink" title="查询程序进程或端口占用情况"></a>查询程序进程或端口占用情况</h2><h3 id="查询程序进程"><a href="#查询程序进程" class="headerlink" title="查询程序进程"></a>查询程序进程</h3><p><code>ps -ef | grep &lt;程序名&gt;</code>，如<code>ps -ef | grep nginx</code>;<code>ps -ef | grep tomcat</code></p><h3 id="查看端口占用情况"><a href="#查看端口占用情况" class="headerlink" title="查看端口占用情况"></a>查看端口占用情况</h3><ol><li>查看已经连接的服务端口（ESTABLISHED）<br><code>netstat -a</code></li><li>查看所有的服务端口（LISTEN，ESTABLISHED）<br><code>netstat -ap</code></li><li>查看指定端口，可以结合grep命令：<br><code>netstat -ap | grep &lt;pid&gt;</code>，如：<code>netstat -ap | grep 8080</code></li><li>查看指定端口，也可以结合lsof命令：<br><code>lsof -i:&lt;pid&gt;</code>，如：<code>lsof -i:8888</code></li></ol><h3 id="关闭端口程序进程"><a href="#关闭端口程序进程" class="headerlink" title="关闭端口程序进程"></a>关闭端口程序进程</h3><p><code>kill -9 &lt;pid&gt;</code>，如<code>kill -9 8080</code></p><blockquote><p>kill就是给某个进程id发送了一个信号。默认发送的信号是SIGTERM，而kill -9发送的信号是SIGKILL，即exit。exit信号不会被系统阻塞，所以kill -9能顺利杀掉进程。</p></blockquote><h3 id="查看端口号对应的系统服务名称"><a href="#查看端口号对应的系统服务名称" class="headerlink" title="查看端口号对应的系统服务名称"></a>查看端口号对应的系统服务名称</h3><p><code>cat /etc/services</code></p><h2 id="系统服务及防火墙管理"><a href="#系统服务及防火墙管理" class="headerlink" title="系统服务及防火墙管理"></a>系统服务及防火墙管理</h2><h3 id="启动系统服务"><a href="#启动系统服务" class="headerlink" title="启动系统服务"></a>启动系统服务</h3><p><code>sudo /etc/init.d/service start</code></p><h3 id="停止系统服务"><a href="#停止系统服务" class="headerlink" title="停止系统服务"></a>停止系统服务</h3><p><code>sudo /etc/init.d/service stop</code></p><h3 id="重启系统服务"><a href="#重启系统服务" class="headerlink" title="重启系统服务"></a>重启系统服务</h3><p><code>sudo /etc/init.d/service restart</code></p><h3 id="查看端口号对应的系统服务名称-1"><a href="#查看端口号对应的系统服务名称-1" class="headerlink" title="查看端口号对应的系统服务名称"></a>查看端口号对应的系统服务名称</h3><p><code>cat /etc/services</code></p><h2 id="utf防火墙设置"><a href="#utf防火墙设置" class="headerlink" title="utf防火墙设置"></a>utf防火墙设置</h2><h3 id="查看防火墙状态-查看当前防火墙使用规则"><a href="#查看防火墙状态-查看当前防火墙使用规则" class="headerlink" title="查看防火墙状态/查看当前防火墙使用规则"></a>查看防火墙状态/查看当前防火墙使用规则</h3><p><code>sudo ufw status</code></p><h3 id="防火墙的安装"><a href="#防火墙的安装" class="headerlink" title="防火墙的安装"></a>防火墙的安装</h3><p><code>sudo apt-get install ufw</code></p><blockquote><p>ubuntu 系统默认已安装ufw。</p></blockquote><h3 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h3><p><code>sudo  ufw enable</code></p><h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p><code>sudo  ufw disable</code></p><h3 id="打开或关闭某个端口"><a href="#打开或关闭某个端口" class="headerlink" title="打开或关闭某个端口"></a>打开或关闭某个端口</h3><p><code>sudo ufw allow|deny [service|port]</code><br>如：<br><code>sudo ufw allow smtp　允许所有的外部IP访问本机的25/tcp (smtp)端口</code>;<br><code>sudo ufw allow 22/tcp 允许所有的外部IP访问本机的22/tcp (ssh)端口</code>;<br><code>sudo ufw allow 53 允许外部访问53端口(tcp/udp)</code>;<br><code>sudo ufw allow from 192.168.1.100 允许此IP访问所有的本机端口</code>;<br><code>sudo ufw allow proto udp 192.168.0.1 port 53 to 192.168.0.2 port 53</code>;<br><code>sudo ufw deny smtp 禁止外部访问smtp服务;</code><br><code>sudo ufw delete allow smtp 删除上面建立的某条规则</code>;</p>]]></content>
+    <content type="html"><![CDATA[<a id="more"></a><h1 id="系统命令"><a href="#系统命令" class="headerlink" title=" 系统命令 "></a><strong> 系统命令 </strong></h1><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><table><br>    <tbody><br>        <tr><td><code>reboot</code></td><td>立刻重启</td><td></td></tr><br>        <tr><td><code>shutdown -r now</code></td><td>立刻重启</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -r 10</code></td><td>10分钟后自动重启</td><td>如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启</td></tr><br>        <tr><td><code>shutdown -r 20:35</code></td><td>在时间为20:35时重启</td><td>root用户使用</td></tr><br>    </tbody><br></table><br>&gt; shuntdown为系统安全关机/重启的命令，通过参数-h或-r的配合来完成关机或重启。不过在linux系统中只有拥有root权限才可以使用这个命令。<br><br>## 关机 ##<br><table><br>    <tbody><br>        <tr><td><code>halt</code></td><td>立刻关机</td><td></td></tr><br>        <tr><td><code>poweroff</code></td><td>立刻关机</td><td></td></tr><br>        <tr><td><code>shutdown -h now</code></td><td>立刻关机/td&gt;</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -h 10</code></td><td>10分钟后自动关机</td><td>root用户使用</td></tr><br>    </tbody><br></table><h2 id="查询程序进程或端口占用情况"><a href="#查询程序进程或端口占用情况" class="headerlink" title="查询程序进程或端口占用情况"></a>查询程序进程或端口占用情况</h2><h3 id="查询程序进程"><a href="#查询程序进程" class="headerlink" title="查询程序进程"></a>查询程序进程</h3><p><code>ps -ef | grep &lt;程序名&gt;</code>，如<code>ps -ef | grep nginx</code>;<code>ps -ef | grep tomcat</code></p><h3 id="查看端口占用情况"><a href="#查看端口占用情况" class="headerlink" title="查看端口占用情况"></a>查看端口占用情况</h3><ol><li>查看已经连接的服务端口（ESTABLISHED）<br><code>netstat -a</code></li><li>查看所有的服务端口（LISTEN，ESTABLISHED）<br><code>netstat -ap</code></li><li>查看指定端口，可以结合grep命令：<br><code>netstat -ap | grep &lt;pid&gt;</code>，如：<code>netstat -ap | grep 8080</code></li><li>查看指定端口，也可以结合lsof命令：<br><code>lsof -i:&lt;pid&gt;</code>，如：<code>lsof -i:8888</code></li></ol><h3 id="关闭端口程序进程"><a href="#关闭端口程序进程" class="headerlink" title="关闭端口程序进程"></a>关闭端口程序进程</h3><p><code>kill -9 &lt;pid&gt;</code>，如<code>kill -9 8080</code></p><blockquote><p>kill就是给某个进程id发送了一个信号。默认发送的信号是SIGTERM，而kill -9发送的信号是SIGKILL，即exit。exit信号不会被系统阻塞，所以kill -9能顺利杀掉进程。</p></blockquote><h3 id="查看端口号对应的系统服务名称"><a href="#查看端口号对应的系统服务名称" class="headerlink" title="查看端口号对应的系统服务名称"></a>查看端口号对应的系统服务名称</h3><p><code>cat /etc/services</code></p><h2 id="系统服务及防火墙管理"><a href="#系统服务及防火墙管理" class="headerlink" title="系统服务及防火墙管理"></a>系统服务及防火墙管理</h2><h3 id="启动系统服务"><a href="#启动系统服务" class="headerlink" title="启动系统服务"></a>启动系统服务</h3><p><code>sudo /etc/init.d/service start</code></p><h3 id="停止系统服务"><a href="#停止系统服务" class="headerlink" title="停止系统服务"></a>停止系统服务</h3><p><code>sudo /etc/init.d/service stop</code></p><h3 id="重启系统服务"><a href="#重启系统服务" class="headerlink" title="重启系统服务"></a>重启系统服务</h3><p><code>sudo /etc/init.d/service restart</code></p><h3 id="查看端口号对应的系统服务名称-1"><a href="#查看端口号对应的系统服务名称-1" class="headerlink" title="查看端口号对应的系统服务名称"></a>查看端口号对应的系统服务名称</h3><p><code>cat /etc/services</code></p><h2 id="utf防火墙设置"><a href="#utf防火墙设置" class="headerlink" title="utf防火墙设置"></a>utf防火墙设置</h2><h3 id="查看防火墙状态-查看当前防火墙使用规则"><a href="#查看防火墙状态-查看当前防火墙使用规则" class="headerlink" title="查看防火墙状态/查看当前防火墙使用规则"></a>查看防火墙状态/查看当前防火墙使用规则</h3><p><code>sudo ufw status</code></p><h3 id="防火墙的安装"><a href="#防火墙的安装" class="headerlink" title="防火墙的安装"></a>防火墙的安装</h3><p><code>sudo apt-get install ufw</code></p><blockquote><p>ubuntu 系统默认已安装ufw。</p></blockquote><h3 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h3><p><code>sudo  ufw enable</code></p><h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p><code>sudo  ufw disable</code></p><h3 id="打开或关闭某个端口"><a href="#打开或关闭某个端口" class="headerlink" title="打开或关闭某个端口"></a>打开或关闭某个端口</h3><p><code>sudo ufw allow|deny [service|port]</code><br>如：<br><code>sudo ufw allow smtp　允许所有的外部IP访问本机的25/tcp (smtp)端口</code>;<br><code>sudo ufw allow 22/tcp 允许所有的外部IP访问本机的22/tcp (ssh)端口</code>;<br><code>sudo ufw allow 53 允许外部访问53端口(tcp/udp)</code>;<br><code>sudo ufw allow from 192.168.1.100 允许此IP访问所有的本机端口</code>;<br><code>sudo ufw allow proto udp 192.168.0.1 port 53 to 192.168.0.2 port 53</code>;<br><code>sudo ufw deny smtp 禁止外部访问smtp服务;</code><br><code>sudo ufw delete allow smtp 删除上面建立的某条规则</code>;</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;系统命令&quot;&gt;&lt;a href=&quot;#系统命令&quot; class=&quot;headerlink&quot; title=&quot; 系统命令 &quot;&gt;&lt;/a&gt;&lt;strong&gt; 系统命令 &lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;重启&quot;&gt;&lt;a href=&quot;#重启&quot; class=&quot;headerlink&quot;
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h1 id=&quot;系统命令&quot;&gt;&lt;a href=&quot;#系统命令&quot; class=&quot;headerlink&quot; title=&quot; 系统命令 &quot;&gt;&lt;/a&gt;&lt;strong&gt; 系统命令 &lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;重启&quot;&gt;&lt;a href=&quot;#重启&quot; 
       
     
     </summary>
@@ -62,9 +63,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
-    
       <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
     
   </entry>
   
@@ -86,9 +87,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
-    
       <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
@@ -110,9 +111,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
-    
       <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
