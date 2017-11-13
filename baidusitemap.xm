@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2017-11-13T04:10:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统的常用命令</title>
+        <pubTime>2017-11-13T03:35:59.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/11/12/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T13:09:56.000Z</lastmod>
     <data>
@@ -11,9 +33,9 @@
         <title>Nginx服务器的安装_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-11-12T13:09:56.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>Nginx</tag>
+         
+        <tag>程序安装</tag>
          
          
            
@@ -33,9 +55,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            
@@ -55,9 +77,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            

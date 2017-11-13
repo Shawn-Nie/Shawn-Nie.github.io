@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu系统的常用命令]]></title>
+    <url>%2F2017%2F11%2F13%2FUbuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[系统命令 重启 reboot立刻重启 shutdown -r now立刻重启root用户使用 shutdown -r 1010分钟后自动重启如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启 shutdown -r 20:35在时间为20:35时重启root用户使用 &gt; shuntdown为系统安全关机/重启的命令，通过参数-h或-r的配合来完成关机或重启。不过在linux系统中只有拥有root权限才可以使用这个命令。## 关机 ## halt立刻关机 poweroff立刻关机 shutdown -h now立刻关机/td&gt;root用户使用 shutdown -h 1010分钟后自动关机root用户使用 查询程序进程或端口占用情况查询程序进程ps -ef | grep &lt;程序名&gt;，如ps -ef | grep nginx;ps -ef | grep tomcat 查看端口占用情况 查看已经连接的服务端口（ESTABLISHED）netstat -a 查看所有的服务端口（LISTEN，ESTABLISHED）netstat -ap 查看指定端口，可以结合grep命令：netstat -ap | grep &lt;pid&gt;，如：netstat -ap | grep 8080 查看指定端口，也可以结合lsof命令：lsof -i:&lt;pid&gt;，如：lsof -i:8888 关闭端口程序进程kill -9 &lt;pid&gt;，如kill -9 8080 kill就是给某个进程id发送了一个信号。默认发送的信号是SIGTERM，而kill -9发送的信号是SIGKILL，即exit。exit信号不会被系统阻塞，所以kill -9能顺利杀掉进程。 查看端口号对应的系统服务名称cat /etc/services 系统服务及防火墙管理启动系统服务sudo /etc/init.d/service start 停止系统服务sudo /etc/init.d/service stop 重启系统服务sudo /etc/init.d/service restart 查看端口号对应的系统服务名称cat /etc/services utf防火墙设置查看防火墙状态/查看当前防火墙使用规则sudo ufw status 防火墙的安装sudo apt-get install ufw ubuntu 系统默认已安装ufw。 开启防火墙sudo ufw enable 关闭防火墙sudo ufw disable 打开或关闭某个端口sudo ufw allow|deny [service|port]如：sudo ufw allow smtp 允许所有的外部IP访问本机的25/tcp (smtp)端口;sudo ufw allow 22/tcp 允许所有的外部IP访问本机的22/tcp (ssh)端口;sudo ufw allow 53 允许外部访问53端口(tcp/udp);sudo ufw allow from 192.168.1.100 允许此IP访问所有的本机端口;sudo ufw allow proto udp 192.168.0.1 port 53 to 192.168.0.2 port 53;sudo ufw deny smtp 禁止外部访问smtp服务;sudo ufw delete allow smtp 删除上面建立的某条规则;]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx服务器的安装_适用于Ubuntu 16.04系统]]></title>
     <url>%2F2017%2F11%2F12%2FNginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F%2F</url>
     <content type="text"><![CDATA[Nginx (“engine x”) 是一个高性能的 HTTP 和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。 Nginx 是由 Igor Sysoev 为俄罗斯访问量第二的 Rambler.ru 站点开发的，第一个公开版本0.1.0发布于2004年10月4日。其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、示例配置文件和低系统资源的消耗而闻名。 安装环境及文件准备系统环境Ubuntu 16.04。 安装Nginx依赖库登录Ubuntu系统，依次安装如下依赖库： 安装gcc g++的依赖库apt-get install build-essentialapt-get install libtool 安装 pcre依赖库sudo apt-get updatesudo apt-get install libpcre3 libpcre3-dev 安装 zlib依赖库apt-get install zlib1g-dev 安装 ssl依赖库apt-get install openssl 安装Nginx程序 下载最新版本Nginx程序进入cd /usr/local/src文件夹，下载并解压最新版本Nginx安装包：wget http://nginx.org/download/nginx-1.11.3.tar.gztar -zxvf nginx-1.11.3.tar.gz 在这里建议安装完成后，仍保留安装文件。后续Nginx相关的各种插件（如ngx_pagespeed）安装过程中可能还会用到。 配置并编译Nginx进入解压后的程序包目录：cd nginx-1.11.3，编译Nginx属性：./configure --prefix=/usr/local/nginx 编辑Nginx并开始安装makesudo make install 启动Nginx并检验安装是否成功输入 sudo /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf命令，启动程序。输入 ps -ef|grep nginx 可查看Nginx进程。如得到正确反馈，则Nginx安装成功。 Nginx的常用命令 Nginx的启动、关闭和重启 启动Nginxcd /usr/local/nginx/sbin/nginx ./sbin/nginx 关闭Nginxcd /usr/local/nginx/sbin/nginx ./sbin/nginx -s stop 重新加载配置/重启cd /usr/local/nginx/sbin/nginx ./sbin/nginx -s reload 查看Nginx版本cd /usr/local/nginx/sbin/nginx ./sbin/nginx -V 检验配置文件是否正确在每次修改Nginx配置文件时，应先检验配置文件是否正确，再进行重启。cd /usr/local/nginx/sbin/nginx ./sbin/nginx -t如显示nginx.conf syntax is ok / nginx.conf test is successful等反馈，则则表示配置文件正确。否则，会有相关提示。]]></content>
@@ -8,8 +20,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>Nginx</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
   <entry>
@@ -20,8 +32,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -32,8 +44,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
 </search>
