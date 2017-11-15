@@ -203,7 +203,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/程序安装/">程序安装</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/程序安装/">程序安装</a></li></ul>
                     </div>
                 </section>
                 
@@ -275,6 +275,84 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Ubuntu下安装Maven" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/15/Ubuntu下安装Maven/" class="article-date">
+      <time datetime="2017-11-15T03:37:37.000Z" itemprop="datePublished">2017-11-15</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="环境需求"><a href="#环境需求" class="headerlink" title=" 环境需求 "></a><strong> 环境需求 </strong></h1><p>安装Maven前，先确保系统已正常安装JDK。</p>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title=" 安装步骤 "></a><strong> 安装步骤 </strong></h1><h2 id="下载并解压安装文件"><a href="#下载并解压安装文件" class="headerlink" title="下载并解压安装文件"></a>下载并解压安装文件</h2><ol>
+<li>输入<code>wget http://apache.fayea.com/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz</code>命令，下载maven程序安装包。<br>如apache地址访问较慢，可尝试从镜像网址获取下载文件：<code>wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz</code>。</li>
+<li>解压Maven安装文件<br><code>tar -xzf apache-maven-3.5.0-bin.tar.gz</code></li>
+<li>移动Maven到/usr/local中<br><code>mv apache-maven-3.5.0 /usr/local/apache-maven-3.5.0</code></li>
+</ol>
+<h2 id="设置Maven环境变量"><a href="#设置Maven环境变量" class="headerlink" title="设置Maven环境变量"></a>设置Maven环境变量</h2><ol>
+<li>编辑~/.bashrc文件<br>输入<code>vi ~/.bashrc</code>命令，开始编辑文件</li>
+<li>配置环境变量<br>向文件添加如下语句：<br><code>export M2_HOME=/usr/local/apache-maven-3.5.0</code><br><code>export M2=$M2_HOME/bin</code><br><code>export MAVEN_OPTS=&quot;-Xms256m -Xmx512m&quot;</code><br><code>export PATH=$M2:$PATH</code></li>
+<li>保存~/.bashrc文件，使环境变量生效<br><code>source ~/.bashrc</code></li>
+</ol>
+<h2 id="验证Maven安装"><a href="#验证Maven安装" class="headerlink" title="验证Maven安装"></a>验证Maven安装</h2><p><code>mvn --version</code></p>
+<blockquote>
+<p>如Maven已正确安装，则返回如下信息：<br><img src="https://i.imgur.com/HI5Trv0.jpg" alt=""></p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/">Maven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Ubuntu系统的常用命令" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -583,14 +661,14 @@
         <div id="footer-info">
             <!-- <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2017 Shawn Nie
+                2016-2017 Shawn Nie
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div> -->
 	<div class="footer-right">
                 <i class="fa fa-copyright"></i> 
-                2017 Shawn Nie
+                2016-2017 Shawn Nie
             </div>
         </div>
         
