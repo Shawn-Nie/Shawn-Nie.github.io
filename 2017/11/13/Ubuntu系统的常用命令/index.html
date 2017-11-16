@@ -15,18 +15,24 @@
 
 
 
-<meta name="description" content="系统命令 重启            reboot立刻重启        shutdown -r now立刻重启root用户使用        shutdown -r 1010分钟后自动重启如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启        shutdown -r 20:35在时间为20:35时重启root用户使用       shuntdown">
+<meta name="description" content="系统命令">
 <meta name="keywords" content="Ubuntu,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu系统的常用命令">
 <meta property="og:url" content="http://yoursite.com/2017/11/13/Ubuntu系统的常用命令/index.html">
 <meta property="og:site_name" content="Shawn的技术博客">
-<meta property="og:description" content="系统命令 重启            reboot立刻重启        shutdown -r now立刻重启root用户使用        shutdown -r 1010分钟后自动重启如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启        shutdown -r 20:35在时间为20:35时重启root用户使用       shuntdown">
+<meta property="og:description" content="系统命令">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-13T04:10:36.000Z">
+<meta property="og:image" content="https://i.imgur.com/kO9e53V.jpg">
+<meta property="og:image" content="https://i.imgur.com/O1B34Gs.jpg">
+<meta property="og:image" content="https://i.imgur.com/eF9WQQO.jpg">
+<meta property="og:image" content="https://i.imgur.com/vCNZ0Ig.jpg">
+<meta property="og:image" content="https://i.imgur.com/MchTfwL.jpg">
+<meta property="og:updated_time" content="2017-11-16T13:27:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu系统的常用命令">
-<meta name="twitter:description" content="系统命令 重启            reboot立刻重启        shutdown -r now立刻重启root用户使用        shutdown -r 1010分钟后自动重启如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启        shutdown -r 20:35在时间为20:35时重启root用户使用       shuntdown">
+<meta name="twitter:description" content="系统命令">
+<meta name="twitter:image" content="https://i.imgur.com/kO9e53V.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -315,8 +321,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<h1 id="系统命令"><a href="#系统命令" class="headerlink" title=" 系统命令 "></a><strong> 系统命令 </strong></h1><h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><table><br>    <tbody><br>        <tr><td><code>reboot</code></td><td>立刻重启</td><td></td></tr><br>        <tr><td><code>shutdown -r now</code></td><td>立刻重启</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -r 10</code></td><td>10分钟后自动重启</td><td>如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启</td></tr><br>        <tr><td><code>shutdown -r 20:35</code></td><td>在时间为20:35时重启</td><td>root用户使用</td></tr><br>    </tbody><br></table>
+        <h1 id="系统命令"><a href="#系统命令" class="headerlink" title=" 系统命令 "></a><strong> 系统命令 </strong></h1><a id="more"></a>
+<h2 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h2><table><br>    <tbody><br>        <tr><td><code>reboot</code></td><td>立刻重启</td><td></td></tr><br>        <tr><td><code>shutdown -r now</code></td><td>立刻重启</td><td>root用户使用</td></tr><br>        <tr><td><code>shutdown -r 10</code></td><td>10分钟后自动重启</td><td>如果是通过shutdown命令设置关机的话，可以用shutdown -c命令取消重启</td></tr><br>        <tr><td><code>shutdown -r 20:35</code></td><td>在时间为20:35时重启</td><td>root用户使用</td></tr><br>    </tbody><br></table>
 
 <blockquote>
 <p>shuntdown为系统安全关机/重启的命令，通过参数-h或-r的配合来完成关机或重启。不过在linux系统中只有拥有root权限才可以使用这个命令。</p>
@@ -347,6 +353,64 @@
 <h3 id="开启防火墙"><a href="#开启防火墙" class="headerlink" title="开启防火墙"></a>开启防火墙</h3><p><code>sudo  ufw enable</code></p>
 <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p><code>sudo  ufw disable</code></p>
 <h3 id="打开或关闭某个端口"><a href="#打开或关闭某个端口" class="headerlink" title="打开或关闭某个端口"></a>打开或关闭某个端口</h3><p><code>sudo ufw allow|deny [service|port]</code><br>如：<br><code>sudo ufw allow smtp　允许所有的外部IP访问本机的25/tcp (smtp)端口</code>;<br><code>sudo ufw allow 22/tcp 允许所有的外部IP访问本机的22/tcp (ssh)端口</code>;<br><code>sudo ufw allow 53 允许外部访问53端口(tcp/udp)</code>;<br><code>sudo ufw allow from 192.168.1.100 允许此IP访问所有的本机端口</code>;<br><code>sudo ufw allow proto udp 192.168.0.1 port 53 to 192.168.0.2 port 53</code>;<br><code>sudo ufw deny smtp 禁止外部访问smtp服务;</code><br><code>sudo ufw delete allow smtp 删除上面建立的某条规则</code>;</p>
+<h2 id="系统缓存-硬盘空间状态查看及管理"><a href="#系统缓存-硬盘空间状态查看及管理" class="headerlink" title="系统缓存/硬盘空间状态查看及管理"></a>系统缓存/硬盘空间状态查看及管理</h2><h3 id="查看内存使用情况"><a href="#查看内存使用情况" class="headerlink" title="查看内存使用情况"></a>查看内存使用情况</h3><p>命令: <code>free -m</code><br><img src="https://i.imgur.com/kO9e53V.jpg" alt=""></p>
+<blockquote>
+<p>返回参数及说明：</p>
+<table><br>    <tbody><br>        <tr><td>total</td><td>内存总数</td></tr><br>        <tr><td>used</td><td>已使用的内存数</td></tr><br>        <tr><td>free</td><td>空闲的内存数</td></tr><br>        <tr><td>shared</td><td>多个进程共享的内存总额</td></tr><br>    </tbody><br></table>
+
+</blockquote>
+<h3 id="查看磁盘占用情况"><a href="#查看磁盘占用情况" class="headerlink" title="查看磁盘占用情况"></a>查看磁盘占用情况</h3><p>命令: <code>df -lh</code><br><img src="https://i.imgur.com/O1B34Gs.jpg" alt=""></p>
+<blockquote>
+<p>返回参数及说明：</p>
+<table><br>    <tbody><br>        <tr><td>Used</td><td>已经使用的空间</td></tr><br>        <tr><td>Avail</td><td>可以使用的空间</td></tr><br>        <tr><td>Mounted on</td><td>挂载的目录</td></tr><br>    </tbody><br></table>
+
+</blockquote>
+<p>类似的命令还有：</p>
+<table><br>    <tbody><br>        <tr><td>df -h –total</td><td>显示磁盘的单个文件系统的利用率</td></tr><br>        <tr><td>df -T</td><td>展示文件系统类型</td></tr><br>        <tr><td>df -a</td><td>显示虚拟文件系统的信息</td></tr><br>        <tr><td>df -T -h</td><td>检查硬盘使用情况</td></tr><br>        <tr><td>fdisk -l</td><td>检查磁盘分区</td></tr><br>    </tbody><br></table>
+
+
+<h3 id="查看索引节点-Inode-的占用情况"><a href="#查看索引节点-Inode-的占用情况" class="headerlink" title="查看索引节点(Inode)的占用情况"></a>查看索引节点(Inode)的占用情况</h3><p>命令: <code>df -i</code><br><img src="https://i.imgur.com/eF9WQQO.jpg" alt=""></p>
+<blockquote>
+<p>在Linux中，inode是用来存储特定文件的元数据的一种数据结构，在创建一个文件系统时，inode的预先定义数量将被分配。这意味着，一个文件系统可能耗尽空间不只是因为大文件用完了所有可用空间，也可能是因为很多小文件用完了所有可能的inode。</p>
+</blockquote>
+<hr>
+<h2 id="gt-磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间-索引或系统内存已满。此时应注意查看磁盘空间，及时清除无效文件或缓存。"><a href="#gt-磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间-索引或系统内存已满。此时应注意查看磁盘空间，及时清除无效文件或缓存。" class="headerlink" title="&gt; 磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间/索引或系统内存已满。此时应注意查看磁盘空间，及时清除无效文件或缓存。"></a>&gt; 磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。<strong>有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间/索引或系统内存已满</strong>。此时应注意查看磁盘空间，及时清除无效文件或缓存。</h2><h3 id="查找并列出系统大文件"><a href="#查找并列出系统大文件" class="headerlink" title="查找并列出系统大文件"></a>查找并列出系统大文件</h3><p>命令: <code>find / -size +&lt;文件体积&gt; |xargs ls -lh</code> ;<br>如：<code>find / -size 100M |xargs ls -lh</code> 为列出系统内大于100M的文件。<br><img src="https://i.imgur.com/vCNZ0Ig.jpg" alt=""></p>
+<h3 id="清空log文件"><a href="#清空log文件" class="headerlink" title="清空log文件"></a>清空log文件</h3><p>命令: <code>cat /dev/null &gt; &lt;文件及路径&gt;</code> ;<br>如：<code>cat /dev/null &gt; /home/Tomcat7_server/apache-tomcat-7.0.69/logs/catalina.out</code> 为清空Tomcat日志文件；<code>cat /dev/null &gt; /usr/local/nginx/logs/access.log</code> 为清空Nginx服务器的 access.log文件。</p>
+<h3 id="查看当前目录内文件夹的大小"><a href="#查看当前目录内文件夹的大小" class="headerlink" title="查看当前目录内文件夹的大小"></a>查看当前目录内文件夹的大小</h3><p>命令: <code>du -h --max-depth=1</code><br><img src="https://i.imgur.com/MchTfwL.jpg" alt=""></p>
+<h3 id="清理程序升级缓存以及无用包"><a href="#清理程序升级缓存以及无用包" class="headerlink" title="清理程序升级缓存以及无用包"></a>清理程序升级缓存以及无用包</h3><ul>
+<li>清理旧版本的软件缓存 <code>sudo apt-get autoclean</code> ;</li>
+<li>清理所有软件缓存 <code>sudo apt-get clean</code> ;</li>
+<li>删除系统不再使用的孤立软件 <code>sudo apt-get autoremove</code> ;</li>
+</ul>
+<h3 id="清理Linux下孤立的包"><a href="#清理Linux下孤立的包" class="headerlink" title="清理Linux下孤立的包"></a>清理Linux下孤立的包</h3><p><code>sudo apt-get install deborphan -y</code></p>
+<h1 id="软件源码包的安装与卸载"><a href="#软件源码包的安装与卸载" class="headerlink" title=" 软件源码包的安装与卸载 "></a><strong> 软件源码包的安装与卸载 </strong></h1><h2 id="源码包的下载与解压"><a href="#源码包的下载与解压" class="headerlink" title="源码包的下载与解压"></a>源码包的下载与解压</h2><h3 id="tar-gz类压缩包"><a href="#tar-gz类压缩包" class="headerlink" title="tar.gz类压缩包"></a>tar.gz类压缩包</h3><ol>
+<li>直接解压：<code>tar -xvzf &lt;文件名称&gt;.tar.gz</code>；</li>
+<li>tar.gz文件解至tar文件：<code>gzip -d &lt;文件名称&gt;.tar.gz</code> ;</li>
+</ol>
+<h3 id="tar未压缩类文件包"><a href="#tar未压缩类文件包" class="headerlink" title="tar未压缩类文件包"></a>tar未压缩类文件包</h3><ol>
+<li>解包：<code>tar -xvf &lt;文件名称&gt;.tar</code> ；</li>
+<li>打包：<code>tar -cvf &lt;文件名称&gt;.tar &lt;文件列表&gt;</code> ;</li>
+</ol>
+<h3 id="zip类文件包"><a href="#zip类文件包" class="headerlink" title="zip类文件包"></a>zip类文件包</h3><ol>
+<li>解压：<code>unzip &lt;文件名称&gt;.zip -d dir</code> ；</li>
+<li>打包：<code>zip zipfile &lt;待压缩文件列表&gt;</code> ;</li>
+</ol>
+<h3 id="bz2类文件包"><a href="#bz2类文件包" class="headerlink" title="bz2类文件包"></a>bz2类文件包</h3><ol>
+<li>解压：<code>bunzip2 &lt;文件名称&gt;.bz2</code> 或 <code>bzip2 -d &lt;文件名称&gt;.bz2</code> ；</li>
+<li>压缩：<code>bzip2 &lt;待压缩文件&gt;</code> ;</li>
+</ol>
+<h3 id="z类文件包"><a href="#z类文件包" class="headerlink" title="z类文件包"></a>z类文件包</h3><p>解压：<code>uncompress &lt;文件名称&gt;.z</code> ；<br>压缩：<code>compress &lt;文件名称&gt;</code> ;</p>
+<h2 id="通过源码包安装程序"><a href="#通过源码包安装程序" class="headerlink" title="通过源码包安装程序"></a>通过源码包安装程序</h2><ol>
+<li>配置：解压目录下 <code>./configure</code> ;</li>
+<li>编译：解压目录下 <code>make</code> ;</li>
+<li>安装：解压目录下 <code>make install</code> ;</li>
+</ol>
+<h2 id="源码包程序的卸载"><a href="#源码包程序的卸载" class="headerlink" title="源码包程序的卸载"></a>源码包程序的卸载</h2><ol>
+<li>移除软件：<code>sudo apt-get remove --purge &lt;软件名&gt;</code>;</li>
+<li>删除系统不再使用的孤立软件: <code>sudo apt-get autoremove</code> ;</li>
+<li>清理旧版本的软件缓存: <code>sudo apt-get autoclean</code> ;</li>
+<li>清除残余的配置文件: <code>dpkg -l |grep ^rc|awk &#39;{print $2}&#39; |sudo xargs dpkg -P</code> ;</li>
+</ol>
 
       
     </div>
@@ -358,7 +422,7 @@
         <p><span>本文标题:</span><a href="/2017/11/13/Ubuntu系统的常用命令/">Ubuntu系统的常用命令</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
         <p><span>发布时间:</span>2017-11-13, 11:35:59</p>
-        <p><span>最后更新:</span>2017-11-13, 12:10:36</p>
+        <p><span>最后更新:</span>2017-11-16, 21:27:01</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/11/13/Ubuntu系统的常用命令/" title="Ubuntu系统的常用命令">http://yoursite.com/2017/11/13/Ubuntu系统的常用命令/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/11/13/Ubuntu系统的常用命令/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -394,7 +458,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#系统命令"><span class="toc-number">1.</span> <span class="toc-text"> 系统命令 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#重启"><span class="toc-number">1.1.</span> <span class="toc-text">重启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关机"><span class="toc-number">1.2.</span> <span class="toc-text">关机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查询程序进程或端口占用情况"><span class="toc-number">1.3.</span> <span class="toc-text">查询程序进程或端口占用情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查询程序进程"><span class="toc-number">1.3.1.</span> <span class="toc-text">查询程序进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口占用情况"><span class="toc-number">1.3.2.</span> <span class="toc-text">查看端口占用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭端口程序进程"><span class="toc-number">1.3.3.</span> <span class="toc-text">关闭端口程序进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口号对应的系统服务名称"><span class="toc-number">1.3.4.</span> <span class="toc-text">查看端口号对应的系统服务名称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统服务及防火墙管理"><span class="toc-number">1.4.</span> <span class="toc-text">系统服务及防火墙管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动系统服务"><span class="toc-number">1.4.1.</span> <span class="toc-text">启动系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止系统服务"><span class="toc-number">1.4.2.</span> <span class="toc-text">停止系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重启系统服务"><span class="toc-number">1.4.3.</span> <span class="toc-text">重启系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口号对应的系统服务名称-1"><span class="toc-number">1.4.4.</span> <span class="toc-text">查看端口号对应的系统服务名称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ufw-防火墙设置"><span class="toc-number">1.5.</span> <span class="toc-text">ufw 防火墙设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看防火墙状态-查看当前防火墙使用规则"><span class="toc-number">1.5.1.</span> <span class="toc-text">查看防火墙状态/查看当前防火墙使用规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防火墙的安装"><span class="toc-number">1.5.2.</span> <span class="toc-text">防火墙的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启防火墙"><span class="toc-number">1.5.3.</span> <span class="toc-text">开启防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭防火墙"><span class="toc-number">1.5.4.</span> <span class="toc-text">关闭防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开或关闭某个端口"><span class="toc-number">1.5.5.</span> <span class="toc-text">打开或关闭某个端口</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#系统命令"><span class="toc-number">1.</span> <span class="toc-text"> 系统命令 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#重启"><span class="toc-number">1.1.</span> <span class="toc-text">重启</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关机"><span class="toc-number">1.2.</span> <span class="toc-text">关机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查询程序进程或端口占用情况"><span class="toc-number">1.3.</span> <span class="toc-text">查询程序进程或端口占用情况</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查询程序进程"><span class="toc-number">1.3.1.</span> <span class="toc-text">查询程序进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口占用情况"><span class="toc-number">1.3.2.</span> <span class="toc-text">查看端口占用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭端口程序进程"><span class="toc-number">1.3.3.</span> <span class="toc-text">关闭端口程序进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口号对应的系统服务名称"><span class="toc-number">1.3.4.</span> <span class="toc-text">查看端口号对应的系统服务名称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统服务及防火墙管理"><span class="toc-number">1.4.</span> <span class="toc-text">系统服务及防火墙管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#启动系统服务"><span class="toc-number">1.4.1.</span> <span class="toc-text">启动系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#停止系统服务"><span class="toc-number">1.4.2.</span> <span class="toc-text">停止系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重启系统服务"><span class="toc-number">1.4.3.</span> <span class="toc-text">重启系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看端口号对应的系统服务名称-1"><span class="toc-number">1.4.4.</span> <span class="toc-text">查看端口号对应的系统服务名称</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ufw-防火墙设置"><span class="toc-number">1.5.</span> <span class="toc-text">ufw 防火墙设置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看防火墙状态-查看当前防火墙使用规则"><span class="toc-number">1.5.1.</span> <span class="toc-text">查看防火墙状态/查看当前防火墙使用规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防火墙的安装"><span class="toc-number">1.5.2.</span> <span class="toc-text">防火墙的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开启防火墙"><span class="toc-number">1.5.3.</span> <span class="toc-text">开启防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关闭防火墙"><span class="toc-number">1.5.4.</span> <span class="toc-text">关闭防火墙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#打开或关闭某个端口"><span class="toc-number">1.5.5.</span> <span class="toc-text">打开或关闭某个端口</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#系统缓存-硬盘空间状态查看及管理"><span class="toc-number">1.6.</span> <span class="toc-text">系统缓存/硬盘空间状态查看及管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看内存使用情况"><span class="toc-number">1.6.1.</span> <span class="toc-text">查看内存使用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看磁盘占用情况"><span class="toc-number">1.6.2.</span> <span class="toc-text">查看磁盘占用情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看索引节点-Inode-的占用情况"><span class="toc-number">1.6.3.</span> <span class="toc-text">查看索引节点(Inode)的占用情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gt-磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间-索引或系统内存已满。此时应注意查看磁盘空间，及时清除无效文件或缓存。"><span class="toc-number">1.7.</span> <span class="toc-text">> 磁盘块和索引节点其中之一满，都会导致无法创建文件，提示磁盘空间已满。有时系统运行的nginx服务器突然报500错误，也有可能是因为磁盘空间/索引或系统内存已满。此时应注意查看磁盘空间，及时清除无效文件或缓存。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查找并列出系统大文件"><span class="toc-number">1.7.1.</span> <span class="toc-text">查找并列出系统大文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清空log文件"><span class="toc-number">1.7.2.</span> <span class="toc-text">清空log文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看当前目录内文件夹的大小"><span class="toc-number">1.7.3.</span> <span class="toc-text">查看当前目录内文件夹的大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清理程序升级缓存以及无用包"><span class="toc-number">1.7.4.</span> <span class="toc-text">清理程序升级缓存以及无用包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清理Linux下孤立的包"><span class="toc-number">1.7.5.</span> <span class="toc-text">清理Linux下孤立的包</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#软件源码包的安装与卸载"><span class="toc-number">2.</span> <span class="toc-text"> 软件源码包的安装与卸载 </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#源码包的下载与解压"><span class="toc-number">2.1.</span> <span class="toc-text">源码包的下载与解压</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tar-gz类压缩包"><span class="toc-number">2.1.1.</span> <span class="toc-text">tar.gz类压缩包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tar未压缩类文件包"><span class="toc-number">2.1.2.</span> <span class="toc-text">tar未压缩类文件包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#zip类文件包"><span class="toc-number">2.1.3.</span> <span class="toc-text">zip类文件包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bz2类文件包"><span class="toc-number">2.1.4.</span> <span class="toc-text">bz2类文件包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#z类文件包"><span class="toc-number">2.1.5.</span> <span class="toc-text">z类文件包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过源码包安装程序"><span class="toc-number">2.2.</span> <span class="toc-text">通过源码包安装程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#源码包程序的卸载"><span class="toc-number">2.3.</span> <span class="toc-text">源码包程序的卸载</span></a></li></ol></li></ol>
         
     </div>
     <style>

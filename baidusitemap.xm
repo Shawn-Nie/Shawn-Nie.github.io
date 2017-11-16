@@ -4,18 +4,16 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/15/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Maven/</loc>
-    <lastmod>2017-11-15T03:47:22.000Z</lastmod>
+    <loc>http://yoursite.com/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2017-11-16T13:27:01.000Z</lastmod>
     <data>
         <display>
-        <title>Ubuntu下安装Maven</title>
-        <pubTime>2017-11-15T03:37:37.000Z</pubTime>
+        <title>Ubuntu系统的常用命令</title>
+        <pubTime>2017-11-13T03:35:59.000Z</pubTime>
         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>Maven</tag>
          
          
            
@@ -28,16 +26,18 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2017-11-13T04:10:36.000Z</lastmod>
+    <loc>http://yoursite.com/2017/11/15/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Maven/</loc>
+    <lastmod>2017-11-15T03:47:22.000Z</lastmod>
     <data>
         <display>
-        <title>Ubuntu系统的常用命令</title>
-        <pubTime>2017-11-13T03:35:59.000Z</pubTime>
+        <title>Ubuntu下安装Maven</title>
+        <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>Maven</tag>
          
          
            
