@@ -15,16 +15,20 @@
 
 
 
-<meta name="description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shawn的技术博客">
-<meta property="og:url" content="http://yoursite.com/tags/Maven/index.html">
+<meta name="description" content="在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了Findstr命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。">
+<meta name="keywords" content="Windows,DOS,CMD,字段检索,Findstr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows系统下使用DOS命令检索包含指定字符串的所有文件">
+<meta property="og:url" content="http://yoursite.com/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/index.html">
 <meta property="og:site_name" content="Shawn的技术博客">
-<meta property="og:description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
+<meta property="og:description" content="在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了Findstr命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.imgur.com/BGZHMJ4.jpg">
+<meta property="og:updated_time" content="2017-11-16T14:49:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shawn的技术博客">
-<meta name="twitter:description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
+<meta name="twitter:title" content="Windows系统下使用DOS命令检索包含指定字符串的所有文件">
+<meta name="twitter:description" content="在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了Findstr命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。">
+<meta name="twitter:image" content="https://i.imgur.com/BGZHMJ4.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: Maven | Shawn的技术博客</title>
+<title>Windows系统下使用DOS命令检索包含指定字符串的所有文件 | Shawn的技术博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,9 +68,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -269,60 +273,163 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Windows系统下使用DOS命令检索包含指定字符串的所有文件" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/15/Ubuntu下安装Maven/" class="archive-article-date">
-      <time datetime="2017-11-15T03:37:37.000Z" itemprop="datePublished">11-15</time>
+    <div class="article-meta">
+      <a href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/" class="article-date">
+      <time datetime="2017-11-16T14:49:46.000Z" itemprop="datePublished">2017-11-16</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Windows系统下使用DOS命令检索包含指定字符串的所有文件
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
     </div>
 
 
-          
+        
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/">Maven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMD/">CMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOS/">DOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Findstr/">Findstr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字段检索/">字段检索</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了<code>Findstr</code>命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。</p>
+<a id="more"></a>
+<p>打开cmd，输入<code>help findstr</code>命令即可查看Findstr命令的语法详解。</p>
+<p>Findstr命令的具体用法如下：</p>
+<h2 id="进入即将检索文件所在的文件夹"><a href="#进入即将检索文件所在的文件夹" class="headerlink" title="进入即将检索文件所在的文件夹"></a>进入即将检索文件所在的文件夹</h2><p>具体命令: <code>cd &lt;目录路径&gt;</code><br>如：<br>进入C:\Users\HP\workspace文件夹，则输入：<code>C:\Users\HP\workspace</code> 即可进入。</p>
+<h2 id="使用findstr命令，检索包含指定字符串的文件或内容"><a href="#使用findstr命令，检索包含指定字符串的文件或内容" class="headerlink" title="使用findstr命令，检索包含指定字符串的文件或内容"></a>使用findstr命令，检索包含指定字符串的文件或内容</h2><p>命令: <code>findstr /s /i &quot;&lt;字符串内容&gt;&quot; *.*</code> ；<br>如：<br><code>findstr /s /i &quot;Project_info&quot; *.*</code> ,即可输出C:\Users\HP\workspace目录下包含”Project_info”字符串的所有文件。<br><img src="https://i.imgur.com/BGZHMJ4.jpg" alt=""></p>
+
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/">Windows系统下使用DOS命令检索包含指定字符串的所有文件</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
+        <p><span>发布时间:</span>2017-11-16, 22:49:46</p>
+        <p><span>最后更新:</span>2017-11-16, 22:49:46</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/" title="Windows系统下使用DOS命令检索包含指定字符串的所有文件">http://yoursite.com/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/15/Ubuntu下安装Maven/">
+                    Ubuntu下安装Maven
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#进入即将检索文件所在的文件夹"><span class="toc-number">1.</span> <span class="toc-text">进入即将检索文件所在的文件夹</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用findstr命令，检索包含指定字符串的文件或内容"><span class="toc-number">2.</span> <span class="toc-text">使用findstr命令，检索包含指定字符串的文件或内容</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/11/15/Ubuntu下安装Maven/" title="下一篇: Ubuntu下安装Maven">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/">Windows系统下使用DOS命令检索包含指定字符串的所有文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/13/Ubuntu系统的常用命令/">Ubuntu系统的常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/">Nginx服务器的安装_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/">MySQL数据库安装与配置_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/">MySQL数据库安装与配置_适用于Windows7系统</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

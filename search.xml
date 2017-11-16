@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows系统下使用DOS命令检索包含指定字符串的所有文件]]></title>
+    <url>%2F2017%2F11%2F16%2FWindows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了Findstr命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。 打开cmd，输入help findstr命令即可查看Findstr命令的语法详解。 Findstr命令的具体用法如下： 进入即将检索文件所在的文件夹具体命令: cd &lt;目录路径&gt;如：进入C:\Users\HP\workspace文件夹，则输入：C:\Users\HP\workspace 即可进入。 使用findstr命令，检索包含指定字符串的文件或内容命令: findstr /s /i &quot;&lt;字符串内容&gt;&quot; *.* ；如：findstr /s /i &quot;Project_info&quot; *.* ,即可输出C:\Users\HP\workspace目录下包含”Project_info”字符串的所有文件。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>DOS</tag>
+        <tag>CMD</tag>
+        <tag>字段检索</tag>
+        <tag>Findstr</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu下安装Maven]]></title>
     <url>%2F2017%2F11%2F15%2FUbuntu%E4%B8%8B%E5%AE%89%E8%A3%85Maven%2F</url>
     <content type="text"><![CDATA[环境需求 安装Maven前，先确保系统已正常安装JDK。 安装步骤 下载并解压安装文件 输入wget http://apache.fayea.com/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.tar.gz命令，下载maven程序安装包。如apache地址访问较慢，可尝试从镜像网址获取下载文件：wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz。 解压Maven安装文件tar -xzf apache-maven-3.5.0-bin.tar.gz 移动Maven到/usr/local中mv apache-maven-3.5.0 /usr/local/apache-maven-3.5.0 设置Maven环境变量 编辑~/.bashrc文件输入vi ~/.bashrc命令，开始编辑文件 配置环境变量向文件添加如下语句：export M2_HOME=/usr/local/apache-maven-3.5.0export M2=$M2_HOME/binexport MAVEN_OPTS=&quot;-Xms256m -Xmx512m&quot;export PATH=$M2:$PATH 保存~/.bashrc文件，使环境变量生效source ~/.bashrc 验证Maven安装mvn --version 如Maven已正确安装，则返回如下信息：]]></content>
@@ -33,8 +48,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>Nginx</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
   <entry>
@@ -45,8 +60,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -57,8 +72,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
 </search>

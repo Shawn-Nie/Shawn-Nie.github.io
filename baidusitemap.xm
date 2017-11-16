@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/11/16/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2017-11-16T14:49:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows系统下使用DOS命令检索包含指定字符串的所有文件</title>
+        <pubTime>2017-11-16T14:49:46.000Z</pubTime>
+        
+        <tag>Windows</tag>
+         
+        <tag>DOS</tag>
+         
+        <tag>CMD</tag>
+         
+        <tag>字段检索</tag>
+         
+        <tag>Findstr</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2017-11-16T13:27:01.000Z</lastmod>
     <data>
@@ -57,9 +85,9 @@
         <title>Nginx服务器的安装_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-11-12T13:09:56.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>Nginx</tag>
+         
+        <tag>程序安装</tag>
          
          
            
@@ -79,9 +107,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            
@@ -101,9 +129,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            

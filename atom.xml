@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-15T03:47:22.000Z</updated>
+  <updated>2017-11-16T14:49:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows系统下使用DOS命令检索包含指定字符串的所有文件</title>
+    <link href="http://yoursite.com/2017/11/16/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/</id>
+    <published>2017-11-16T14:49:46.000Z</published>
+    <updated>2017-11-16T14:49:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了<code>Findstr</code>命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。</p><a id="more"></a><p>打开cmd，输入<code>help findstr</code>命令即可查看Findstr命令的语法详解。</p><p>Findstr命令的具体用法如下：</p><h2 id="进入即将检索文件所在的文件夹"><a href="#进入即将检索文件所在的文件夹" class="headerlink" title="进入即将检索文件所在的文件夹"></a>进入即将检索文件所在的文件夹</h2><p>具体命令: <code>cd &lt;目录路径&gt;</code><br>如：<br>进入C:\Users\HP\workspace文件夹，则输入：<code>C:\Users\HP\workspace</code> 即可进入。</p><h2 id="使用findstr命令，检索包含指定字符串的文件或内容"><a href="#使用findstr命令，检索包含指定字符串的文件或内容" class="headerlink" title="使用findstr命令，检索包含指定字符串的文件或内容"></a>使用findstr命令，检索包含指定字符串的文件或内容</h2><p>命令: <code>findstr /s /i &quot;&lt;字符串内容&gt;&quot; *.*</code> ；<br>如：<br><code>findstr /s /i &quot;Project_info&quot; *.*</code> ,即可输出C:\Users\HP\workspace目录下包含”Project_info”字符串的所有文件。<br><img src="https://i.imgur.com/BGZHMJ4.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了&lt;code&gt;Findstr&lt;/code&gt;命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+    
+    
+      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+    
+      <category term="DOS" scheme="http://yoursite.com/tags/DOS/"/>
+    
+      <category term="CMD" scheme="http://yoursite.com/tags/CMD/"/>
+    
+      <category term="字段检索" scheme="http://yoursite.com/tags/%E5%AD%97%E6%AE%B5%E6%A3%80%E7%B4%A2/"/>
+    
+      <category term="Findstr" scheme="http://yoursite.com/tags/Findstr/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu下安装Maven</title>
@@ -85,9 +115,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
-    
       <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+    
+      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
@@ -109,9 +139,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
       <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
   </entry>
   
@@ -133,9 +163,9 @@
       <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
-    
       <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
     
   </entry>
   
