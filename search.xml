@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu系统发送本机文件至远程服务器_以SSH方式]]></title>
+    <url>%2F2017%2F11%2F18%2FUbuntu%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[在Linux系统(包含Ubuntu/Centos)下进行远程拷贝文件，可以使用scp命令。scp是secure copy的简写，是linux 系统下基于ssh登录进行安全的远程文件拷贝命令。 scp命令的基本用法从本地复制文件到服务器将本地文件复制到远程的命令有如下方式（需要本地和远程服务器均为Linux系统）：scp &lt;本地待传输文件路径&gt; &lt;远程服务器帐号名&gt;@&lt;远程服务器ip地址&gt;:&lt;远程服务器文件储存路径&gt;或scp -r &lt;本地待传输文件路径&gt; &lt;远程服务器帐号名&gt;@&lt;远程服务器ip地址&gt;:&lt;远程服务器文件储存路径&gt; 如：scp -r /home/shaoxiaohu/test1 zhidao@192.168.0.1:/home/test2;&gt; test1为源目录，test2为目标目录，zhidao@192.168.0.1为远程服务器的用户名和ip地址。 从服务器复制文件到本地scp -r &lt;远程服务器帐号名&gt;@&lt;远程服务器ip地址&gt;:&lt;本地文件储存路径&gt; 如：scp -r root@192.168.0.1:/home/test2 /home/shaoxiaohu/test1&gt; root@192.168.0.1为远程服务器的用户名和ip地址，test1为源目录，test2为目标目录。 【注】上述为本地和服务器端口号一致的时候，默认为22。如果端口号有更改，需在scp 后输入：-P &lt;端口号&gt; （注意是大写，ssh的命令中 -p是小写） scp命令免登陆传送文件的方式使用scp命令，通常需要输入password。如果文件传输的工作很频繁或待传输的文件很多，可以通过设置SSH远程共钥的方式实现免登陆传送文件。具体方法如下： 在本机创建一个RSA公钥使用ssh-keygen -trsa 命令，创建本机公钥。默认保存在~/.ssh/id_rsa.pub 中。 将公钥匙复制到远程主机在这里，远程服务器的共钥命名为anthorized_keys。命令如下: scp &lt;本机id_rsa.pub所在路径&gt;id_rsa.pub &lt;远程服务器账号名&gt;@&lt;远程服务器ip地址&gt;:&lt;远程服务器id_rsa.pub所在路径&gt;authorized_keys 如：scp /root/.ssh/id_rsa.pub root@120.27.151.228:/root/.ssh/authorized_keys 完成远程服务器公钥的设置，下次向同一台远程服务器传输文件即可跳过密码验证，直接传输。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
+        <tag>SSH</tag>
+        <tag>scp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[MySQL数据库_备份用户必备权限]]></title>
+    <url>%2F2017%2F11%2F18%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%87%E4%BB%BD%E7%94%A8%E6%88%B7%E5%BF%85%E5%A4%87%E6%9D%83%E9%99%90%2F</url>
+    <content type="text"><![CDATA[为了方便MySQL数据的周期性备份，备份工作通常设置为自动程序或shell脚本自动执行。同时考虑数据库账户的权限安全，自动备份通常建议设置一个备份专用账户来执行自动备份工作。在单独设置备份账户的时候，怎样配置最少的权限来满足mysqldump 账户的工作需求呢？ mysqldump 所需要的必备权限说明： 权限备注 select对于table 来说mysqldump 最少要有select 权限 show view对于view 来说mysqldump 要有show view 权限 lock tables对于trrigger 来说mysqldump 要有trriger 权限 trriger如果要产生一份一致的备份 mysqldump 要有lock tables 权限 举例来说，如果是用mysqldump 来做备份（假设用户名为’dump’）、那么备份用户的相关权限如下：create user dump@&#39;127.0.0.1&#39;; grant select on tempdb.* to dump@&#39;127.0.0.1&#39;; grant show view on tempdb.* to dump@&#39;127.0.0.1&#39;; grant lock tables on tempdb.* to dump@&#39;127.0.0.1&#39;; grant trigger on tempdb.* to dump@&#39;127.0.0.1&#39;;]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>dump</tag>
+        <tag>数据库备份</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[腾讯云服务器Ubuntu系统设置允许root用户登录]]></title>
+    <url>%2F2017%2F11%2F17%2F%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8root%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[腾讯云主机ubuntu系统默认用户名为ubuntu。在默认的ubuntu用户权限下，很多系统操作（如编辑/删除/上传文件等）都不被允许的。因此，为了更方便的使用系统功能，通常选择root账户直接登录。 启用root用户登录的步骤如下： 修改root密码具体命令: sudo passwd root在窗口中输入及确认新的root用户密码，即可生效。 修改ssh配置命令: sudo vi /etc/ssh/sshd_config ；找到 PermitRootLogin 这项 将其改为 yes 。 修改完成后，保存退出并重启ssh服务既可。sudo service ssh restart]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>腾讯云</tag>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows系统下使用DOS命令检索包含指定字符串的所有文件]]></title>
     <url>%2F2017%2F11%2F16%2FWindows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[在windows系统下，来查找并修改指定目录下包含某一字符串的所有文件，麻烦又费时。其实系统在DOS命令中，提供了Findstr命令来查找指定的一个或多个文件文件中包含（或通过参数 /V来控制不包含）某些特定字符串的行，并将该行完整的信息打印出来，或者打印查询字符串所在的文件名。 打开cmd，输入help findstr命令即可查看Findstr命令的语法详解。 Findstr命令的具体用法如下： 进入即将检索文件所在的文件夹具体命令: cd &lt;目录路径&gt;如：进入C:\Users\HP\workspace文件夹，则输入：C:\Users\HP\workspace 即可进入。 使用findstr命令，检索包含指定字符串的文件或内容命令: findstr /s /i &quot;&lt;字符串内容&gt;&quot; *.* ；如：findstr /s /i &quot;Project_info&quot; *.* ,即可输出C:\Users\HP\workspace目录下包含”Project_info”字符串的所有文件。]]></content>
@@ -60,8 +100,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>MySQL</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
   <entry>
@@ -72,8 +112,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>MySQL</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
 </search>
