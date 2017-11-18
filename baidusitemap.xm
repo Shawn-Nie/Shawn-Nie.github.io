@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2017-11-18T12:22:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
+        <pubTime>2017-11-18T12:22:15.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>数据库备份</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/18/Linux%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2017-11-18T10:44:46.000Z</lastmod>
     <data>
@@ -181,9 +207,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            
@@ -203,9 +229,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            
