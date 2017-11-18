@@ -5,9 +5,9 @@
   <subtitle>Make it a better place.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://shawn-nie.github.io/"/>
   <updated>2017-11-18T10:44:46.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://shawn-nie.github.io/</id>
   
   <author>
     <name>Shawn Nie</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Linux系统发送本机文件至远程服务器_以SSH方式</title>
-    <link href="http://yoursite.com/2017/11/18/Linux%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F/"/>
-    <id>http://yoursite.com/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/</id>
+    <link href="http://shawn-nie.github.io/2017/11/18/Linux%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F/"/>
+    <id>http://shawn-nie.github.io/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/</id>
     <published>2017-11-18T10:44:46.000Z</published>
     <updated>2017-11-18T10:44:46.000Z</updated>
     
@@ -31,23 +31,23 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Ubuntu" scheme="http://yoursite.com/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="http://shawn-nie.github.io/tags/Ubuntu/"/>
     
-      <category term="SSH" scheme="http://yoursite.com/tags/SSH/"/>
+      <category term="SSH" scheme="http://shawn-nie.github.io/tags/SSH/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://shawn-nie.github.io/tags/Linux/"/>
     
-      <category term="scp" scheme="http://yoursite.com/tags/scp/"/>
+      <category term="scp" scheme="http://shawn-nie.github.io/tags/scp/"/>
     
   </entry>
   
   <entry>
     <title>MySQL数据库_备份用户必备权限</title>
-    <link href="http://yoursite.com/2017/11/18/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%87%E4%BB%BD%E7%94%A8%E6%88%B7%E5%BF%85%E5%A4%87%E6%9D%83%E9%99%90/"/>
-    <id>http://yoursite.com/2017/11/18/MySQL数据库_备份用户必备权限/</id>
+    <link href="http://shawn-nie.github.io/2017/11/18/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93_%E5%A4%87%E4%BB%BD%E7%94%A8%E6%88%B7%E5%BF%85%E5%A4%87%E6%9D%83%E9%99%90/"/>
+    <id>http://shawn-nie.github.io/2017/11/18/MySQL数据库_备份用户必备权限/</id>
     <published>2017-11-18T10:24:28.000Z</published>
     <updated>2017-11-18T10:24:28.000Z</updated>
     
@@ -59,21 +59,21 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://shawn-nie.github.io/tags/MySQL/"/>
     
-      <category term="dump" scheme="http://yoursite.com/tags/dump/"/>
+      <category term="dump" scheme="http://shawn-nie.github.io/tags/dump/"/>
     
-      <category term="数据库备份" scheme="http://yoursite.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/"/>
+      <category term="数据库备份" scheme="http://shawn-nie.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD/"/>
     
   </entry>
   
   <entry>
     <title>腾讯云服务器Ubuntu系统设置允许root用户登录</title>
-    <link href="http://yoursite.com/2017/11/17/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8root%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/"/>
-    <id>http://yoursite.com/2017/11/17/腾讯云服务器Ubuntu系统设置允许root用户登录/</id>
+    <link href="http://shawn-nie.github.io/2017/11/17/%E8%85%BE%E8%AE%AF%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Ubuntu%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE%E5%85%81%E8%AE%B8root%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95/"/>
+    <id>http://shawn-nie.github.io/2017/11/17/腾讯云服务器Ubuntu系统设置允许root用户登录/</id>
     <published>2017-11-17T12:21:05.000Z</published>
     <updated>2017-11-17T12:21:05.000Z</updated>
     
@@ -85,21 +85,21 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Ubuntu" scheme="http://yoursite.com/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="http://shawn-nie.github.io/tags/Ubuntu/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://shawn-nie.github.io/tags/Linux/"/>
     
-      <category term="腾讯云" scheme="http://yoursite.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
+      <category term="腾讯云" scheme="http://shawn-nie.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91/"/>
     
   </entry>
   
   <entry>
     <title>Windows系统下使用DOS命令检索包含指定字符串的所有文件</title>
-    <link href="http://yoursite.com/2017/11/16/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/"/>
-    <id>http://yoursite.com/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/</id>
+    <link href="http://shawn-nie.github.io/2017/11/16/Windows%E7%B3%BB%E7%BB%9F%E4%B8%8B%E4%BD%BF%E7%94%A8DOS%E5%91%BD%E4%BB%A4%E6%A3%80%E7%B4%A2%E5%8C%85%E5%90%AB%E6%8C%87%E5%AE%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6/"/>
+    <id>http://shawn-nie.github.io/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/</id>
     <published>2017-11-16T14:49:46.000Z</published>
     <updated>2017-11-16T14:49:46.000Z</updated>
     
@@ -111,25 +111,25 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Windows" scheme="http://yoursite.com/tags/Windows/"/>
+      <category term="Windows" scheme="http://shawn-nie.github.io/tags/Windows/"/>
     
-      <category term="DOS" scheme="http://yoursite.com/tags/DOS/"/>
+      <category term="DOS" scheme="http://shawn-nie.github.io/tags/DOS/"/>
     
-      <category term="CMD" scheme="http://yoursite.com/tags/CMD/"/>
+      <category term="CMD" scheme="http://shawn-nie.github.io/tags/CMD/"/>
     
-      <category term="字段检索" scheme="http://yoursite.com/tags/%E5%AD%97%E6%AE%B5%E6%A3%80%E7%B4%A2/"/>
+      <category term="字段检索" scheme="http://shawn-nie.github.io/tags/%E5%AD%97%E6%AE%B5%E6%A3%80%E7%B4%A2/"/>
     
-      <category term="Findstr" scheme="http://yoursite.com/tags/Findstr/"/>
+      <category term="Findstr" scheme="http://shawn-nie.github.io/tags/Findstr/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu下安装Maven</title>
-    <link href="http://yoursite.com/2017/11/15/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Maven/"/>
-    <id>http://yoursite.com/2017/11/15/Ubuntu下安装Maven/</id>
+    <link href="http://shawn-nie.github.io/2017/11/15/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Maven/"/>
+    <id>http://shawn-nie.github.io/2017/11/15/Ubuntu下安装Maven/</id>
     <published>2017-11-15T03:37:37.000Z</published>
     <updated>2017-11-15T03:47:22.000Z</updated>
     
@@ -141,21 +141,21 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Ubuntu" scheme="http://yoursite.com/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="http://shawn-nie.github.io/tags/Ubuntu/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://shawn-nie.github.io/tags/Linux/"/>
     
-      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+      <category term="Maven" scheme="http://shawn-nie.github.io/tags/Maven/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu系统的常用命令</title>
-    <link href="http://yoursite.com/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://yoursite.com/2017/11/13/Ubuntu系统的常用命令/</id>
+    <link href="http://shawn-nie.github.io/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://shawn-nie.github.io/2017/11/13/Ubuntu系统的常用命令/</id>
     <published>2017-11-13T03:35:59.000Z</published>
     <updated>2017-11-16T13:27:01.000Z</updated>
     
@@ -167,19 +167,19 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Ubuntu" scheme="http://yoursite.com/tags/Ubuntu/"/>
+      <category term="Ubuntu" scheme="http://shawn-nie.github.io/tags/Ubuntu/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux" scheme="http://shawn-nie.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>Nginx服务器的安装_适用于Ubuntu 16.04系统</title>
-    <link href="http://yoursite.com/2017/11/12/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/</id>
+    <link href="http://shawn-nie.github.io/2017/11/12/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%2016.04%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://shawn-nie.github.io/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/</id>
     <published>2017-11-12T13:09:56.000Z</published>
     <updated>2017-11-12T13:09:56.000Z</updated>
     
@@ -192,19 +192,19 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="Nginx" scheme="http://yoursite.com/tags/Nginx/"/>
+      <category term="Nginx" scheme="http://shawn-nie.github.io/tags/Nginx/"/>
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+      <category term="程序安装" scheme="http://shawn-nie.github.io/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
   </entry>
   
   <entry>
     <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
-    <link href="http://yoursite.com/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/</id>
+    <link href="http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://shawn-nie.github.io/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/</id>
     <published>2017-03-07T08:30:21.000Z</published>
     <updated>2017-11-12T12:39:42.000Z</updated>
     
@@ -216,19 +216,19 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="程序安装" scheme="http://shawn-nie.github.io/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+      <category term="MySQL" scheme="http://shawn-nie.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>MySQL数据库安装与配置_适用于Windows7系统</title>
-    <link href="http://yoursite.com/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://yoursite.com/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/</id>
+    <link href="http://shawn-nie.github.io/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://shawn-nie.github.io/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/</id>
     <published>2016-12-10T08:30:21.000Z</published>
     <updated>2017-11-12T12:39:42.000Z</updated>
     
@@ -240,12 +240,12 @@
     
     </summary>
     
-      <category term="教程整理" scheme="http://yoursite.com/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+      <category term="教程整理" scheme="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="程序安装" scheme="http://shawn-nie.github.io/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
     
-      <category term="程序安装" scheme="http://yoursite.com/tags/%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85/"/>
+      <category term="MySQL" scheme="http://shawn-nie.github.io/tags/MySQL/"/>
     
   </entry>
   
