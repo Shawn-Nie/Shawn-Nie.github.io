@@ -4,18 +4,18 @@
 
     
   <url>
-    <loc>http://yoursite.com/2017/11/18/Ubuntu%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F/</loc>
+    <loc>http://yoursite.com/2017/11/18/Linux%E7%B3%BB%E7%BB%9F%E5%8F%91%E9%80%81%E6%9C%AC%E6%9C%BA%E6%96%87%E4%BB%B6%E8%87%B3%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8_%E4%BB%A5SSH%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2017-11-18T10:44:46.000Z</lastmod>
     <data>
         <display>
-        <title>Ubuntu系统发送本机文件至远程服务器_以SSH方式</title>
+        <title>Linux系统发送本机文件至远程服务器_以SSH方式</title>
         <pubTime>2017-11-18T10:44:46.000Z</pubTime>
         
         <tag>Ubuntu</tag>
          
-        <tag>Linux</tag>
-         
         <tag>SSH</tag>
+         
+        <tag>Linux</tag>
          
         <tag>scp</tag>
          
@@ -61,11 +61,11 @@
         <title>腾讯云服务器Ubuntu系统设置允许root用户登录</title>
         <pubTime>2017-11-17T12:21:05.000Z</pubTime>
         
-        <tag>腾讯云</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>腾讯云</tag>
          
          
            
