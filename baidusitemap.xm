@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-11-18T12:22:15.000Z</lastmod>
+    <lastmod>2017-11-19T08:23:10.000Z</lastmod>
     <data>
         <display>
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
