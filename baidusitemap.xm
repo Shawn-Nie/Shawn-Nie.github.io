@@ -286,11 +286,11 @@
         <title>Ubuntu下安装Maven</title>
         <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
-        <tag>Maven</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>Maven</tag>
          
          
            
@@ -332,9 +332,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            
@@ -354,9 +354,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
          
          
            

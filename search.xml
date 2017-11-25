@@ -143,9 +143,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -180,8 +180,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>MySQL</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
   <entry>
@@ -192,8 +192,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>MySQL</tag>
+        <tag>程序安装</tag>
       </tags>
   </entry>
 </search>
