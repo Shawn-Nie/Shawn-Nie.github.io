@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2017-11-25T13:20:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</title>
+        <pubTime>2017-11-25T13:20:37.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>ngx_pagespeed</tag>
+         
+        <tag>Server</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/25/Tomcat%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E6%96%87%E8%B7%AF%E5%BE%84%E5%90%8D%E8%A7%A3%E6%9E%90%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2017-11-25T10:43:29.000Z</lastmod>
     <data>
