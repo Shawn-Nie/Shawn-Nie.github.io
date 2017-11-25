@@ -262,11 +262,11 @@
         <title>Ubuntu下安装Maven</title>
         <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
+        <tag>Maven</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>Maven</tag>
          
          
            
