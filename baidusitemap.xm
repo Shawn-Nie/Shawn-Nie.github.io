@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/24/Eclipse%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E4%B8%8BJava%E6%99%AE%E9%80%9ADynamicWebProject%E8%BD%AC%E4%B8%BAMavenWebProject%E7%9A%84%E6%96%B9%E5%BC%8F%E5%8F%8A%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E8%B0%83%E6%95%B4%E7%A4%BA%E6%84%8F/</loc>
+    <lastmod>2017-11-25T10:06:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
+        <pubTime>2017-11-24T15:10:47.000Z</pubTime>
+        
+        <tag>Maven</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>JavaWeb</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/25/MySQL_select%E5%88%97%E8%A1%A8%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%831%E4%B8%8D%E5%9C%A8GROUP%20BY%E5%AD%90%E5%8F%A5%E4%B8%AD%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%8C%85%E5%90%ABnonaggre%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2017-11-24T16:22:48.000Z</lastmod>
     <data>
@@ -308,9 +332,9 @@
         <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
         <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            
@@ -330,9 +354,9 @@
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>MySQL</tag>
          
          
            

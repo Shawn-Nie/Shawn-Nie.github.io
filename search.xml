@@ -35,6 +35,19 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意]]></title>
+    <url>%2F2017%2F11%2F24%2FEclipse%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0%E4%B8%8BJava%E6%99%AE%E9%80%9ADynamicWebProject%E8%BD%AC%E4%B8%BAMavenWebProject%E7%9A%84%E6%96%B9%E5%BC%8F%E5%8F%8A%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE%E8%B0%83%E6%95%B4%E7%A4%BA%E6%84%8F%2F</url>
+    <content type="text"><![CDATA[本文将介绍如何在Eclipse平台将一个普通JavaWeb项目转为Maven项目。 之前对maven不是很了解，所以在项目起步阶段是直接通过jar包引用的方式搭建基于Spring等流行框架的简单JavaWeb程序。而随着项目的成熟和扩展，相关jar包的引用和配置文件的设置越来越多，越发认同maven在项目构建和管理方面的突出优势。因此在项目开发中途，将正在开发的由普通项目转为maven项目的欲望也越来越强烈。之前因项目已几近成品，始终担心架构转换的过程会对原有项目代码或配置造成干扰而迟迟不敢尝试。后来因新的功能不断补充，项目的结构越来越显得冗余和笨重，因此决定立即将其转为maven架构。 网上比较多的是如何用Eclipse新建maven项目，而如何把一个开发进程中的web项目转换为maven项目，类似的文章却不多，少量的类似文章介绍的也不够详细，对于Maven的初学者来说借鉴难度很大。 正巧近期我所负责的上述项目经历过这样一次转换，在多次尝试和调整下最终转换成功，因此通过此文加以记录，以备后续类似工作提供参照。 转换结果及回顾：普通JavaWeb项目与Maven项目的最终文件位置对比如图示，上述项目的V2.2版本和V2.3版本分别为同一项目的普通JavaWeb版本(即转换Maven架构前)和Maven版本(转换为Maven架构后)。 主程序代码、前端网页/脚本及配置文件位置对比 V2.2 (JavaWeb)V2.3（Maven） java源码位置/src//src/main/java/ (正式代码); /src/test/java/ (测试代码) 配置文件及mapper文件位置/src/ 或 /WebContent/WEB-INF/classes//src/main/resources/ (正式程序); /src/test/resources/ (测试程序) 前端页面及脚本位置/WebContent//src/main/webapp/ (正式程序); /src/test/webapp/ (测试程序) 依赖文件jar包通常保存在/WebContent/WEB-INF/lib/目录下项目根目录下，由pom.xml文件配置即可 java源码位置 普通JavaWeb项目中，程序源码通常在：/src/目录下； 相同的maven架构下，正式程序源码对应的位置为：/src/main/java/目录下。 配置文件位置 普通JavaWeb项目中，配置文件或MyBatis-Mapper文件通常部署在：/src/目录或/WebContent/WEB-INF/classes/目录下； 相同的maven架构下，正式程序配置文件和MyBatis-Mapper文件对应的位置为：/src/main/resources/目录下。 配置文件： MyBatis-Mapper文件： 前端页面及脚本位置 普通JavaWeb项目中，网页及前端css/js脚本通常部署在：/WebContent/目录下； 相同的maven架构下，网页及前端css/js脚本通常部署在对应的位置为：/src/main/webapp/目录下。 依赖文件 普通JavaWeb项目中，jar包通常保存在/WebContent/WEB-INF/lib/目录下； 相同的maven架构下，项目依赖文件通常由根目录的pom.xml文件配置即可。 实现步骤新建maven项目网上的很多教程说的普通项目直接转换为maven项目的方法，通常只适用于普通java程序(jar-app),而并不适合web-app程序（war）。因此本文建议直接新建和复制文件的方式进行项目框架的转换。在Eclipse程序，进入File-New-Maven Project,新建一个maven项目。注意新项目的路径不要与其他项目重复。 之后选择项目的maven模板，这一步很关键，要选择maven-archetype-webapp模板，这是项目生成webapp文件夹的必要条件。 此时对应的maven项目已创建成功。查看项目目录下的pom文件，此时项目的基本属性已配置成功。 复制原JavaWeb项目源码/配置文件及网页/脚本文件至maven项目对应位置将原项目中的文件分别复制到新的maven项目中对应的路径下，具体执行细节参照本文【主程序代码、前端网页/脚本及配置文件位置对比】部分。 将原JavaWeb项目依赖jar包配置到maven项目pom文件中将原JavaWeb项目的jar包按照maven-pom的规范格式依次添加到pom.xml文件中模块下。 示例： &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;javax.activation&lt;/groupId&gt; &lt;artifactId&gt;activation&lt;/artifactId&gt; &lt;version&gt;1.1&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;aopalliance&lt;/groupId&gt; &lt;artifactId&gt;aopalliance&lt;/artifactId&gt; &lt;version&gt;1.0&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;asm&lt;/groupId&gt; &lt;artifactId&gt;asm&lt;/artifactId&gt; &lt;version&gt;3.3&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;asm&lt;/groupId&gt; &lt;artifactId&gt;asm-commons&lt;/artifactId&gt; &lt;version&gt;3.3&lt;/version&gt; &lt;/dependency&gt; ...... ...... &lt;/dependencies&gt; pom文件的其他补充配置添加maven-compiler-plugin插件这个插件时用于编译项目源码的必要插件。没有它，项目执行maven-install /maven-package 等指令时将会报错。maven-compiler-plugin插件需要配置项目java编译器版本(maven默认为1.3版本，对大多数实际开发场景中都显得太老，无法支持代码里的特性，因此通常必须手动设置)和项目编译的编码方式。 具体配置示例如下： &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt; &lt;version&gt;3.5.1&lt;/version&gt; &lt;configuration&gt; &lt;source&gt;${jdk.version}&lt;/source&gt; &lt;target&gt;${jdk.version}&lt;/target&gt; &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt; &lt;compilerArguments&gt; &lt;verbose /&gt; &lt;bootclasspath&gt;${java.home}\jre\lib\rt.jar;${java.home}\jre\lib\jce.jar&lt;/bootclasspath&gt; &lt;/compilerArguments&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; 项目基本属性设置为了避免maven项目的一些默认属性与原JavaWeb项目不同而造成一些小问题，最好同时也将maven项目的一些诸如jdk版本/编码方式直接设置成与原JavaWeb项目相同的值。 示例设置： &lt;properties&gt; &lt;jdk.version&gt;1.8&lt;/jdk.version&gt; &lt;java.home&gt;C:\Program Files\Java\jdk1.8.0_60&lt;/java.home&gt; &lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt; &lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt; &lt;/properties&gt; 至此，项目的转换已完成，新的maven版本项目以可以正常运行或打包部署到远程服务器。 总结完成项目从普通JavaWeb至maven-app的转换，再回头对比转换前后的项目目录结构，发现转换后的项目结构非常清晰，无论是对源码/配置文件等不同类型文件的管理，还是对第三方插件的依赖/开发环境的配置均一目了然。而且从根本上避免了项目的功能能扩展过程中，不断新增jar包引起的版本冲突/文件缺失等异常问题。以此可见，随着项目的不断升级，功能模块的丰富，maven更是越发表现出其不可替代的管理优势。后续大型项目应优先考虑以maven为基础进行构建，将会节省很多调试时间及团队沟通成本。]]></content>
+      <categories>
+        <category>工作记录</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+        <tag>Java</tag>
+        <tag>JavaWeb</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[手风琴谱整理]]></title>
     <url>%2F2017%2F11%2F24%2F%E6%89%8B%E9%A3%8E%E7%90%B4%E8%B0%B1%E6%95%B4%E7%90%86_%E6%98%A5%E5%A4%A9%E8%8A%B1%E5%9B%AD%E9%B2%9C%E8%8A%B1%E7%9B%9B%E5%BC%80%2F</url>
     <content type="text"><![CDATA[业余时候喜欢弹弹手风琴减压。这是我喜欢的第一首手风琴曲，希望年底能够学会。]]></content>
@@ -167,8 +180,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -179,8 +192,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>程序安装</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
 </search>
