@@ -505,7 +505,7 @@ sudo apt-get update
 </code></pre><h3 id="将本地安装的GCC-G-切换到最新版本"><a href="#将本地安装的GCC-G-切换到最新版本" class="headerlink" title="将本地安装的GCC/G++ 切换到最新版本"></a>将本地安装的GCC/G++ 切换到最新版本</h3><p>查看本地安装版本：</p>
 <pre><code>ls -lh / usr / bin / g ++ *
 </code></pre><p>接下来切换GCC/G++到上一步安装的版本：</p>
-<pre><code>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-&lt;原版本&gt; &lt;优先级order值；如：20，50&gt; --slave /usr/bin/g ++ g ++ /usr/bin/g++-&lt;原版本&gt;
+<pre><code>sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-&lt;原版本&gt; &lt;优先级order值；如：20，50&gt; --slave /usr/bin/g++ g++ /usr/bin/g++-&lt;原版本&gt;
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-&lt;新版本&gt; &lt;优先级order值；如：20，50&gt; --slave /usr/bin/g++ g++ /usr/bin/g++-&lt;新版本&gt;
 
 sudo update-alternatives --config gcc #选择新版本的序号
