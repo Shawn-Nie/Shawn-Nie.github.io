@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2017-11-26T11:52:42.000Z</lastmod>
+    <lastmod>2017-11-26T12:45:02.000Z</lastmod>
     <data>
         <display>
         <title>Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</title>
@@ -186,13 +186,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
         <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
