@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2017-11-26T08:52:05.000Z</lastmod>
+    <lastmod>2017-11-26T11:52:42.000Z</lastmod>
     <data>
         <display>
         <title>Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</title>
@@ -61,9 +61,9 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>Maven</tag>
-         
         <tag>JavaWeb</tag>
+         
+        <tag>Maven</tag>
          
         <tag>Java</tag>
          
