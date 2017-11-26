@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/26/Nginx%E5%81%9A%E4%B8%BA%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%97%B6%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B8%85%E7%A9%BA%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-11-26T14:27:39.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx做为反向代理时，服务器缓存清空的方法</title>
+        <pubTime>2017-11-26T14:27:39.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Nginx</tag>
+         
+        <tag>Server</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2017/11/26/Nginx_%5Bemerg%5Dgetpwnam(www)failed%E9%94%99%E8%AF%AF%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2017-11-26T14:13:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx_[emerg]getpwnam(www)failed错误的处理方法</title>
+        <pubTime>2017-11-26T14:13:17.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Nginx</tag>
+         
+        <tag>Server</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-26T12:56:23.000Z</lastmod>
     <data>
@@ -13,11 +61,11 @@
         
         <tag>Nginx</tag>
          
+        <tag>Server</tag>
+         
         <tag>程序安装</tag>
          
         <tag>ngx_pagespeed</tag>
-         
-        <tag>Server</tag>
          
          
            
@@ -125,9 +173,9 @@
         <title>【转载】用户真实评测：阿里云腾讯云谁性价比更高调整示意</title>
         <pubTime>2017-11-24T15:20:17.000Z</pubTime>
         
-        <tag>腾讯云</tag>
-         
         <tag>Server</tag>
+         
+        <tag>腾讯云</tag>
          
          
            
