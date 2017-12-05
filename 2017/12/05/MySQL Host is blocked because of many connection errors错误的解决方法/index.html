@@ -15,16 +15,18 @@
 
 
 
-<meta name="description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Shawn的技术博客">
-<meta property="og:url" content="http://shawn-nie.github.io/categories/教程整理/page/2/index.html">
+<meta name="description" content="错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’ 原因： 　　出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL Host is blocked because of many connection errors错误的解决方法">
+<meta property="og:url" content="http://shawn-nie.github.io/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/index.html">
 <meta property="og:site_name" content="Shawn的技术博客">
-<meta property="og:description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
+<meta property="og:description" content="错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’ 原因： 　　出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-12-05T15:03:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Shawn的技术博客">
-<meta name="twitter:description" content="技术将各种事务流程化，流程化。这就是技术对社会最大的贡献。">
+<meta name="twitter:title" content="MySQL Host is blocked because of many connection errors错误的解决方法">
+<meta name="twitter:description" content="错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’ 原因： 　　出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Category: 教程整理 | Shawn的技术博客</title>
+<title>MySQL Host is blocked because of many connection errors错误的解决方法 | Shawn的技术博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -64,10 +66,10 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
-        isCategory: true,
+        isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: true
@@ -269,259 +271,168 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-MySQL Host is blocked because of many connection errors错误的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/" class="article-date">
+      <time datetime="2017-12-05T15:03:06.000Z" itemprop="datePublished">2017-12-05</time>
+</a>
+
+
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL Host is blocked because of many connection errors错误的解决方法
+    </h1>
+  
+
+      </header>
       
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/" class="archive-article-date">
-      <time datetime="2017-11-16T14:49:46.000Z" itemprop="datePublished">11-16</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/">Windows系统下使用DOS命令检索包含指定字符串的所有文件</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CMD/">CMD</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOS/">DOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Findstr/">Findstr</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/">Windows</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字段检索/">字段检索</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/15/Ubuntu下安装Maven/" class="archive-article-date">
-      <time datetime="2017-11-15T03:37:37.000Z" itemprop="datePublished">11-15</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Maven/">Maven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/13/Ubuntu系统的常用命令/" class="archive-article-date">
-      <time datetime="2017-11-13T03:35:59.000Z" itemprop="datePublished">11-13</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/13/Ubuntu系统的常用命令/">Ubuntu系统的常用命令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/" class="archive-article-date">
-      <time datetime="2017-11-12T13:09:56.000Z" itemprop="datePublished">11-12</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/">Nginx服务器的安装_适用于Ubuntu 16.04系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序安装/">程序安装</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/" class="archive-article-date">
-      <time datetime="2017-03-07T08:30:21.000Z" itemprop="datePublished">03-07</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/">MySQL数据库安装与配置_适用于Ubuntu 16.04系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序安装/">程序安装</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+          
+        <p>错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’</p>
+<p>原因：</p>
+<p>　　出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。</p>
+<a id="more"></a>
+<p>这种情况有两种解决方法：</p>
+<h1 id="提高允许的max-connection-errors数量"><a href="#提高允许的max-connection-errors数量" class="headerlink" title="提高允许的max_connection_errors数量"></a>提高允许的max_connection_errors数量</h1><ol>
+<li>进入Mysql数据库查看max_connection_errors： show variables like ‘%max_connection_errors%’;</li>
+<li>修改max_connection_errors的数量为1000： set global max_connect_errors = 1000;</li>
+<li>查看是否修改成功：show variables like ‘%max_connection_errors%’;</li>
+</ol>
+<h1 id="清理hosts文件"><a href="#清理hosts文件" class="headerlink" title="清理hosts文件"></a>清理hosts文件</h1><p>使用<code>mysqladmin flush-hosts</code>命令，或以root用户登录数据库执行<code>flush hosts</code>命令，清理一下hosts文件即可恢复正常。</p>
+
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/" class="archive-article-date">
-      <time datetime="2016-12-10T08:30:21.000Z" itemprop="datePublished">12-10</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/">MySQL数据库安装与配置_适用于Windows7系统</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序安装/">程序安装</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
   </div>
-</article>
   
-  
-    </div></section>
-  
-
     
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/categories/教程整理/">&laquo; Prev</a><a class="page-number" href="/categories/教程整理/">1</a><span class="page-number current">2</span>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/">MySQL Host is blocked because of many connection errors错误的解决方法</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
+        <p><span>发布时间:</span>2017-12-05, 23:03:06</p>
+        <p><span>最后更新:</span>2017-12-05, 23:03:06</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/" title="MySQL Host is blocked because of many connection errors错误的解决方法">http://shawn-nie.github.io/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">
+                    Nginx做为反向代理时，服务器缓存清空的方法
+                </a>
+            </div>
+        
     </nav>
-  
 
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#提高允许的max-connection-errors数量"><span class="toc-number">1.</span> <span class="toc-text">提高允许的max_connection_errors数量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#清理hosts文件"><span class="toc-number">2.</span> <span class="toc-text">清理hosts文件</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/" title="下一篇: Nginx做为反向代理时，服务器缓存清空的方法">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/">MySQL Host is blocked because of many connection errors错误的解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">Nginx做为反向代理时，服务器缓存清空的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/">Nginx_[emerg]getpwnam(www)failed错误的处理方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统/">Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Tomcat服务器中文路径名解析错误的解决方式/">Tomcat服务器中文路径名解析错误的解决方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/MySQL_select列表的表达式＃1不在GROUP BY子句中，并且包含nonaggre的问题的解决/">MySQL_select列表的表达式＃1不在GROUP BY子句中，并且包含nonaggre的问题的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Mysql 时间 '0000-00-00'异常的解决/">MySQL 时间 '0000-00-00'异常的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/【转载】用户真实评测：阿里云腾讯云谁性价比更高/">【转载】用户真实评测：阿里云腾讯云谁性价比更高调整示意</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意/">Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/手风琴谱整理_春天花园鲜花盛开/">手风琴谱整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/产品设计和优化的五个原则/">产品设计和优化的五个原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/">Ubuntu下MySQL数据库自执行备份脚本的实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/">Linux系统发送本机文件至远程服务器_以SSH方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/MySQL数据库_备份用户必备权限/">MySQL数据库_备份用户必备权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/腾讯云服务器Ubuntu系统设置允许root用户登录/">腾讯云服务器Ubuntu系统设置允许root用户登录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/">Windows系统下使用DOS命令检索包含指定字符串的所有文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/13/Ubuntu系统的常用命令/">Ubuntu系统的常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/">Nginx服务器的安装_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/">MySQL数据库安装与配置_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/">MySQL数据库安装与配置_适用于Windows7系统</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">

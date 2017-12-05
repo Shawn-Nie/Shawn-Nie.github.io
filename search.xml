@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[MySQL Host is blocked because of many connection errors错误的解决方法]]></title>
+    <url>%2F2017%2F12%2F05%2FMySQL%20Host%20is%20blocked%20because%20of%20many%20connection%20errors%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’ 原因： 出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。 这种情况有两种解决方法： 提高允许的max_connection_errors数量 进入Mysql数据库查看max_connection_errors： show variables like ‘%max_connection_errors%’; 修改max_connection_errors的数量为1000： set global max_connect_errors = 1000; 查看是否修改成功：show variables like ‘%max_connection_errors%’; 清理hosts文件使用mysqladmin flush-hosts命令，或以root用户登录数据库执行flush hosts命令，清理一下hosts文件即可恢复正常。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Nginx做为反向代理时，服务器缓存清空的方法]]></title>
     <url>%2F2017%2F11%2F26%2FNginx%E5%81%9A%E4%B8%BA%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E6%97%B6%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%BC%93%E5%AD%98%E6%B8%85%E7%A9%BA%E7%9A%84%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[有些时候为了不让其他人知道自己使用的服务器IP的时候我们喜欢使用反向代理避免这种问题。 通常我们使用的反向代理大多数是nginx设置的。但是在我们对网站的图片等信息更新时候会出现信息更改后仍然不能正常显示，那可能是因为反向代理的原因，所以在我们更新了信息后，同时也要更新代理服务器上的缓存。 这里讲下我们常用的nginx的缓存存在的位置。 操作方法是： 通常nginx的缓存文件是存放在/home/cache/缓存文件下。我只只需要删除里面的内容，重新访问生成就可以了。 命令如下： rm -rf /home/cache/*]]></content>
