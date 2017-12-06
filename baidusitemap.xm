@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/12/06/GitHub%20v.s.%20Bitbucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2017-12-06T14:28:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub v.s. Bitbucket远程仓库的对比</title>
+        <pubTime>2017-12-06T14:28:06.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+        <tag>GitHub</tag>
+         
+        <tag>BitBucket</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/12/06/GitHub%E6%88%96BitBucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%A8Eclipse%E4%B8%AD%E7%9A%84%E7%AE%A1%E7%90%86%E5%8F%8AEGit%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2017-12-06T13:37:21.000Z</lastmod>
     <data>
@@ -151,9 +175,9 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>JavaWeb</tag>
-         
         <tag>Maven</tag>
+         
+        <tag>JavaWeb</tag>
          
         <tag>Java</tag>
          
@@ -465,12 +489,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://shawn-nie.github.io/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
-        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
-        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
+        <title>MySQL数据库安装与配置_适用于Windows7系统</title>
+        <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
@@ -487,12 +511,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
-        <title>MySQL数据库安装与配置_适用于Windows7系统</title>
-        <pubTime>2016-12-10T08:30:21.000Z</pubTime>
+        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
+        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
