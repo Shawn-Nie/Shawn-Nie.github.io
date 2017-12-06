@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/12/06/GitHub%E6%88%96BitBucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%A8Eclipse%E4%B8%AD%E7%9A%84%E7%AE%A1%E7%90%86%E5%8F%8AEGit%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2017-12-06T13:37:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程</title>
+        <pubTime>2017-12-06T13:37:21.000Z</pubTime>
+        
+        <tag>GitHub</tag>
+         
+        <tag>Eclipse</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/12/05/MySQL%20Host%20is%20blocked%20because%20of%20many%20connection%20errors%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2017-12-05T15:03:06.000Z</lastmod>
     <data>
