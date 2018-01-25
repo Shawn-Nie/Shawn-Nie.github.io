@@ -26,11 +26,11 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2017/12/06/GitHub%20v.s.%20Bitbucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
+    <loc>http://shawn-nie.github.io/2017/12/06/%E3%80%90%E8%BD%AC%E8%BD%BD%E3%80%91GitHub%20v.s.%20Bitbucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
     <lastmod>2017-12-06T14:28:06.000Z</lastmod>
     <data>
         <display>
-        <title>GitHub v.s. Bitbucket远程仓库的对比</title>
+        <title>【转载】GitHub v.s. Bitbucket远程仓库的对比</title>
         <pubTime>2017-12-06T14:28:06.000Z</pubTime>
         
         <tag>Git</tag>
@@ -322,11 +322,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
+        <tag>MySQL</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
@@ -511,12 +511,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
-        <title>MySQL数据库安装与配置_适用于Windows7系统</title>
-        <pubTime>2016-12-10T08:30:21.000Z</pubTime>
+        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
+        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
@@ -533,12 +533,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
+    <loc>http://shawn-nie.github.io/2016/12/10/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EWindows7%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2017-11-12T12:39:42.000Z</lastmod>
     <data>
         <display>
-        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
-        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
+        <title>MySQL数据库安装与配置_适用于Windows7系统</title>
+        <pubTime>2016-12-10T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
