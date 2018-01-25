@@ -99,11 +99,11 @@
         <title>Nginx做为反向代理时，服务器缓存清空的方法</title>
         <pubTime>2017-11-26T14:27:39.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -123,11 +123,11 @@
         <title>Nginx_[emerg]getpwnam(www)failed错误的处理方法</title>
         <pubTime>2017-11-26T14:13:17.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -322,13 +322,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
         <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -348,11 +348,11 @@
         <title>Linux系统发送本机文件至远程服务器_以SSH方式</title>
         <pubTime>2017-11-18T10:44:46.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>SSH</tag>
-         
-        <tag>Linux</tag>
          
         <tag>scp</tag>
          
@@ -398,9 +398,9 @@
         <title>腾讯云服务器Ubuntu系统设置允许root用户登录</title>
         <pubTime>2017-11-17T12:21:05.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>腾讯云</tag>
          
@@ -450,9 +450,9 @@
         <title>Ubuntu系统的常用命令</title>
         <pubTime>2017-11-13T03:35:59.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -472,9 +472,9 @@
         <title>Ubuntu下安装Maven</title>
         <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>Maven</tag>
          
