@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/01/23/Javascript-window.open()%E6%96%B9%E6%B3%95%E9%87%87%E7%94%A8post%E4%BC%A0%E5%80%BC%E7%9A%84%E6%94%B9%E5%86%99%E6%96%B9%E5%BC%8F/</loc>
+    <lastmod>2018-01-24T10:26:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>Javascript:window.open()方法采用post传值的改写方式</title>
+        <pubTime>2018-01-23T14:42:10.000Z</pubTime>
+        
+        <tag>Javascript</tag>
+         
+        <tag>前端</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/12/06/GitHub%20v.s.%20Bitbucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E5%AF%B9%E6%AF%94/</loc>
     <lastmod>2017-12-06T14:28:06.000Z</lastmod>
     <data>
@@ -175,9 +197,9 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>Maven</tag>
-         
         <tag>JavaWeb</tag>
+         
+        <tag>Maven</tag>
          
         <tag>Java</tag>
          

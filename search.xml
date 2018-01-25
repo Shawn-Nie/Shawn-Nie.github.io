@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Javascript:window.open()方法采用post传值的改写方式]]></title>
+    <url>%2F2018%2F01%2F23%2FJavascript-window.open()%E6%96%B9%E6%B3%95%E9%87%87%E7%94%A8post%E4%BC%A0%E5%80%BC%E7%9A%84%E6%94%B9%E5%86%99%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[最近在做web项目，碰到需要跨页面传递参数的功能，就是那种需要把当前页面的内容带到新开的子窗体中。采用js中window.open()方法请求子页面或刷新父页面信息，仅支持以get的方式传递，把需要的内容或参数全部序列化，然后通过url去传，显得url很臃肿，而且get的传递内容长度有限制。 在web项目开发中，考虑数据的安全性及传递内容的体量，通常会倾向于采用post的方式传递参数。问题在于open方法不能设置请求方式，一般网页的post都是通过form来实现的。如果仅仅模拟form的提交方式，那么open方法里那种可设置窗体属性的参数又不能用。 最后通过查阅相关资料及借鉴js其他的功能，逐渐实现window.open()与post相结合的功能:将form的target设置成和open的name参数一样的值，通过浏览器自动识别实现了将内容post到新窗口中。 比较有意思的是直接通过调用form的submit方法不能触发onsubmit事件，查看了帮助文档，必须手动的触发，否则只能看到页面刷新而没有打开新窗口。 具体改写方法如下： 打开子页面 示例代码：window.open(&#39;proj_list.html?prod_type=web&amp;ln_department_id=ln_department_id&#39;,&#39;newwindow&#39;,&quot;height=300,width=800,top=400,left=800,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes&quot;); 改写后的方法如下： var add_form=$(&apos;&lt;form action=&quot;proj_list.html&quot; method=&quot;post&quot; target=&quot;newwindow&quot;&gt;&lt;/form&gt;&apos;); add_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;prod_type&quot; value=&quot;web&quot;/&gt;&apos;); add_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;ln_department_id&quot; value=&quot;&apos;+ln_department_id+&apos;&quot;/&gt;&apos;); $(document.body).append(add_form); add_form.submit(function(){ window.open(&apos;about:blank&apos;,&apos;newwindow&apos;,&quot;height=300,width=800,top=400,left=800,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes&quot;); }); //此处很关键 add_form.submit(); 新方法的关键在于： form表单的target和即将打开的子页面name参数相同(同为“newwindow”)； 为form表单添加提交触发功能，先打开一个空的子页面，然后借用post功能，将form表单所指的url和对应的参数传入子页面。 刷新父页面 示例代码：window.opener.location.href=&#39;proj_list.html?prod_type=web&amp;ln_department_id=ln_department_id&#39;; 改写后的方法如下： var parent_form=$(&apos;&lt;form action=&quot;proj_list.html&quot; method=&quot;post&quot; target=&quot;opener&quot;&gt;&lt;/form&gt;&apos;); parent_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;prod_type&quot; value=&quot;&apos;+&apos;web&apos;+&apos;&quot;/&gt;&apos;); parent_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;ln_department_id&quot; value=&quot;&apos;+ln_department_id+&apos;&quot;/&gt;&apos;); $(document.body).append(parent_form); parent_form.submit();]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Javascript</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[GitHub v.s. Bitbucket远程仓库的对比]]></title>
     <url>%2F2017%2F12%2F06%2FGitHub%20v.s.%20Bitbucket%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E5%AF%B9%E6%AF%94%2F</url>
     <content type="text"><![CDATA[对于目前的技术发展阶段来说，主流的远程Git仓库一般有GitHub和BitBucket仓库相对受开发者推崇。因此本文分享下我们以往收集的使用buckets和octocats的经验。主要结论如下： 具体对比： 代码是否一定要公开？ 否。 Bitbucket提供免费的私人仓库，而Github提供付费的私人仓库。只有公开仓库的代码才是公开的。 Bitbucket和Github对于私人和公开项目采用了不同的方法。Bitbucket提供无限的免费私人仓库，而Github对此是收费的。在两家服务里，公开仓库是无限且免费的，并且不限制贡献者的数量。 就开源项目而言，哪里更加容易配合团队工作？ Github更适合开源、多人的开发项目 两家在价格上的第二个区别在于合作者的数量。Bitbucket在私人仓库上主要提供一共5人一个免费账户，而Github更加关注其公开仓库，因此它有自己的界限。尽管它们提供许多相似的代码托管特性，Github关注于开源，而Bitbucket看起来更加关注企业开发者，尤其是在2010年被Atlassian注资后。 fork技术哪一个更强？ 就fork而言，两者没有明显差异 GitHub在流行度上远优于Bitbucket，GitHub拥有超过4百万的用户数。不过Bitbucket也不算输，它依然提供了良好的使用体验，成为了Atlassian产品套件的一部分。GitHub和Bitbucket都有漂亮的前端，提供了问题单跟踪、wiki、简单易用的REST API以及rich GUI和各种操作系统上命令行工具（Windows/Mac/Linux甚至移动端）。 就特性维度而言，Gist是GitHub相对于Bitbucket的一个杀手锏，通过gist能够能够便捷地分享代码片段，并实现有效的版本管理。 双向认证是另一个评价颇高的GitHub特性，Bitbucket也没有实现。 但是Bitbucket有spoon功能，GitHub暂时还没有这一功能。 页面——2048的影响 两家服务均可支持 两家服务的一个很赞的特性是页面——托管简单的HTML页面，向那些不一定是开发者的用户展示项目。两家的这个特性基本上是一样的。你可以创建一个username.bitbucket.com或github.io，得到一个你自己的漂亮的URL。github.io URL正在变成大量开源库和项目的半义务性质的服务，一般会和相关的“Fork me onGithub”标语相配合。但要注意，如果你使用的是自定义域名，它可能会花费更多的载入时间。 去寻找还是被发现 Bitbucket上的项目几乎不可能被发现。 GitHub和Bitbucket的差异也表现在搜索页面上。Bitbucket只显示了一个简单的搜索界面。而GitHub却展示了目前最流行的代码仓以及最受欢迎的主题，更不用说它为开发者提供项目专辑和公开的工作台功能。因此，对于希望被更多人发现的项目，目前来看，非GitHub莫属。 从哪些社区可以获取有力支持？ 这一点，GitHub以它的开源本质和社交特性，远远优于BitBucket 在Stackoverflow上随便瞟一眼最新的问题，你会发现每隔几分钟就会有关于GitHub的问题出现，然而关于Bitbucket的问题要一两个小时才能碰到。你能在Stackoverflow找到几乎所有你可能遇到问题的答案。 当然各自的主页上也有很多资源和在线社区的支持，但是很明显，GitHub是遥遥领先的。统计一下最流行的开发库，无论是Java、Ruby还是JS，毫无疑问他们都是在GitHub上。更为重要的是，GitHub的开源本质也为他赢得了良好的声誉。 两个站点间是否可以切换？ 可以，从GitHub迁移到Bitbucket相对容易一些 Bitbucket提供了简单方便的方式，用于从GitHub上导入代码仓。通过其他的方式，如先保存远程仓库项目至本地再上传到另外一个远程仓库，仍然是可行的。 如何评价Git和Mercurial? Mercurial更好上手，而Git 提供了更为丰富的操控细节。 Bitbucket是基于Mercurial实现，直到2011年才开始支持Git。与此相反，GitHub从一开始就是围绕着Git来构建。当然没有绝对正确的决策，实际上Git和Mercurial也非常相像。权衡点在于，Mercurial更注重易用性，而Git更注重操控性。如果你是刚刚从cvs或者svn迁移到分布式版本管理系统，通常会发现Mercurial更容易用。 从价格来看，哪一个更据优势？除去企业套餐之外，Bitbucket的价格区间在$10 ~$200之间，可支持的用户数从5个到不限。Git的资费分为个人账户和组织账号两种。组织账号的价格在每月$25 ~$200之间，提供了团队管理功能和10 ~125个私人代码仓。个人账号的价格在每月$7 ~$50之间，可以创建5~50个私人代码仓。]]></content>
@@ -131,8 +143,8 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
         <tag>JavaWeb</tag>
+        <tag>Maven</tag>
         <tag>Java</tag>
       </tags>
   </entry>
