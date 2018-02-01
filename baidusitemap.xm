@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-02-01T08:35:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
+        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>程序安装</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/01/23/Javascript-window.open()%E6%96%B9%E6%B3%95%E9%87%87%E7%94%A8post%E4%BC%A0%E5%80%BC%E7%9A%84%E6%94%B9%E5%86%99%E6%96%B9%E5%BC%8F/</loc>
     <lastmod>2018-01-24T10:26:31.000Z</lastmod>
     <data>
@@ -197,9 +219,9 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>JavaWeb</tag>
-         
         <tag>Maven</tag>
+         
+        <tag>JavaWeb</tag>
          
         <tag>Java</tag>
          
@@ -322,11 +344,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
+        <tag>MySQL</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
@@ -517,28 +539,6 @@
         <display>
         <title>MySQL数据库安装与配置_适用于Windows7系统</title>
         <pubTime>2016-12-10T08:30:21.000Z</pubTime>
-        
-        <tag>MySQL</tag>
-         
-        <tag>程序安装</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2017-11-12T12:39:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>MySQL数据库安装与配置_适用于Ubuntu 16.04系统</title>
-        <pubTime>2017-03-07T08:30:21.000Z</pubTime>
         
         <tag>MySQL</tag>
          
