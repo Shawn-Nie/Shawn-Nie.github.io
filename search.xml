@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu系统安装Tomcat7教程(apt-get方法)]]></title>
+    <url>%2F2018%2F02%2F02%2FUbuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B(apt-get%E6%96%B9%E6%B3%95)%2F</url>
+    <content type="text"><![CDATA[安装JDK在安装Tomcat之前，需先确保系统已正确安装JDK。 安装Tomcat7sudo apt-get install tomcat7 修改Tomcat配置文件，设置JAVA_HOME这一步如安装顺利，则会自动启动Tomcat。而有些系统则会提示tomcat7，no JDK found - please set JAVA_HOME错误，这种情况下应先配置tomcat的JAVA_HOME，再重启程序即可。 打开tomcat7配置文件，开始编辑: sudo vi /etc/default/tomcat7 ; 取消JAVA_HOME=…..的注释，并正确配置JAVA_HOME，保存并退出。 Tomcat的启动、停止和重启至此，Tomcat已安装成功。以apt-get方法安装Tomcat，可以通过service命令直接控制tomcat程序。具体如下： 命令指令 启动sudo service tomcat7 start 停止sudo service tomcat7 stop 重启sudo service tomcat7 restart]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu系统安装Java教程(apt-get方法)]]></title>
+    <url>%2F2018%2F02%2F02%2FUbuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Java%E6%95%99%E7%A8%8B(apt-get%E6%96%B9%E6%B3%95)%2F</url>
+    <content type="text"><![CDATA[安装python-software-propertiessudo apt-get install python-software-properties sudo apt-get install software-properties-common 添加ppasudo add-apt-repository ppa:webupd8team/java 更新系统sudo apt-get update 开始安装Javasudo apt-get install oracle-java8-installer 设置java环境变量至此，java已经安装成功。使用java -version 命令即可查看Java版本： 使用sudo update-alternatives --config java 命令可以查看java安装路径： 查看Java安装路径后，需要设置系统环境变量。具体流程如下： 打开environment文件：sudo vim /etc/environment ； 在文件中添加上一步查询到的Java安装路径，如：JAVA_HOME=&quot;/usr/lib/jvm/java-8-oracle/jre&quot; 。 * java版本切换如系统安装了多个版本的JDK，可以通过update-java-alternatives命令切换Java版本。如： sudo update-java-alternatives -s java-8-oracle]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Javascript:window.open()方法采用post传值的改写方式]]></title>
     <url>%2F2018%2F01%2F23%2FJavascript-window.open()%E6%96%B9%E6%B3%95%E9%87%87%E7%94%A8post%E4%BC%A0%E5%80%BC%E7%9A%84%E6%94%B9%E5%86%99%E6%96%B9%E5%BC%8F%2F</url>
     <content type="text"><![CDATA[最近在做web项目，碰到需要跨页面传递参数的功能，就是那种需要把当前页面的内容带到新开的子窗体中。采用js中window.open()方法请求子页面或刷新父页面信息，仅支持以get的方式传递，把需要的内容或参数全部序列化，然后通过url去传，显得url很臃肿，而且get的传递内容长度有限制。 在web项目开发中，考虑数据的安全性及传递内容的体量，通常会倾向于采用post的方式传递参数。问题在于open方法不能设置请求方式，一般网页的post都是通过form来实现的。如果仅仅模拟form的提交方式，那么open方法里那种可设置窗体属性的参数又不能用。 最后通过查阅相关资料及借鉴js其他的功能，逐渐实现window.open()与post相结合的功能:将form的target设置成和open的name参数一样的值，通过浏览器自动识别实现了将内容post到新窗口中。 比较有意思的是直接通过调用form的submit方法不能触发onsubmit事件，查看了帮助文档，必须手动的触发，否则只能看到页面刷新而没有打开新窗口。 具体改写方法如下： 打开子页面 示例代码：window.open(&#39;proj_list.html?prod_type=web&amp;ln_department_id=ln_department_id&#39;,&#39;newwindow&#39;,&quot;height=300,width=800,top=400,left=800,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes&quot;); 改写后的方法如下： var add_form=$(&apos;&lt;form action=&quot;proj_list.html&quot; method=&quot;post&quot; target=&quot;newwindow&quot;&gt;&lt;/form&gt;&apos;); add_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;prod_type&quot; value=&quot;web&quot;/&gt;&apos;); add_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;ln_department_id&quot; value=&quot;&apos;+ln_department_id+&apos;&quot;/&gt;&apos;); $(document.body).append(add_form); add_form.submit(function(){ window.open(&apos;about:blank&apos;,&apos;newwindow&apos;,&quot;height=300,width=800,top=400,left=800,toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes&quot;); }); //此处很关键 add_form.submit(); 新方法的关键在于： form表单的target和即将打开的子页面name参数相同(同为“newwindow”)； 为form表单添加提交触发功能，先打开一个空的子页面，然后借用post功能，将form表单所指的url和对应的参数传入子页面。 刷新父页面 示例代码：window.opener.location.href=&#39;proj_list.html?prod_type=web&amp;ln_department_id=ln_department_id&#39;; 改写后的方法如下： var parent_form=$(&apos;&lt;form action=&quot;proj_list.html&quot; method=&quot;post&quot; target=&quot;opener&quot;&gt;&lt;/form&gt;&apos;); parent_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;prod_type&quot; value=&quot;&apos;+&apos;web&apos;+&apos;&quot;/&gt;&apos;); parent_form.append(&apos;&lt;input style=&quot;display:none&quot; name=&quot;ln_department_id&quot; value=&quot;&apos;+ln_department_id+&apos;&quot;/&gt;&apos;); $(document.body).append(parent_form); parent_form.submit();]]></content>
@@ -143,9 +169,9 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>Maven</tag>
-        <tag>JavaWeb</tag>
         <tag>Java</tag>
+        <tag>JavaWeb</tag>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -175,9 +201,9 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>MySQL</tag>
         <tag>数据库备份</tag>
       </tags>
   </entry>

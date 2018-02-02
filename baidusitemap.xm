@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B(apt-get%E6%96%B9%E6%B3%95)/</loc>
+    <lastmod>2018-02-02T14:10:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统安装Tomcat7教程(apt-get方法)</title>
+        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Java%E6%95%99%E7%A8%8B(apt-get%E6%96%B9%E6%B3%95)/</loc>
+    <lastmod>2018-02-02T13:41:03.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统安装Java教程(apt-get方法)</title>
+        <pubTime>2018-02-02T13:41:03.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/03/07/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu16.04%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2018-02-01T08:35:26.000Z</lastmod>
     <data>
@@ -219,11 +267,11 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>Maven</tag>
+        <tag>Java</tag>
          
         <tag>JavaWeb</tag>
          
-        <tag>Java</tag>
+        <tag>Maven</tag>
          
          
            
@@ -344,11 +392,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
