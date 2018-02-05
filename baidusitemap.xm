@@ -267,9 +267,9 @@
         <title>Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</title>
         <pubTime>2017-11-24T15:10:47.000Z</pubTime>
         
-        <tag>Java</tag>
-         
         <tag>JavaWeb</tag>
+         
+        <tag>Java</tag>
          
         <tag>Maven</tag>
          
@@ -392,11 +392,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
+        <tag>MySQL</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          

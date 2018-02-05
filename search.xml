@@ -169,8 +169,8 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>JavaWeb</tag>
+        <tag>Java</tag>
         <tag>Maven</tag>
       </tags>
   </entry>
@@ -201,9 +201,9 @@
         <category>工作记录</category>
       </categories>
       <tags>
+        <tag>MySQL</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
-        <tag>MySQL</tag>
         <tag>数据库备份</tag>
       </tags>
   </entry>
