@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/10/SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2018-02-10T15:04:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property问题的解决</title>
+        <pubTime>2018-02-10T15:04:27.000Z</pubTime>
+        
+        <tag>Tomcat</tag>
+         
+        <tag>JavaWeb</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/02/10/java_lang_VerifyError_Expecting_a_stackmap_frame_at_branch_target%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2018-02-10T14:31:39.000Z</lastmod>
     <data>
