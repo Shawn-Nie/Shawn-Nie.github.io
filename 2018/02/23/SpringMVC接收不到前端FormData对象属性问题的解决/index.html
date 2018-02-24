@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="问题描述: SpringMVC的服务端来获取通过FormData提交的参数时候时候;如果是GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
+<meta name="description" content="问题描述: SpringMVC的服务端获取通过FormData提交的参数时候;如果采用GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
 <meta name="keywords" content="SpringMVC,js,文件上传">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SpringMVC接收不到前端FormData对象属性问题的解决">
 <meta property="og:url" content="http://shawn-nie.github.io/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/index.html">
 <meta property="og:site_name" content="Shawn的技术博客">
-<meta property="og:description" content="问题描述: SpringMVC的服务端来获取通过FormData提交的参数时候时候;如果是GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
+<meta property="og:description" content="问题描述: SpringMVC的服务端获取通过FormData提交的参数时候;如果采用GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-23T11:41:52.000Z">
+<meta property="og:updated_time" content="2018-02-24T02:17:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringMVC接收不到前端FormData对象属性问题的解决">
-<meta name="twitter:description" content="问题描述: SpringMVC的服务端来获取通过FormData提交的参数时候时候;如果是GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
+<meta name="twitter:description" content="问题描述: SpringMVC的服务端获取通过FormData提交的参数时候;如果采用GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下:">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -315,21 +315,21 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>问题描述: SpringMVC的服务端来获取通过FormData提交的参数时候时候;如果是GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。</p>
+        <p>问题描述: SpringMVC的服务端获取通过FormData提交的参数时候;如果采用GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。</p>
 <p>解决方案如下: </p>
 <a id="more"></a>
 <h2 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h2><p>查阅相关资料发现，这是form表单的enctype编码方式不同导致的。</p>
-<p>enctype 属性规定在发送到服务器之前应该如何对表单数据进行编码。默认地，表单数据会编码为 “application/x-www-form-urlencoded”。就是说，在发送到服务器之前，所有字符都会进行编码（空格转换为 “+” 加号，特殊符号转换为 ASCII HEX 值）。如果使用GET，则强制使用application/x-www-form-urlencoded”方式。</p>
+<p>enctype属性规定在发送到服务器之前应该如何对表单数据进行编码。默认地，表单数据会编码为 “application/x-www-form-urlencoded”。就是说，在发送到服务器之前，所有字符都会进行编码（空格转换为 “+” 加号，特殊符号转换为 ASCII HEX 值）。如果使用GET，则强制使用application/x-www-form-urlencoded”方式。</p>
 <p>在本文所用代码中有强制使用multipart/form-data的数据传递方式，所以SpringMVC中获取不到POST形式的参数。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>先总结一下表单的两种编码的形式:</p>
 <table><br>    <tbody><br>        <tr><td>application/x-www-form-urlencoded</td><td>空格转换为 “+” 加号，特殊符号转换为 ASCII HEX 值</td></tr><br>        <tr><td>multipart/form-data</td><td>不对字符进行编码，使用二进制数据传输，一般用于上传文件，非文本的数据传输。</td></tr><br>    </tbody><br></table>
 
-<p>springMVC如果一定要以POST方式接收 multipart/form-data 传输的数据，应该在spring的配置文件上下文配置：</p>
+<p>SpringMVC如果一定要以POST方式接收 multipart/form-data 传输的数据，应该在Spring的配置文件上下文配置：</p>
 <pre><code>&lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt;   
 &lt;/bean&gt;
 </code></pre><p>同时需要将commons-fileupload-x.x.x.jar和commons-io-x.x.jar两个包文件引入到项目中。</p>
 <p>这样服务端就既可以接收multipart/form-data 传输的数据，也可以接收application/x-www-form-urlencoded传输的文本数据了。</p>
-<p>【注】SpringMV如需接收File文件，要以Spring提供的读取文件的类CommonsMultipartFile进行接收。如： </p>
+<p>【注】SpringMVC如需接收File文件，要以Spring提供的读取文件的类<strong>CommonsMultipartFile</strong>进行接收。如： </p>
 <pre><code>public String doAction(@RequestParam(&quot;sealPfxFile&quot;) CommonsMultipartFile sealPfxFile, Seal seal, ModelMap modelMap, HttpServletRequest request) throws Exception {
   //上传文件名
   String fileName = sealPfxFile.getFileItem().getName();
@@ -347,7 +347,7 @@
         <p><span>本文标题:</span><a href="/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/">SpringMVC接收不到前端FormData对象属性问题的解决</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
         <p><span>发布时间:</span>2018-02-23, 19:20:59</p>
-        <p><span>最后更新:</span>2018-02-23, 19:41:52</p>
+        <p><span>最后更新:</span>2018-02-24, 10:17:52</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/" title="SpringMVC接收不到前端FormData对象属性问题的解决">http://shawn-nie.github.io/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/</a>
             <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
