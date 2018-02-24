@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[SpringMVC接收不到前端FormData对象属性问题的解决]]></title>
+    <url>%2F2018%2F02%2F23%2FSpringMVC%E6%8E%A5%E6%94%B6%E4%B8%8D%E5%88%B0%E5%89%8D%E7%AB%AFFormData%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%2F</url>
+    <content type="text"><![CDATA[问题描述: SpringMVC的服务端来获取通过FormData提交的参数时候时候;如果是GET方式,服务端可以接收参数的值; 而采用POST方式的时候，却始终接收不到参数的值而报错。 解决方案如下: 问题分析查阅相关资料发现，这是form表单的enctype编码方式不同导致的。 enctype 属性规定在发送到服务器之前应该如何对表单数据进行编码。默认地，表单数据会编码为 “application/x-www-form-urlencoded”。就是说，在发送到服务器之前，所有字符都会进行编码（空格转换为 “+” 加号，特殊符号转换为 ASCII HEX 值）。如果使用GET，则强制使用application/x-www-form-urlencoded”方式。 在本文所用代码中有强制使用multipart/form-data的数据传递方式，所以SpringMVC中获取不到POST形式的参数。 解决方案先总结一下表单的两种编码的形式: application/x-www-form-urlencoded空格转换为 “+” 加号，特殊符号转换为 ASCII HEX 值 multipart/form-data不对字符进行编码，使用二进制数据传输，一般用于上传文件，非文本的数据传输。 springMVC如果一定要以POST方式接收 multipart/form-data 传输的数据，应该在spring的配置文件上下文配置： &lt;bean id=&quot;multipartResolver&quot; class=&quot;org.springframework.web.multipart.commons.CommonsMultipartResolver&quot;&gt; &lt;/bean&gt; 同时需要将commons-fileupload-x.x.x.jar和commons-io-x.x.jar两个包文件引入到项目中。 这样服务端就既可以接收multipart/form-data 传输的数据，也可以接收application/x-www-form-urlencoded传输的文本数据了。 【注】SpringMV如需接收File文件，要以Spring提供的读取文件的类CommonsMultipartFile进行接收。如： public String doAction(@RequestParam(&quot;sealPfxFile&quot;) CommonsMultipartFile sealPfxFile, Seal seal, ModelMap modelMap, HttpServletRequest request) throws Exception { //上传文件名 String fileName = sealPfxFile.getFileItem().getName(); //上传文件流 InputStream is = sealPfxFile.getInputStream(); }]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>SpringMVC</tag>
+        <tag>js</tag>
+        <tag>文件上传</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property问题的解决]]></title>
     <url>%2F2018%2F02%2F10%2FSetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%2F</url>
     <content type="text"><![CDATA[问题描述: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 解决方案如下: 关闭tomcat，双击eclipse下tomcat服务器，在出来的Tomcat server at localhost页面中找到server options选项，选中其中的选项”Publish modual contexts to separat XML files“，ctr+s，启动tomcat。]]></content>

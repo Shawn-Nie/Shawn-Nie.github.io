@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/23/SpringMVC%E6%8E%A5%E6%94%B6%E4%B8%8D%E5%88%B0%E5%89%8D%E7%AB%AFFormData%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2018-02-23T11:41:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>SpringMVC接收不到前端FormData对象属性问题的解决</title>
+        <pubTime>2018-02-23T11:20:59.000Z</pubTime>
+        
+        <tag>SpringMVC</tag>
+         
+        <tag>js</tag>
+         
+        <tag>文件上传</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/02/10/SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2018-02-10T15:04:27.000Z</lastmod>
     <data>
