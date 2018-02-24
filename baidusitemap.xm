@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/24/%E9%AB%98%E7%89%88%E6%9C%ACSpring_EhCacheFactoryBean%E6%8A%A5%E9%94%99-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
+    <lastmod>2018-02-24T06:10:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决</title>
+        <pubTime>2018-02-24T06:10:52.000Z</pubTime>
+        
+        <tag>Spring</tag>
+         
+        <tag>ehcache</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/02/23/SpringMVC%E6%8E%A5%E6%94%B6%E4%B8%8D%E5%88%B0%E5%89%8D%E7%AB%AFFormData%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2018-02-24T02:17:52.000Z</lastmod>
     <data>
@@ -460,11 +482,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
