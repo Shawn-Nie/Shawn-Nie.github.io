@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/05/29/Ubuntu%E7%B3%BB%E7%BB%9F_Apache2+PHP+MySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2018-05-29T11:36:09.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建</title>
+        <pubTime>2018-05-29T11:36:09.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>服务器，php，apache2</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/02/24/%E9%AB%98%E7%89%88%E6%9C%ACSpring_EhCacheFactoryBean%E6%8A%A5%E9%94%99-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V%E7%9A%84%E8%A7%A3%E5%86%B3/</loc>
     <lastmod>2018-02-24T06:10:52.000Z</lastmod>
     <data>
