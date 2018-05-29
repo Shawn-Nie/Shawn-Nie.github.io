@@ -13,7 +13,11 @@
         
         <tag>Ubuntu</tag>
          
-        <tag>服务器，php，apache2</tag>
+        <tag>服务器</tag>
+         
+        <tag>php</tag>
+         
+        <tag>apache2</tag>
          
          
            
@@ -504,13 +508,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
         <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
