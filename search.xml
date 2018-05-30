@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu_Shell脚本'r'command_not_found错误的解决方法]]></title>
+    <url>%2F2018%2F05%2F30%2FUbuntu_Shell%E8%84%9A%E6%9C%AC'%60r'command_not_found%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。 这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。 问题发生的原因Windows系统的换行符是\r\n，而Linux系统的换行符是\n，所以只要把脚本中的 \r 去掉就可以了。 问题的解决: 脚本代码转化为unix格式找到命令脚本文件，执行如下命令: sed -i &apos;s/\r$//&apos; &lt;文件路径及名称&gt; 待执行完成后，再次运行脚本，即可正常执行内部命令行。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Shell</tag>
+        <tag>sed</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Ubuntu系统使用sed命令替换字符串的常用语法]]></title>
+    <url>%2F2018%2F05%2F30%2FUbuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8sed%E5%91%BD%E4%BB%A4%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[sed替换的基本语法为: sed &apos;s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/&apos; 在上一段代码规则中:单引号内部,s表示替换,三根斜线中间是替换的样式,特殊字符需要使用反斜线 \ 进行转义。但是单引号 &#39; 是不能用反斜线 \ 转义的,这中签情况需要把命令中的单引号改为双引号,即: sed &quot;s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/&quot; 。 命令中的斜线分隔符可以换成其他的符号,只需要紧跟s定义即可,例如换成问号 ? : sed &#39;s?&lt;原待替换字符串&gt;?&lt;替换目标字符串&gt;?&#39; ，效果是一样的。 基本语法默认只替换每行的第一个匹配的关键字。 更复杂的语法可以在此基础上加以调整: 替换全部匹配的关键字基本语法 g 可以替换字符串中每一个匹配的关键字: sed &apos;s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; 指定替换范围(行数范围)这里有几个特殊符号，可以用于选定命令指代的行数范围: 上箭头 ^ ： 表示行首; 美元符号 $ ： 如果在引号中表示行尾,但是在引号外却表示末行(最后一行)； 数字: 指定一个数字，数字就代表对应的范围行数。 替换指定行数范围内容sed &apos;2s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; //替换第2行 (全局替换) sed &apos;$s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; //替换最后一行 (全局替换) sed &apos;2,5s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; //替换2到5行 (全局替换) sed &apos;2,$s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; //替换2到最后一行 (全局替换) 在指定行首/尾添加内容添加命令默认是添加在行首。如需添加到行位，要用 &amp; 字符标记在添加内容之前。 sed &apos;s/^/&lt;待添加的目标字符串&gt;&amp;/g&apos; //在所有行首添加 sed &apos;s/$/&amp;&lt;待添加的目标字符串&gt;/g&apos; //在所有行末添加 保存替换输出结果或编辑文件内字符sed处理过的输出是直接输出到屏幕上的,如果需要保存可以将输出重定向,或者使用参数 i 直接在文件中替换: sed -i &apos;s/&lt;原待替换字符串&gt;/&lt;替换目标字符串&gt;/g&apos; &lt;需替换内容的文件名&gt; //替换文件中的所有匹配项]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>sed</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建]]></title>
     <url>%2F2018%2F05%2F29%2FUbuntu%E7%B3%BB%E7%BB%9F_Apache2%2BPHP%2BMySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[在Ubuntu系统安装Apache2服务器并支持PHP_Web。 基本模块安装安装并启动MySQL服务MySQL的安装及常用指令在前章节有详细介绍，这里仅简单记录MySQL的安装及启动命令: 安装MySQL服务sudo apt-get install mysql-server mysql-client 启动MySQL服务sudo service mysql start 关于MySQL的详细安装及常用指令，请查看《MySQL数据库安装与配置_适用于Ubuntu16.04系统》。 安装Apache2服务器并使其支持MySQL服务安装Apache2服务器sudo apt-get install apache2 安装mysql支持工具库sudo apt-get install libapache2-mod-auth-mysql 安装完成后，需要将www目录更改下所有权以便可以新建文档: sudo chmod 777 /var/www 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以打开本机的浏览器 输入 本机ip； 出现下图的界面即表示安装成功。如80端口已被占用，需要编辑Apache配置文件，设置新的端口(见本文【apache服务器自定义端口配置】章节)。 安装php5并使其支持MySQL安装之前，先输入: sudo apt-get update 安装php5及Apache-php扩展包sudo apt-get install php5 libapache2-mod-php5 【注】这一步可能会产生Could not get lock /var/cache/apt/archives/lock异常，具体处理方式如下:输入如下指令，apt-get命令即可恢复正常: sudo rm -rf /var/cache/apt/archives/lock sudo apt-get update 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以用本章节测试方式进行检验。如80端口已被占用，需要跳过本章节，修改Apache端口，设置为Apache设置新的端口再进行测试(见本文【apache服务器自定义端口配置】章节)。 新建一个文档：sudo vi /var/www/phpinfo.php 按下i键编辑文件 输入: &lt;?php phpinfo(); ?&gt; ESC 后输入:wq保存退出 重启Apache服务器：sudo /etc/init.d/apache2 restart 在浏览器中输入 http://[服务器_ip]/phpinfo.php,出现PHP的相关配置信息即表示成功 安装php-MySQL及相关扩展包sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl 安装php-FastCGI管理器(phpstorm)sudo apt-get install php5-cgi * 安装phpmyadmin为了更方便的管理数据库 同时也建议安装phpmyadmin。命令行输入： sudo apt-get install phpmyadmin 在安装过程中会要求选择Web server：apache2或lighttpd，选择apache2，按tab键然后确定。然后会要求输入设置的Mysql数据库密码连接密码 Password of the database’s administrative user。 安装完成后需要将phpmyadmin的文件夹复制到www文件下进行管理： sudo cp /usr/share/phpmyadmin /var/www -a 打开浏览器输入http://[server_ip]/phpmyadmin 出现如下页面后就表示已经成功(如Apache默认端口被占用，见本文【apache服务器自定义端口配置】章节)： Apache服务器自定义端口配置本章节适用于在当前机器已使用Nginx服务器占用Apache默认端口，需要另行配置Apache端口的情况。 修改监听端口以及主机端口命令: sudo vi /etc/apache2/ports.conf 将端口的80改为想要指定的可用端口。 如: 修改virtualHost的端口打开ports.conf文件中注释部分指向的文件: /etc/apache2/sites-enabled/000-default.conf 将&lt;VirtualHost *:80&gt;修改成上一步指定的端口 重启apache2sudo service apache2 restart 这一步可能会出现 Could not reliably determine the server&#39;s fully qualified domain name, using 10.29.47.114. Set the &#39;ServerName&#39; directive globally to suppress this message 错误，这个问题应该是因为沒有在 /etc/httpd/conf/httpd.conf 中设定 ServerName ;解决这个问题，需要打开配置文件，加上 ServerName 的定义。具体方法如下:打开Apahce配置文件: sudo vim /etc/apache2/apache2.conf ,增加 ServerName localhost:[上一步指定的端口] 即可]]></content>
@@ -264,10 +289,10 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
-        <tag>数据库备份</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>MySQL</tag>
+        <tag>数据库备份</tag>
       </tags>
   </entry>
   <entry>

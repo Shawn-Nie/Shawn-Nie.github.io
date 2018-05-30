@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/05/30/Ubuntu_Shell%E8%84%9A%E6%9C%AC'%60r'command_not_found%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2018-05-30T10:25:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu_Shell脚本'r'command_not_found错误的解决方法</title>
+        <pubTime>2018-05-30T10:25:40.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Shell</tag>
+         
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2018/05/30/Ubuntu%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8sed%E5%91%BD%E4%BB%A4%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2018-05-30T10:24:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统使用sed命令替换字符串的常用语法</title>
+        <pubTime>2018-05-30T10:24:23.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>sed</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/05/29/Ubuntu%E7%B3%BB%E7%BB%9F_Apache2+PHP+MySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2018-05-29T11:36:09.000Z</lastmod>
     <data>
@@ -508,13 +554,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
-        <tag>数据库备份</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>数据库备份</tag>
          
          
            

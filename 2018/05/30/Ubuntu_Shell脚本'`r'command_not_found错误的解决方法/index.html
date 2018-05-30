@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="在配置nginx 时，有时会提示如下错误： nginx: [emerg] getpwnam(&amp;quot;www&amp;quot;) failed 这里有两种解决方案： 去除user nobody配置在nginx.conf中 把user nobody的注释去掉既可 创建www用户错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令： /usr/sbin/group">
-<meta name="keywords" content="Linux,Nginx,Server">
+<meta name="description" content="在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。 这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。">
+<meta name="keywords" content="Ubuntu,Shell,sed">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx_[emerg]getpwnam(www)failed错误的处理方法">
-<meta property="og:url" content="http://shawn-nie.github.io/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/index.html">
+<meta property="og:title" content="Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法">
+<meta property="og:url" content="http://shawn-nie.github.io/2018/05/30/Ubuntu_Shell脚本'`r'command_not_found错误的解决方法/index.html">
 <meta property="og:site_name" content="Shawn的技术博客">
-<meta property="og:description" content="在配置nginx 时，有时会提示如下错误： nginx: [emerg] getpwnam(&amp;quot;www&amp;quot;) failed 这里有两种解决方案： 去除user nobody配置在nginx.conf中 把user nobody的注释去掉既可 创建www用户错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令： /usr/sbin/group">
+<meta property="og:description" content="在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。 这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-26T14:13:17.000Z">
+<meta property="og:updated_time" content="2018-05-30T10:25:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx_[emerg]getpwnam(www)failed错误的处理方法">
-<meta name="twitter:description" content="在配置nginx 时，有时会提示如下错误： nginx: [emerg] getpwnam(&amp;quot;www&amp;quot;) failed 这里有两种解决方案： 去除user nobody配置在nginx.conf中 把user nobody的注释去掉既可 创建www用户错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令： /usr/sbin/group">
+<meta name="twitter:title" content="Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法">
+<meta name="twitter:description" content="在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。 这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Nginx_[emerg]getpwnam(www)failed错误的处理方法 | Shawn的技术博客</title>
+<title>Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法 | Shawn的技术博客</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +271,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Nginx_[emerg]getpwnam(www)failed错误的处理方法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Ubuntu_Shell脚本&#39;`r&#39;command_not_found错误的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/" class="article-date">
-      <time datetime="2017-11-26T14:13:17.000Z" itemprop="datePublished">2017-11-26</time>
+      <a href="/2018/05/30/Ubuntu_Shell脚本'`r'command_not_found错误的解决方法/" class="article-date">
+      <time datetime="2018-05-30T10:25:40.000Z" itemprop="datePublished">2018-05-30</time>
 </a>
 
 
@@ -290,7 +290,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Nginx_[emerg]getpwnam(www)failed错误的处理方法
+      Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法
     </h1>
   
 
@@ -305,7 +305,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell/">Shell</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sed/">sed</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -315,17 +315,13 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <a id="more"></a>
-<p>在配置nginx 时，有时会提示如下错误：</p>
-<pre><code>nginx: [emerg] getpwnam(&quot;www&quot;) failed
-</code></pre><p>这里有两种解决方案：</p>
-<h2 id="去除user-nobody配置"><a href="#去除user-nobody配置" class="headerlink" title="去除user nobody配置"></a>去除user nobody配置</h2><p>在nginx.conf中 把user nobody的注释去掉既可</p>
-<h2 id="创建www用户"><a href="#创建www用户" class="headerlink" title="创建www用户"></a>创建www用户</h2><p>错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令：</p>
-<pre><code>/usr/sbin/groupadd -f www
-/usr/sbin/useradd -g www www
-</code></pre><p>以上方法测试通过，启动后，在浏览器里输入服务器IP，即可查看到：</p>
-<pre><code>Welcome to nginx!
-</code></pre><p>的欢迎界面。</p>
+        <p>在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。</p>
+<p>这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。</p>
+<a id="more"></a>
+<h2 id="问题发生的原因"><a href="#问题发生的原因" class="headerlink" title="问题发生的原因"></a>问题发生的原因</h2><p>Windows系统的换行符是<code>\r\n</code>，而Linux系统的换行符是<code>\n</code>，所以只要把脚本中的 \r 去掉就可以了。</p>
+<h2 id="问题的解决-脚本代码转化为unix格式"><a href="#问题的解决-脚本代码转化为unix格式" class="headerlink" title="问题的解决: 脚本代码转化为unix格式"></a>问题的解决: 脚本代码转化为unix格式</h2><p>找到命令脚本文件，执行如下命令:</p>
+<pre><code>sed -i &apos;s/\r$//&apos; &lt;文件路径及名称&gt;
+</code></pre><p>待执行完成后，再次运行脚本，即可正常执行内部命令行。</p>
 
       
     </div>
@@ -334,13 +330,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/">Nginx_[emerg]getpwnam(www)failed错误的处理方法</a></p>
+        <p><span>本文标题:</span><a href="/2018/05/30/Ubuntu_Shell脚本'`r'command_not_found错误的解决方法/">Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
-        <p><span>发布时间:</span>2017-11-26, 22:13:17</p>
-        <p><span>最后更新:</span>2017-11-26, 22:13:17</p>
+        <p><span>发布时间:</span>2018-05-30, 18:25:40</p>
+        <p><span>最后更新:</span>2018-05-30, 18:25:40</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/" title="Nginx_[emerg]getpwnam(www)failed错误的处理方法">http://shawn-nie.github.io/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/30/Ubuntu_Shell脚本'`r'command_not_found错误的解决方法/" title="Ubuntu_Shell脚本&#39;r&#39;command_not_found错误的解决方法">http://shawn-nie.github.io/2018/05/30/Ubuntu_Shell脚本&#39;`r&#39;command_not_found错误的解决方法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2018/05/30/Ubuntu_Shell脚本&#39;`r&#39;command_not_found错误的解决方法/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -352,16 +348,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">
-                    Nginx做为反向代理时，服务器缓存清空的方法
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/11/25/Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统/">
-                    Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统
+                <a href="/2018/05/30/Ubuntu系统使用sed命令替换字符串的常用语法/">
+                    Ubuntu系统使用sed命令替换字符串的常用语法
                 </a>
             </div>
         
@@ -373,7 +363,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#去除user-nobody配置"><span class="toc-number">1.</span> <span class="toc-text">去除user nobody配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建www用户"><span class="toc-number">2.</span> <span class="toc-text">创建www用户</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题发生的原因"><span class="toc-number">1.</span> <span class="toc-text">问题发生的原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题的解决-脚本代码转化为unix格式"><span class="toc-number">2.</span> <span class="toc-text">问题的解决: 脚本代码转化为unix格式</span></a></li></ol>
         
     </div>
     <style>
@@ -419,15 +409,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/" title="上一篇: Nginx做为反向代理时，服务器缓存清空的方法">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/11/25/Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统/" title="下一篇: Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统">
+            <a href="/2018/05/30/Ubuntu系统使用sed命令替换字符串的常用语法/" title="下一篇: Ubuntu系统使用sed命令替换字符串的常用语法">
                 <i class="fa fa-angle-right"></i>
             </a>
         
