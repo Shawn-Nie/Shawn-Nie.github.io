@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-06-16T17:01:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</title>
+        <pubTime>2017-11-25T13:20:37.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Server</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>ngx_pagespeed</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/05/30/Ubuntu_Shell%E8%84%9A%E6%9C%AC'%60r'command_not_found%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2018-05-30T10:25:40.000Z</lastmod>
     <data>
@@ -360,32 +386,6 @@
         <tag>Nginx</tag>
          
         <tag>Server</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2017-11-26T12:56:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</title>
-        <pubTime>2017-11-25T13:20:37.000Z</pubTime>
-        
-        <tag>Nginx</tag>
-         
-        <tag>Server</tag>
-         
-        <tag>程序安装</tag>
-         
-        <tag>ngx_pagespeed</tag>
          
          
            
