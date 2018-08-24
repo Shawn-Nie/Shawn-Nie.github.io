@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-08-24T11:21:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统的常用命令</title>
+        <pubTime>2017-11-13T03:35:59.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/25/Nginx%E4%B8%8BPageSpeed%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E5%9F%BA%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2018-06-16T17:01:12.000Z</lastmod>
     <data>
@@ -663,28 +685,6 @@
         <tag>字段检索</tag>
          
         <tag>Findstr</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2017-11-16T13:27:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu系统的常用命令</title>
-        <pubTime>2017-11-13T03:35:59.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
          
          
            
