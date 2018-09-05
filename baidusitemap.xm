@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/08/28/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Redis%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2018-09-05T11:52:54.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统安装Redis数据库</title>
+        <pubTime>2018-08-28T06:31:48.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Redis</tag>
+         
+        <tag>NoSQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2017/11/13/Ubuntu%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2018-08-24T11:21:15.000Z</lastmod>
     <data>
@@ -576,11 +602,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          

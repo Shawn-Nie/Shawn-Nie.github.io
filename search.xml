@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu系统安装Redis数据库]]></title>
+    <url>%2F2018%2F08%2F28%2FUbuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Redis%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[本文将分别记录官方安装包及apt-get命令两种方式的redis数据库安装方法,以及redis的一些常用命令 Redis数据库的安装方法一: 官方安装包安装进入redis官网(https://redis.io/)下载最新版本的redis安装包(如果无法打开官网，可以进入中文版网站http://www.redis.cn/替代)，按照以下步骤执行安装操作即可(在这里我们以版本4.0.10为例)。 步骤如下: 下载安装包至选定路径假设我们希望下载安装包文件至user/local/src/路径下，执行如下命令: cd user/local/src/ wget http://download.redis.io/releases/redis-4.0.10.tar.gz 下载完成后，解压安装包: tar xzf redis-4.0.10.tar.gz 使用make命令变编译安装文件进入解压后的安装文件路径下,执行make语句进行编译: cd redis-4.0.10 make 编译的过程大概要1~2分钟，编译完成之后，redis也就安装成功了。 启动redis服务编译好的文件，存放在当前安装文件路径下的src目录下。此时，我们便可以在当前目录下启动redis: cd src 或 cd /usr/local/src/redis-4.0.10/src/ //启动redis-server ./redis-server //启动redis-client ./redis-cli 如能正常启动，则redis已正确成功安装。 方法二: apt-get命令安装使用apt-get命令安装比较简单，如果对版本没有特殊要求，apt-get更适合快速安装: //更新apt资源列表 sudo apt-get update //安装redis sudo apt-get install redis-server 以apt-get方式安装成功后，系统会自动注册服务，所以启动redis的命令可以直接使用: //启动redis-server redis-server //启动redis-client redis-cli redis数据库的常见配置与使用命令redis支持远程连接配置Redis默认仅支持本地链接，输入进程命令：ps -ef | grep redis可查看其进程及连接支持。如结果显示: root 5239 1 0 10:37 ? 00:00:00 ./redis-server 127.0.0.1:6379 则当前redis仅支持本地连接，外网无法连接当前redis服务器 ( 127.0.0.1:6379) 。 如需支持外网访问当前redis数据库，需更改配置文件redis.conf 并重启redis-server即可。 具体步骤如下: 打开redis.conf 文件，屏蔽 bind 127.0.0.1 命令行： #bind 127.0.0.1 修改protected-mode属性为no : protected-mode no 重启redis服务。 此时再次执行命令ps -ef | grep redis ，可以看见，redis服务器已支持外部访问连接 (*:6379) 。 Redis常用命令 命令 释义 备注 示例 KEYS 查看当前数据库中全部的键 keys select 选择序列为 的数据库 redis一般默认包含16个数据库，索引值为0~15。如不做选择，默认进入的是索引为0的数据库。 select 5]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
+        <tag>Redis</tag>
+        <tag>NoSQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu_Shell脚本'r'command_not_found错误的解决方法]]></title>
     <url>%2F2018%2F05%2F30%2FUbuntu_Shell%E8%84%9A%E6%9C%AC'%60r'command_not_found%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
     <content type="text"><![CDATA[在执行一个shell脚本的时候, 经过检验，内部代码并没有错误，但运行时却提示 ‘\r’: command not found。 这个问题一般发生在Windows创建和编辑.sh脚本上传至Linux服务器运行的情况。问题发生的原因是 因为系统换行符的差异。只要转化脚本为unix格式即可解决问题。 问题发生的原因Windows系统的换行符是\r\n，而Linux系统的换行符是\n，所以只要把脚本中的 \r 去掉就可以了。 问题的解决: 脚本代码转化为unix格式找到命令脚本文件，执行如下命令: sed -i &apos;s/\r$//&apos; &lt;文件路径及名称&gt; 待执行完成后，再次运行脚本，即可正常执行内部命令行。]]></content>
@@ -289,9 +303,9 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>MySQL</tag>
         <tag>数据库备份</tag>
       </tags>
   </entry>
