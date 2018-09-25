@@ -8,8 +8,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
         <tag>Redis</tag>
         <tag>NoSQL</tag>
       </tags>
@@ -42,7 +42,7 @@
   <entry>
     <title><![CDATA[Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建]]></title>
     <url>%2F2018%2F05%2F29%2FUbuntu%E7%B3%BB%E7%BB%9F_Apache2%2BPHP%2BMySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%2F</url>
-    <content type="text"><![CDATA[在Ubuntu系统安装Apache2服务器并支持PHP_Web。 基本模块安装安装并启动MySQL服务MySQL的安装及常用指令在前章节有详细介绍，这里仅简单记录MySQL的安装及启动命令: 安装MySQL服务sudo apt-get install mysql-server mysql-client 启动MySQL服务sudo service mysql start 关于MySQL的详细安装及常用指令，请查看《MySQL数据库安装与配置_适用于Ubuntu16.04系统》。 安装Apache2服务器并使其支持MySQL服务安装Apache2服务器sudo apt-get install apache2 安装mysql支持工具库sudo apt-get install libapache2-mod-auth-mysql 安装完成后，需要将www目录更改下所有权以便可以新建文档: sudo chmod 777 /var/www 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以打开本机的浏览器 输入 本机ip； 出现下图的界面即表示安装成功。如80端口已被占用，需要编辑Apache配置文件，设置新的端口(见本文【apache服务器自定义端口配置】章节)。 安装php5并使其支持MySQL安装之前，先输入: sudo apt-get update 安装php5及Apache-php扩展包sudo apt-get install php5 libapache2-mod-php5 【注】这一步可能会产生Could not get lock /var/cache/apt/archives/lock异常，具体处理方式如下:输入如下指令，apt-get命令即可恢复正常: sudo rm -rf /var/cache/apt/archives/lock sudo apt-get update 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以用本章节测试方式进行检验。如80端口已被占用，需要跳过本章节，修改Apache端口，设置为Apache设置新的端口再进行测试(见本文【apache服务器自定义端口配置】章节)。 新建一个文档：sudo vi /var/www/phpinfo.php 按下i键编辑文件 输入: &lt;?php phpinfo(); ?&gt; ESC 后输入:wq保存退出 重启Apache服务器：sudo /etc/init.d/apache2 restart 在浏览器中输入 http://[服务器_ip]/phpinfo.php,出现PHP的相关配置信息即表示成功 安装php-MySQL及相关扩展包sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl 安装php-FastCGI管理器(phpstorm)sudo apt-get install php5-cgi * 安装phpmyadmin为了更方便的管理数据库 同时也建议安装phpmyadmin。命令行输入： sudo apt-get install phpmyadmin 在安装过程中会要求选择Web server：apache2或lighttpd，选择apache2，按tab键然后确定。然后会要求输入设置的Mysql数据库密码连接密码 Password of the database’s administrative user。 安装完成后需要将phpmyadmin的文件夹复制到www文件下进行管理： sudo cp /usr/share/phpmyadmin /var/www -a 打开浏览器输入http://[server_ip]/phpmyadmin 出现如下页面后就表示已经成功(如Apache默认端口被占用，见本文【apache服务器自定义端口配置】章节)： Apache服务器自定义端口配置本章节适用于在当前机器已使用Nginx服务器占用Apache默认端口，需要另行配置Apache端口的情况。 修改监听端口以及主机端口命令: sudo vi /etc/apache2/ports.conf 将端口的80改为想要指定的可用端口。 如: 修改virtualHost的端口打开ports.conf文件中注释部分指向的文件: /etc/apache2/sites-enabled/000-default.conf 将&lt;VirtualHost *:80&gt;修改成上一步指定的端口 重启apache2sudo service apache2 restart 这一步可能会出现 Could not reliably determine the server&#39;s fully qualified domain name, using 10.29.47.114. Set the &#39;ServerName&#39; directive globally to suppress this message 错误，这个问题应该是因为沒有在 /etc/httpd/conf/httpd.conf 中设定 ServerName ;解决这个问题，需要打开配置文件，加上 ServerName 的定义。具体方法如下:打开Apahce配置文件: sudo vim /etc/apache2/apache2.conf ,增加 ServerName localhost:[上一步指定的端口] 即可]]></content>
+    <content type="text"><![CDATA[在Ubuntu系统安装Apache2服务器并支持PHP_Web。 基本模块安装安装并启动MySQL服务MySQL的安装及常用指令在前章节有详细介绍，这里仅简单记录MySQL的安装及启动命令: 安装MySQL服务sudo apt-get install mysql-server mysql-client 启动MySQL服务sudo service mysql start 关于MySQL的详细安装及常用指令，请查看《MySQL数据库安装与配置_适用于Ubuntu16.04系统》。 安装Apache2服务器并使其支持MySQL服务安装Apache2服务器sudo apt-get install apache2 安装mysql支持工具库sudo apt-get install libapache2-mod-auth-mysql 安装完成后，需要将www目录更改下所有权以便可以新建文档: sudo chmod 777 /var/www 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以打开本机的浏览器 输入 本机ip； 出现下图的界面即表示安装成功。如80端口已被占用，需要编辑Apache配置文件，设置新的端口(见本文【apache服务器自定义端口配置】章节)。 安装php5并使其支持MySQL安装之前，先输入: sudo apt-get update 安装php5及Apache-php扩展包sudo apt-get install php5 libapache2-mod-php5 【注】这一步可能会产生Could not get lock /var/cache/apt/archives/lock异常，具体处理方式如下:输入如下指令，apt-get命令即可恢复正常: sudo rm -rf /var/cache/apt/archives/lock sudo apt-get update 【注】因php版本更新，这里可能会出现 Package php5 is not available, but is referred to by another package 问题。这是因为php版本替换，安装包名字发生变化引起的。具体解决步骤如下: sudo apt-get install -y language-pack-en-base sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php sudo add-apt-repository ppa:ondrej/php sudo apt-get update apt-cache search php5 sudo apt-get install php5.5-common sudo apt-get install libapache2-mod-php5.5` 这里 apt-get update apt-cache search ... 命令很关键，如后续其他软件以apt-get方法安装的过程中出现类似问题，可通过 apt-cache search 命令检索具体包名称再进行安装。 安装成功检验如果服务器未配置其余占用80端口的Server(如Nginx)，可以用本章节测试方式进行检验。如80端口已被占用，需要跳过本章节，修改Apache端口，设置为Apache设置新的端口再进行测试(见本文【apache服务器自定义端口配置】章节)。 新建一个文档：sudo vi /var/www/phpinfo.php 按下i键编辑文件 输入: &lt;?php phpinfo(); ?&gt; ESC 后输入:wq保存退出 重启Apache服务器：sudo /etc/init.d/apache2 restart 在浏览器中输入 http://[服务器_ip]/phpinfo.php,出现PHP的相关配置信息即表示成功 安装php-MySQL及相关扩展包sudo apt-get install php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl 安装php-FastCGI管理器(phpstorm)sudo apt-get install php5-cgi * 安装phpmyadmin为了更方便的管理数据库 同时也建议安装phpmyadmin。命令行输入： sudo apt-get install phpmyadmin 在安装过程中会要求选择Web server：apache2或lighttpd，选择apache2，按tab键然后确定。然后会要求输入设置的Mysql数据库密码连接密码 Password of the database’s administrative user。 安装完成后需要将phpmyadmin的文件夹复制到www文件下进行管理： sudo cp /usr/share/phpmyadmin /var/www -a 打开浏览器输入http://[server_ip]/phpmyadmin 出现如下页面后就表示已经成功(如Apache默认端口被占用，见本文【apache服务器自定义端口配置】章节)： Apache服务器自定义端口配置本章节适用于在当前机器已使用Nginx服务器占用Apache默认端口，需要另行配置Apache端口的情况。 修改监听端口以及主机端口命令: sudo vi /etc/apache2/ports.conf 将端口的80改为想要指定的可用端口。 如: 修改virtualHost的端口打开ports.conf文件中注释部分指向的文件: /etc/apache2/sites-enabled/000-default.conf 将&lt;VirtualHost *:80&gt;修改成上一步指定的端口 重启apache2sudo service apache2 restart 这一步可能会出现 Could not reliably determine the server&#39;s fully qualified domain name, using 10.29.47.114. Set the &#39;ServerName&#39; directive globally to suppress this message 错误，这个问题应该是因为沒有在 /etc/httpd/conf/httpd.conf 中设定 ServerName ;解决这个问题，需要打开配置文件，加上 ServerName 的定义。具体方法如下:打开Apahce配置文件: sudo vim /etc/apache2/apache2.conf ,增加 ServerName localhost:[上一步指定的端口] 即可]]></content>
       <categories>
         <category>教程整理</category>
       </categories>
@@ -110,8 +110,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
         <tag>Java</tag>
       </tags>
   </entry>
@@ -123,8 +123,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>程序安装</tag>
         <tag>Ubuntu</tag>
+        <tag>程序安装</tag>
         <tag>Java</tag>
       </tags>
   </entry>
@@ -184,9 +184,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>Nginx</tag>
         <tag>Server</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -197,9 +197,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>Nginx</tag>
         <tag>Server</tag>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -303,10 +303,10 @@
         <category>工作记录</category>
       </categories>
       <tags>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>MySQL</tag>
         <tag>数据库备份</tag>
-        <tag>Linux</tag>
-        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -317,9 +317,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
         <tag>SSH</tag>
+        <tag>Linux</tag>
         <tag>scp</tag>
       </tags>
   </entry>
@@ -344,8 +344,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>腾讯云</tag>
       </tags>
   </entry>
@@ -372,8 +372,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>Maven</tag>
       </tags>
   </entry>
@@ -385,8 +385,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/05/29/Ubuntu%E7%B3%BB%E7%BB%9F_Apache2+PHP+MySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2018-09-25T13:29:00.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建</title>
+        <pubTime>2018-05-29T11:36:09.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>服务器</tag>
+         
+        <tag>php</tag>
+         
+        <tag>apache2</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/08/28/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Redis%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2018-09-05T11:52:54.000Z</lastmod>
     <data>
@@ -11,9 +37,9 @@
         <title>Ubuntu系统安装Redis数据库</title>
         <pubTime>2018-08-28T06:31:48.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
          
         <tag>Redis</tag>
          
@@ -37,9 +63,9 @@
         <title>Ubuntu系统的常用命令</title>
         <pubTime>2017-11-13T03:35:59.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -112,32 +138,6 @@
         <tag>Ubuntu</tag>
          
         <tag>sed</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2018/05/29/Ubuntu%E7%B3%BB%E7%BB%9F_Apache2+PHP+MySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2018-05-29T11:36:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建</title>
-        <pubTime>2018-05-29T11:36:09.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>服务器</tag>
-         
-        <tag>php</tag>
-         
-        <tag>apache2</tag>
          
          
            
@@ -247,9 +247,9 @@
         <title>Ubuntu系统安装Tomcat7教程(apt-get方法)</title>
         <pubTime>2018-02-02T14:10:23.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
          
         <tag>Java</tag>
          
@@ -271,9 +271,9 @@
         <title>Ubuntu系统安装Java教程(apt-get方法)</title>
         <pubTime>2018-02-02T13:41:03.000Z</pubTime>
         
-        <tag>程序安装</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
          
         <tag>Java</tag>
          
@@ -405,11 +405,11 @@
         <title>Nginx做为反向代理时，服务器缓存清空的方法</title>
         <pubTime>2017-11-26T14:27:39.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
-         
-        <tag>Linux</tag>
          
          
            
@@ -429,11 +429,11 @@
         <title>Nginx_[emerg]getpwnam(www)failed错误的处理方法</title>
         <pubTime>2017-11-26T14:13:17.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
-         
-        <tag>Linux</tag>
          
          
            
@@ -602,13 +602,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
-        <tag>数据库备份</tag>
+        <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
          
-        <tag>Ubuntu</tag>
+        <tag>MySQL</tag>
+         
+        <tag>数据库备份</tag>
          
          
            
@@ -628,11 +628,11 @@
         <title>Linux系统发送本机文件至远程服务器_以SSH方式</title>
         <pubTime>2017-11-18T10:44:46.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>SSH</tag>
+         
+        <tag>Linux</tag>
          
         <tag>scp</tag>
          
@@ -678,9 +678,9 @@
         <title>腾讯云服务器Ubuntu系统设置允许root用户登录</title>
         <pubTime>2017-11-17T12:21:05.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
         <tag>腾讯云</tag>
          
@@ -730,9 +730,9 @@
         <title>Ubuntu下安装Maven</title>
         <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
          
         <tag>Maven</tag>
          
