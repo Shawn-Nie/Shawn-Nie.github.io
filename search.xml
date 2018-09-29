@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows10系统安装Maven及Eclipse-Maven的集成]]></title>
+    <url>%2F2018%2F09%2F30%2FWindows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90%2F</url>
+    <content type="text"><![CDATA[环境需求 安装Maven前，先确保系统已正常安装且配置好JDK。 安装步骤 下载并解压安装文件 访问 Maven官方网站： http://maven.apache.org/download.cgi , 打开后 找到下载链接，如下所示： 下载合适的Maven压缩包，解压至自定义的文件位置。如: D:\Program Files\Maven 。 设置Maven环境变量 分别添加 M2_HOME 和 MAVEN_HOME 环境变量至 Windows 环境变量，并将其指向上一步Maven压缩包解压的文件夹。在这里应该是: D:\Program Files\Maven\apache-maven-3.5.4 。 更新 PATH 变量 。添加 Maven bin 文件夹到 PATH 的最后，如： %M2_HOME%\bin, 这样就可以在命令中的任何目录下运行 Maven 命令了。 验证Maven安装打开cmd, 执行 mvn --version 命令。 如Maven已正确安装，则返回如下信息： 在Eclipse上安装maven 点击Eclipse中的 window-&gt;Perference-&gt;Maven-&gt;Installations ，设置本机已下载安装完成的Maven。 此时，Eclipse 已成功集成Maven，可以进行Maven项目的开发。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu系统安装Redis数据库]]></title>
     <url>%2F2018%2F08%2F28%2FUbuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Redis%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[本文将分别记录官方安装包及apt-get命令两种方式的redis数据库安装方法,以及redis的一些常用命令 Redis数据库的安装方法一: 官方安装包安装进入redis官网(https://redis.io/)下载最新版本的redis安装包(如果无法打开官网，可以进入中文版网站http://www.redis.cn/替代)，按照以下步骤执行安装操作即可(在这里我们以版本4.0.10为例)。 步骤如下: 下载安装包至选定路径假设我们希望下载安装包文件至user/local/src/路径下，执行如下命令: cd user/local/src/ wget http://download.redis.io/releases/redis-4.0.10.tar.gz 下载完成后，解压安装包: tar xzf redis-4.0.10.tar.gz 使用make命令变编译安装文件进入解压后的安装文件路径下,执行make语句进行编译: cd redis-4.0.10 make 编译的过程大概要1~2分钟，编译完成之后，redis也就安装成功了。 启动redis服务编译好的文件，存放在当前安装文件路径下的src目录下。此时，我们便可以在当前目录下启动redis: cd src 或 cd /usr/local/src/redis-4.0.10/src/ //启动redis-server ./redis-server //启动redis-client ./redis-cli 如能正常启动，则redis已正确成功安装。 方法二: apt-get命令安装使用apt-get命令安装比较简单，如果对版本没有特殊要求，apt-get更适合快速安装: //更新apt资源列表 sudo apt-get update //安装redis sudo apt-get install redis-server 以apt-get方式安装成功后，系统会自动注册服务，所以启动redis的命令可以直接使用: //启动redis-server redis-server //启动redis-client redis-cli redis数据库的常见配置与使用命令redis支持远程连接配置Redis默认仅支持本地链接，输入进程命令：ps -ef | grep redis可查看其进程及连接支持。如结果显示: root 5239 1 0 10:37 ? 00:00:00 ./redis-server 127.0.0.1:6379 则当前redis仅支持本地连接，外网无法连接当前redis服务器 ( 127.0.0.1:6379) 。 如需支持外网访问当前redis数据库，需更改配置文件redis.conf 并重启redis-server即可。 具体步骤如下: 打开redis.conf 文件，屏蔽 bind 127.0.0.1 命令行： #bind 127.0.0.1 修改protected-mode属性为no : protected-mode no 重启redis服务。 此时再次执行命令ps -ef | grep redis ，可以看见，redis服务器已支持外部访问连接 (*:6379) 。 Redis常用命令 命令 释义 备注 示例 KEYS 查看当前数据库中全部的键 keys select 选择序列为 的数据库 redis一般默认包含16个数据库，索引值为0~15。如不做选择，默认进入的是索引为0的数据库。 select 5]]></content>

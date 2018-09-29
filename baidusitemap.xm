@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/09/30/Windows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90/</loc>
+    <lastmod>2018-09-29T17:17:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows10系统安装Maven及Eclipse-Maven的集成</title>
+        <pubTime>2018-09-29T16:48:11.000Z</pubTime>
+        
+        <tag>Maven</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/05/29/Ubuntu%E7%B3%BB%E7%BB%9F_Apache2+PHP+MySQL%E6%9C%8D%E5%8A%A1%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2018-09-25T13:29:00.000Z</lastmod>
     <data>
