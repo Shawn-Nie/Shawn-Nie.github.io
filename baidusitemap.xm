@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2018/09/30/Windows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90/</loc>
-    <lastmod>2018-09-29T17:17:43.000Z</lastmod>
+    <lastmod>2018-09-29T17:24:43.000Z</lastmod>
     <data>
         <display>
         <title>Windows10系统安装Maven及Eclipse-Maven的集成</title>

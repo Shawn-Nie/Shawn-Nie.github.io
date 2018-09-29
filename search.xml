@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Windows10系统安装Maven及Eclipse-Maven的集成]]></title>
     <url>%2F2018%2F09%2F30%2FWindows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90%2F</url>
-    <content type="text"><![CDATA[环境需求 安装Maven前，先确保系统已正常安装且配置好JDK。 安装步骤 下载并解压安装文件 访问 Maven官方网站： http://maven.apache.org/download.cgi , 打开后 找到下载链接，如下所示： 下载合适的Maven压缩包，解压至自定义的文件位置。如: D:\Program Files\Maven 。 设置Maven环境变量 分别添加 M2_HOME 和 MAVEN_HOME 环境变量至 Windows 环境变量，并将其指向上一步Maven压缩包解压的文件夹。在这里应该是: D:\Program Files\Maven\apache-maven-3.5.4 。 更新 PATH 变量 。添加 Maven bin 文件夹到 PATH 的最后，如： %M2_HOME%\bin, 这样就可以在命令中的任何目录下运行 Maven 命令了。 验证Maven安装打开cmd, 执行 mvn --version 命令。 如Maven已正确安装，则返回如下信息： 在Eclipse上安装maven 点击Eclipse中的 window-&gt;Perference-&gt;Maven-&gt;Installations ，设置本机已下载安装完成的Maven。 此时，Eclipse 已成功集成Maven，可以进行Maven项目的开发。]]></content>
+    <content type="text"><![CDATA[环境需求 安装Maven前，先确保系统已正常安装且配置好JDK。 安装步骤 下载并解压安装文件 访问 Maven官方网站： http://maven.apache.org/download.cgi , 打开后找到下载链接，如下所示： 下载合适的Maven压缩包，解压至自定义的文件位置。如: D:\Program Files\Maven 。 设置Maven环境变量 分别添加 M2_HOME 和 MAVEN_HOME 环境变量至 Windows 环境变量，并将其指向上一步Maven压缩包解压的文件夹。在这里应该是: D:\Program Files\Maven\apache-maven-3.5.4 。 更新 PATH 变量 。添加 Maven bin 文件夹到 PATH 的最后，如： %M2_HOME%\bin, 这样就可以在命令中的任何目录下运行 Maven 命令了。 验证Maven安装打开cmd, 执行 mvn --version 命令。 如Maven已正确安装，则返回如下信息： 在Eclipse上安装maven 点击Eclipse中的 window-&gt;Perference-&gt;Maven-&gt;Installations ，设置本机已下载安装完成的Maven。 此时，Eclipse 已成功集成Maven，可以进行Maven项目的开发。]]></content>
       <categories>
         <category>教程整理</category>
       </categories>
