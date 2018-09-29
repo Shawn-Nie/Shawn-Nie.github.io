@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows10系统安装Tomcat7教程及Eclipse-Tomcat的整合]]></title>
+    <url>%2F2018%2F09%2F30%2FWindows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B%E5%8F%8AEclipse-Tomcat%E7%9A%84%E6%95%B4%E5%90%88%2F</url>
+    <content type="text"><![CDATA[安装JDK在安装Tomcat之前，需先确保系统已正确安装和配置JDK。 安装Tomcat7（解压包方式）下载Tomcat程序压缩包进入Tomcat官网： https://tomcat.apache.org/ ， 选择下载想要的版本。 下载完成后，直接解压安装包至选定的路径，如: D:\Program Files\Tomcat_Servers 。 配置Tomcat环境变量 新建变量名：CATALINA_HOME，变量值为上一部压缩包解压的位置。在这里案例为：D:\Program Files\Tomcat_Servers\apache-tomcat-7.0.91 。 添加Path变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin 。 配置好环境变量后，Tomcat即可直接运行。进入 Tomcat bin 目录下，分别执行 startup.bat 和 shutdown.bat 文件即可分别执行Tomcat的启动和关闭。 Eclipse集成Tomcat服务器启动Eclipse，进入Window - Preferences - Server 下，添加上一部安装的Tomcat服务器： * Eclipse-Tomcat 插件的使用在上一部已经实现Eclipse-Tomcat的集成， 这一步非必要设置。而这一步的好处是eclipse和tomcat协同工作的更快捷和直观。 安装Tomcat插件，就可以在eclipse中看到小猫图标了。 具体步骤如下: 下载插件点击后上方的help，接着选择install new software 。 接着点击add,填入tomcatplugin，url:http://tomcatplugin.sf.net/update,点击ok,等待检索插件。 检索完成后，选择加入插件。 此时插件开始下载和装配至Eclipse。选择适宜的版本进行安装即可。 配置server Locations下载并安装完成后，系统会提示重启Eclipse。 此时重启Eclipse即可。 重启后可以看到Eclipse窗口已有Tomcat菜单和图标了： 接下来需要配置server Locations。选择第二项use tomcat installation.. 即可，如图： 设置Tomcat插件属性进入Window -Preference -Tomcat 下，选择Tomcat版本及Tomcat安装路径。 此时Tomcat插件已配置完成。 直接点击tomcat的小猫图标，即可启动或关闭Tomcat服务器。]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>程序安装</tag>
+        <tag>Java</tag>
+        <tag>Win10</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows10系统安装Maven及Eclipse-Maven的集成]]></title>
     <url>%2F2018%2F09%2F30%2FWindows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90%2F</url>
     <content type="text"><![CDATA[环境需求 安装Maven前，先确保系统已正常安装且配置好JDK。 安装步骤 下载并解压安装文件 访问 Maven官方网站： http://maven.apache.org/download.cgi , 打开后找到下载链接，如下所示： 下载合适的Maven压缩包，解压至自定义的文件位置。如: D:\Program Files\Maven 。 设置Maven环境变量 分别添加 M2_HOME 和 MAVEN_HOME 环境变量至 Windows 环境变量，并将其指向上一步Maven压缩包解压的文件夹。在这里应该是: D:\Program Files\Maven\apache-maven-3.5.4 。 更新 PATH 变量 。添加 Maven bin 文件夹到 PATH 的最后，如： %M2_HOME%\bin, 这样就可以在命令中的任何目录下运行 Maven 命令了。 验证Maven安装打开cmd, 执行 mvn --version 命令。 如Maven已正确安装，则返回如下信息： 在Eclipse上安装maven 点击Eclipse中的 window-&gt;Perference-&gt;Maven-&gt;Installations ，设置本机已下载安装完成的Maven。 此时，Eclipse 已成功集成Maven，可以进行Maven项目的开发。]]></content>
@@ -283,8 +296,8 @@
       </categories>
       <tags>
         <tag>JavaWeb</tag>
-        <tag>Maven</tag>
         <tag>Java</tag>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>

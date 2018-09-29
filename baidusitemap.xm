@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/09/30/Windows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B%E5%8F%8AEclipse-Tomcat%E7%9A%84%E6%95%B4%E5%90%88/</loc>
+    <lastmod>2018-09-29T18:56:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows10系统安装Tomcat7教程及Eclipse-Tomcat的整合</title>
+        <pubTime>2018-09-29T17:50:44.000Z</pubTime>
+        
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>Win10</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/09/30/Windows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Maven%E5%8F%8AEclipse-Maven%E7%9A%84%E9%9B%86%E6%88%90/</loc>
     <lastmod>2018-09-29T17:24:43.000Z</lastmod>
     <data>
@@ -499,9 +523,9 @@
         
         <tag>JavaWeb</tag>
          
-        <tag>Maven</tag>
-         
         <tag>Java</tag>
+         
+        <tag>Maven</tag>
          
          
            
