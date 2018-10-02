@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/10/03/Windows10%E7%B3%BB%E7%BB%9FGit%E4%BB%93%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8AEclipse-Git%E6%8F%92%E4%BB%B6%E7%9A%84%E6%95%B4%E5%90%88/</loc>
+    <lastmod>2018-10-02T18:14:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows10系统Git仓库的安装及Eclipse-Git插件的整合</title>
+        <pubTime>2018-10-02T16:11:22.000Z</pubTime>
+        
+        <tag>程序安装</tag>
+         
+        <tag>Git</tag>
+         
+        <tag>Eclipse</tag>
+         
+        <tag>EGit</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/09/30/Windows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B%E5%8F%8AEclipse-Tomcat%E7%9A%84%E6%95%B4%E5%90%88/</loc>
     <lastmod>2018-09-29T18:56:29.000Z</lastmod>
     <data>
@@ -81,9 +107,9 @@
         <title>Ubuntu系统安装Redis数据库</title>
         <pubTime>2018-08-28T06:31:48.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>Redis</tag>
          
@@ -107,9 +133,9 @@
         <title>Ubuntu系统的常用命令</title>
         <pubTime>2017-11-13T03:35:59.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -291,9 +317,9 @@
         <title>Ubuntu系统安装Tomcat7教程(apt-get方法)</title>
         <pubTime>2018-02-02T14:10:23.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>Java</tag>
          
@@ -315,9 +341,9 @@
         <title>Ubuntu系统安装Java教程(apt-get方法)</title>
         <pubTime>2018-02-02T13:41:03.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>程序安装</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>Java</tag>
          
@@ -449,11 +475,11 @@
         <title>Nginx做为反向代理时，服务器缓存清空的方法</title>
         <pubTime>2017-11-26T14:27:39.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -473,11 +499,11 @@
         <title>Nginx_[emerg]getpwnam(www)failed错误的处理方法</title>
         <pubTime>2017-11-26T14:13:17.000Z</pubTime>
         
-        <tag>Linux</tag>
-         
         <tag>Nginx</tag>
          
         <tag>Server</tag>
+         
+        <tag>Linux</tag>
          
          
            
@@ -523,9 +549,9 @@
         
         <tag>JavaWeb</tag>
          
-        <tag>Java</tag>
-         
         <tag>Maven</tag>
+         
+        <tag>Java</tag>
          
          
            
@@ -646,13 +672,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
         <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
          
            
@@ -672,11 +698,11 @@
         <title>Linux系统发送本机文件至远程服务器_以SSH方式</title>
         <pubTime>2017-11-18T10:44:46.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>SSH</tag>
-         
-        <tag>Linux</tag>
          
         <tag>scp</tag>
          
@@ -722,9 +748,9 @@
         <title>腾讯云服务器Ubuntu系统设置允许root用户登录</title>
         <pubTime>2017-11-17T12:21:05.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>腾讯云</tag>
          
@@ -774,9 +800,9 @@
         <title>Ubuntu下安装Maven</title>
         <pubTime>2017-11-15T03:37:37.000Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
         <tag>Linux</tag>
+         
+        <tag>Ubuntu</tag>
          
         <tag>Maven</tag>
          

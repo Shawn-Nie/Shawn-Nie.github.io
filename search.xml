@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Windows10系统Git仓库的安装及Eclipse-Git插件的整合]]></title>
+    <url>%2F2018%2F10%2F03%2FWindows10%E7%B3%BB%E7%BB%9FGit%E4%BB%93%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8AEclipse-Git%E6%8F%92%E4%BB%B6%E7%9A%84%E6%95%B4%E5%90%88%2F</url>
+    <content type="text"><![CDATA[本文将分别记录官方安装包及apt-get命令两种方式的redis数据库安装方法,以及redis的一些常用命令 Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。本文详细记录Git仓库及Eclipse-Git插件EGit的安装及配置过程。 Git托管平台账号在使用Git仓库相关功能之前，需拥有一个代码托管平台的账号。目前比较流行的平台包括: GitHub / BitBucket / GitLab / Coding ,… 等。 Git的安装与配置安装包的下载与运行进入Git官网 https://git-scm.com/downloads 选择系统匹配的安装包，下载后双击运行安装程序。 安装文件提示安装完成后, 打开 cmd 输入 git --version 命令查看一下是否安装成功。如返回git版本，即可进入下一步。 配置Path环境变量设置系统变量Path，添加git.exe 文件路径，即： &lt;安装目录&gt;\cmd\git.exe 。 Git的用户配置及.ssh-key的生成如已有Github或其他Git仓库的账号(如Bitbucket/GitLab/Coding,… 等)，可以在这一步进行用户信息设置并生成本机ssh-key公钥。Git支持https和git两种传输协议。使用https协议，每次pull, push都会提示要输入密码； 使用git协议+ssh密钥，可以免去每次通讯都要输密码的麻烦。 接下来将详细介绍传输公钥的配置过程。 Git仓库初始化进入一个计划做为项目存储的版本仓库的目录，在其中新建文件夹。输入git init命令，初始化git仓库。此时该目录下出现一个.git的隐藏文件，用于记载用户的Git操作。 账户的认证打开gitbash，设置已有用户的账号和email,这些是在提交commit时的签名： $ git config –global user.name &quot;Yourname&quot; $ git config –global user.email &quot;Youremail@xxx.com&quot; 生成本机SSH密钥查看系统盘用户目录下（一般在 C:\Users\&lt;用户名&gt;.ssh）是否已存在 .ssh目录。如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件；如有直接进入下一步;如没有，在gitbash输入以下命令重新生成: ssh-keygen -t rsa -C &quot;Youremail@xxx.com&quot; 此时用户SSH公钥已成功创建。进入用户目录打开.ssh文件夹，进入会看到生成的 id_rsa 以及 id_rsa.pub，前者是私钥最好不要泄露，后者是公钥可以告诉其他人。 连接客户端与github账号，添加SSH公钥这里以github为例，可以根据实际情况连接不同的服务器。 打开github， 进入setting → SSH and GPG keys → New SSH key 菜单，添加上一步生成的公钥。 用文本编辑器打开id_rsa.pub文件，将里面的内容复制到key 的位置。 点击Add SSH key，保存公钥。 此时，Git的安装及配置已完成，可以正常使用。 EGit的安装与配置安装好Git仓库之后，可以选择安装Eclipse-Git插件，EGit，使代码的开发及提交更便捷。 新版本的Eclipse下载后一般都会提供Git插件，若是没有Git插件,可以再eclipse 的market里面搜索EGit插件安装，如果低版本的eclipse安装高版本的EGit插件会报错，建议尽量选择与Eclipse版本相符的EGit插件，或直接去eclipse官网下载一个最新的eclipse for j2ee。因此在安装EGit插件之前，可以先检查一下Eclipse是否已经自带Git插件。如已经自带，则无需安装，直接进行配置即可。 具体检查或安装方式如下： 查看Eclipse版本，检查Eclipse中是否已安装EGit插件打开Eclipse菜单栏Help -&gt; About Eclipse IDE，查看是否有EGit插件的图标。 如上图所示，如能看到EGit插件图标，说明当前Eclipse已安装好EGit插件，可以直接进入配置环节，不再安装。如没有看到EGit插件图标，可以按照下一步进行安装： Egit插件的下载与安装EGit需要eclipse授权，通过网页是无法下载egit的安装包的。因此EGit的下载及安装仍在Elipse程序中进行。注意：一般market里面搜索到的EGit插件都是适合最新版本的eclipse，所以建议先打开http://wiki.eclipse.org/EGit/FAQ#Where_can_I_find_older_releases_of_EGit.3F。该网页提供了对应版本的EGit，自己选择相应的版本。 在Eclipse工具栏依次打开eclipse→help→install new software→Add，Name栏中输入EGit，location栏中输入 http://download.eclipse.org/egit/updates-X.X.X ，点击OK进行下载。 下载完成后会自动开始安装，根据界面提示点击next即可。安装完成后会提示重启eclipse，点击OK即可完成整个安装流程。 EGit的基本配置及属性定义Git账号的配置进入工具栏Window -&gt;Preferences -&gt; Team -&gt; Git -&gt; Configuration，点击Add Entry…，添加name和email，在将项目代码commit到Git时需要用到name和email信息。 在点击AddEntry…弹出的对话框中，Key填user.name，Value填姓名信息，这是添加name信息，在添加email信息时，Key填user.email，Value填email地址。 其他常用属性与配置在工具栏Window -&gt;Preferences -&gt; Team -&gt; Git -&gt; Configuration中，可以查看或修改本地仓库路径等其他常用配置。 EGit的主要功能使用方法解析本地项目提交及远程仓库推送 创建GitHub项目代码仓库（如已存在可跳过）登录GitHub，点击“New repository”添加项目代码仓库。 输入Repository name（建议与提交的项目名同名），Description（稍微描述一下此项目的主要功能），选Public（Private为收费私人项目；Public免费公开项目，即所发布的项目代码任何人都可以查看得到），最后点击Create repository，项目代码仓库创建完毕。 将本地项目代码发布至本地Git仓库选中要发布的项目，单击右键，Team -&gt; Share Project，选择Git，点击Next。 勾选Use or create repository in parent folder of project，选中要发布的项目，点击Create Repository，点击Finish完成。 发布项目。鼠标选中要发布的项目，单击右键，Team -&gt; Commit，填写Commit message（必填，即当前版本的更新事项），勾选全选，点击Commit提交。 注意：此时，仅是提交在本地Git仓库，还需要Push才能提交到GitHub中（下一步）。 将项目发布至GitHub远程仓库选中要发布的项目，单击右键，Team -&gt; Remote -&gt; Push。粘贴项目远程仓库的URI，填写User和Password（即GitHub的账户名和密码），点击Next。 接下来点击Source ref的下拉框，选择即将更新的Branch(一般为master)，点击Add Spec，点击Finish，点击OK完成。 如下图所示，项目已成功Push到GitHub远程仓库。 项目首次推送（push）需注意的问题在本地进行commit操作将项目更新提交到本地Git仓库后，如项目首次推送至远程仓库，则需先将服务器端的更新pull到本地仓库进行合并（Merge），然后再进行push操作。 发布后的GitHub项目页面，可以很方便的看到提交的次数，每次提交的备注信息等，非常方便对代码的管理。 历史记录及版本对比历史记录进入Team -&gt; Show in history菜单可以查看版本历史提交记录。 版本对比点击 Compare Mode 可以选择对比模式。 远程Git仓库的访问及远程GitHub项目导入本地下载GitHub项目代码至本地Git仓库（clone）从GitHub中取得项目代码后，点击工具栏Window -&gt; Show View -&gt; Git -&gt; Git Repositories，点击OK，调出Git Repositories视图。 在Git Repositories视图中，点击clone按钮，进入Clone Git Repository对话框。填写URI，User，Password，点击Next。 接下来选择即将保存的仓库分支（Branch）和本地保存路径，点击Finish。 至此，项目代码就被下载到指定目录下了，需要使用的时候通过Eclipse Import进来即可。 导入Git仓库代码到Eclipse]]></content>
+      <categories>
+        <category>教程整理</category>
+      </categories>
+      <tags>
+        <tag>程序安装</tag>
+        <tag>Git</tag>
+        <tag>Eclipse</tag>
+        <tag>EGit</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Windows10系统安装Tomcat7教程及Eclipse-Tomcat的整合]]></title>
     <url>%2F2018%2F09%2F30%2FWindows10%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B%E5%8F%8AEclipse-Tomcat%E7%9A%84%E6%95%B4%E5%90%88%2F</url>
     <content type="text"><![CDATA[安装JDK在安装Tomcat之前，需先确保系统已正确安装和配置JDK。 安装Tomcat7（解压包方式）下载Tomcat程序压缩包进入Tomcat官网： https://tomcat.apache.org/ ， 选择下载想要的版本。 下载完成后，直接解压安装包至选定的路径，如: D:\Program Files\Tomcat_Servers 。 配置Tomcat环境变量 新建变量名：CATALINA_HOME，变量值为上一部压缩包解压的位置。在这里案例为：D:\Program Files\Tomcat_Servers\apache-tomcat-7.0.91 。 添加Path变量值：%CATALINA_HOME%\lib;%CATALINA_HOME%\bin 。 配置好环境变量后，Tomcat即可直接运行。进入 Tomcat bin 目录下，分别执行 startup.bat 和 shutdown.bat 文件即可分别执行Tomcat的启动和关闭。 Eclipse集成Tomcat服务器启动Eclipse，进入Window - Preferences - Server 下，添加上一部安装的Tomcat服务器： * Eclipse-Tomcat 插件的使用在上一部已经实现Eclipse-Tomcat的集成， 这一步非必要设置。而这一步的好处是eclipse和tomcat协同工作的更快捷和直观。 安装Tomcat插件，就可以在eclipse中看到小猫图标了。 具体步骤如下: 下载插件点击后上方的help，接着选择install new software 。 接着点击add,填入tomcatplugin，url:http://tomcatplugin.sf.net/update,点击ok,等待检索插件。 检索完成后，选择加入插件。 此时插件开始下载和装配至Eclipse。选择适宜的版本进行安装即可。 配置server Locations下载并安装完成后，系统会提示重启Eclipse。 此时重启Eclipse即可。 重启后可以看到Eclipse窗口已有Tomcat菜单和图标了： 接下来需要配置server Locations。选择第二项use tomcat installation.. 即可，如图： 设置Tomcat插件属性进入Window -Preference -Tomcat 下，选择Tomcat版本及Tomcat安装路径。 此时Tomcat插件已配置完成。 直接点击tomcat的小猫图标，即可启动或关闭Tomcat服务器。]]></content>
@@ -32,8 +46,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>程序安装</tag>
+        <tag>Ubuntu</tag>
         <tag>Redis</tag>
         <tag>NoSQL</tag>
       </tags>
@@ -134,8 +148,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>程序安装</tag>
+        <tag>Ubuntu</tag>
         <tag>Java</tag>
       </tags>
   </entry>
@@ -147,8 +161,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>程序安装</tag>
+        <tag>Ubuntu</tag>
         <tag>Java</tag>
       </tags>
   </entry>
@@ -208,9 +222,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Nginx</tag>
         <tag>Server</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -221,9 +235,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Nginx</tag>
         <tag>Server</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -296,8 +310,8 @@
       </categories>
       <tags>
         <tag>JavaWeb</tag>
-        <tag>Java</tag>
         <tag>Maven</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -327,10 +341,10 @@
         <category>工作记录</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
-        <tag>Linux</tag>
         <tag>MySQL</tag>
         <tag>数据库备份</tag>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -341,9 +355,9 @@
         <category>教程整理</category>
       </categories>
       <tags>
+        <tag>Linux</tag>
         <tag>Ubuntu</tag>
         <tag>SSH</tag>
-        <tag>Linux</tag>
         <tag>scp</tag>
       </tags>
   </entry>
@@ -368,8 +382,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
         <tag>腾讯云</tag>
       </tags>
   </entry>
@@ -396,8 +410,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
         <tag>Maven</tag>
       </tags>
   </entry>
@@ -409,8 +423,8 @@
         <category>教程整理</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
