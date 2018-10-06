@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2018-10-06T18:19:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统安装Tomcat7教程</title>
+        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/10/06/Eclipse%E8%BF%90%E8%A1%8CJ2EE%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0java_lang_VerifyError__Inconsistent_stackmap_frames_at_branch%20_target_XXXX%E6%8A%A5%E9%94%99%E6%83%85%E5%86%B5%E7%9A%84%E4%BF%AE%E5%A4%8D/</loc>
     <lastmod>2018-10-06T13:37:13.000Z</lastmod>
     <data>
@@ -320,30 +344,6 @@
         <pubTime>2018-02-10T14:31:39.000Z</pubTime>
         
         <tag>JavaWeb</tag>
-         
-        <tag>Java</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B(apt-get%E6%96%B9%E6%B3%95)/</loc>
-    <lastmod>2018-02-02T14:10:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu系统安装Tomcat7教程(apt-get方法)</title>
-        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>程序安装</tag>
          
         <tag>Java</tag>
          
