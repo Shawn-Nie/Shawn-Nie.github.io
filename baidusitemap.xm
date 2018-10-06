@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/10/06/Eclipse%E8%BF%90%E8%A1%8CJ2EE%E9%A1%B9%E7%9B%AE%E5%87%BA%E7%8E%B0java_lang_VerifyError__Inconsistent_stackmap_frames_at_branch%20_target_XXXX%E6%8A%A5%E9%94%99%E6%83%85%E5%86%B5%E7%9A%84%E4%BF%AE%E5%A4%8D/</loc>
+    <lastmod>2018-10-06T13:37:13.000Z</lastmod>
+    <data>
+        <display>
+        <title>Eclipse运行J2EE项目出现java_lang_VerifyError__Inconsistent_stackmap_frames_at_branch _target_XXXX报错情况的修复</title>
+        <pubTime>2018-10-06T13:37:13.000Z</pubTime>
+        
+        <tag>Java</tag>
+         
+        <tag>Eclipse</tag>
+         
+        <tag>JVM</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/10/03/Windows10%E7%B3%BB%E7%BB%9FGit%E4%BB%93%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8AEclipse-Git%E6%8F%92%E4%BB%B6%E7%9A%84%E6%95%B4%E5%90%88/</loc>
     <lastmod>2018-10-03T11:41:05.000Z</lastmod>
     <data>
