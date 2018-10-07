@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-10-06T18:19:14.000Z</lastmod>
+    <lastmod>2018-10-07T13:18:38.000Z</lastmod>
     <data>
         <display>
         <title>Ubuntu系统安装Tomcat7教程</title>
