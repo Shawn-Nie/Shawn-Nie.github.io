@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/10/08/Nginx_Lua_Module%E6%89%A9%E5%B1%95%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2018-10-08T14:35:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>Nginx_Lua_Module扩展的安装与配置_适用于Ubuntu系统</title>
+        <pubTime>2018-10-08T14:35:35.000Z</pubTime>
+        
+        <tag>Nginx</tag>
+         
+        <tag>Lua</tag>
+         
+        <tag>LuaJIT</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2018-10-07T13:18:38.000Z</lastmod>
     <data>
