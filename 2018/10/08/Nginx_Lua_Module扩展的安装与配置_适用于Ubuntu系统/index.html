@@ -531,35 +531,44 @@ rewrite_by_lua_file  conf/lua/get_params.lua;
 <h3 id="conf-lua-get-params-lua"><a href="#conf-lua-get-params-lua" class="headerlink" title="conf/lua/get_params.lua"></a>conf/lua/get_params.lua</h3><pre><code>local action_request_method = ngx.var.request_method
 local action_url_param = nil  
 local action_proxy_upstream = &quot;www.vspnoa.tomcat_colony&quot; 
+local action_accpted_param_str = nil 
 
 if &quot;GET&quot; == action_request_method then 
-    action_url_param = ngx.req.get_uri_args()[&quot;url_param&quot;] or nil 
+    action_accpted_param_str = ngx.req.get_uri_args() 
 elseif &quot;POST&quot; == action_request_method then
     ngx.req.read_body()
-    action_url_param = ngx.req.get_post_args()[&quot;url_param&quot;] or nil 
+    action_accpted_param_str = ngx.req.get_post_args() 
 end
 
-if action_url_param  == &quot;get_stf_mastered_element_type_selected_approve_prcs_unfinished_list_with_proj_budg_items&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot;
-elseif action_url_param  == &quot;batch_edit_approving_status&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
-elseif action_url_param  == &quot;edit_approving_status_from_joint&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
-elseif action_url_param  == &quot;revoke_approve&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
-elseif action_url_param  == &quot;edit_approving_PRI&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot;
+if action_accpted_param_str    ~= nil then
+    action_url_param = action_accpted_param_str[&quot;url_param&quot;] 
+end 
 
-elseif action_url_param  == &quot;edit_expense_element_cashier_payment_plan&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
-elseif action_url_param  == &quot;edit_expense_element_cashier_payment_exec&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
-elseif action_url_param  == &quot;batch_insert_and_refer_approving_fc_list&quot;  then
-    action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
+
+
+if action_url_param    ~= nil then     
+    if action_url_param  == &quot;get_stf_mastered_element_type_selected_approve_prcs_unfinished_list_with_proj_budg_items&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot;
+    elseif action_url_param  == &quot;batch_edit_approving_status&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
+    elseif action_url_param  == &quot;edit_approving_status_from_joint&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
+    elseif action_url_param  == &quot;revoke_approve&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot; 
+    elseif action_url_param  == &quot;edit_approving_PRI&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_approve_process_colony&quot;
+
+    elseif action_url_param  == &quot;edit_expense_element_cashier_payment_plan&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
+    elseif action_url_param  == &quot;edit_expense_element_cashier_payment_exec&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
+    elseif action_url_param  == &quot;batch_insert_and_refer_approving_fc_list&quot;  then
+        action_proxy_upstream = &quot;www.vspnoa.tomcat_finance_process_colony&quot; 
+    end
 end
 
 ngx.var.action_proxy_pass=string.format(&quot;%s%s&quot;,&quot;http://&quot;,action_proxy_upstream);
--- ngx.log(ngx.INFO , &quot;action_url_param: &quot; , action_url_param); 
+-- ngx.log(ngx.INFO , &quot;action_url_param: &quot; , action_url_param);  
 </code></pre>
       
     </div>
