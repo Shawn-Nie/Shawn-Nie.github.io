@@ -276,6 +276,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Nginx安装upstream-fair模块(适用于Ubuntu系统)" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/09/Nginx安装upstream-fair模块(适用于Ubuntu系统)/" class="article-date">
+      <time datetime="2018-10-09T14:50:53.433Z" itemprop="datePublished">2018-10-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <hr>
+<p>title: Nginx安装upstream-fair模块(适用于Ubuntu系统)<br>Exception Details:<br>tags: [Nginx,upstream]<br>categories: [教程整理]<br>date: 2018-10-09 20:07:18</p>
+<h2 id="updated-2018-10-09-20-07-18"><a href="#updated-2018-10-09-20-07-18" class="headerlink" title="updated: 2018-10-09 20:07:18"></a>updated: 2018-10-09 20:07:18</h2><blockquote>
+<p>The Nginx fair proxy balancer enhances the standard round-robin load balancer provided with Nginx so that it will track busy back end servers (e.g. Thin, Ebb, Mongrel) and balance the load to non-busy server processes.</p>
+</blockquote>
+<p>fair是一个第三方Nginx-upstream负载均衡插件。upstream-fair 是比内建的负载均衡更加智能的负载均衡模块，fair模块会对全局的请求进行统计，并根据该服务器空闲状态，及处理过的请求及所有请求数、页面大小、加载时间长短智能的进行负载均衡。</p>
+<p>本文将介绍Nginx集成upstream-fair的过程（本文假设Nginx已安装完成）。</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a href="/2018/10/09/Nginx安装upstream-fair模块(适用于Ubuntu系统)/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Nginx_Lua_Module扩展的安装与配置_适用于Ubuntu系统" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -913,78 +968,6 @@
       
         <p class="article-more-link">
           <a href="/2018/05/29/Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/" class="article-date">
-      <time datetime="2018-02-24T06:10:52.000Z" itemprop="datePublished">2018-02-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/">高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>问题描述: 因项目技术需求，项目需要在原有低版本Spring-3.2.15.RELEASE+ehcache-2.4.4(同时包含Mybatis)框架的基础上，升级到较新的版本(4.1.0.RELEASE及以上,本文所选版本为Spring-5.0.4.RELEASE)。<br>更新Spring相关依赖文件后，启动项目。发现项目出现：</p>
-<pre><code>java.lang.NoSuchMethodError: org.springframework.cache.ehcache.EhCach
-eFactoryBean.setMaxEntriesLocalHeap(J)V
-</code></pre><p>报错。</p>
-<p>具体如下: </p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ehcache/">ehcache</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

@@ -276,6 +276,78 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/" class="article-date">
+      <time datetime="2018-02-24T06:10:52.000Z" itemprop="datePublished">2018-02-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/">高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>问题描述: 因项目技术需求，项目需要在原有低版本Spring-3.2.15.RELEASE+ehcache-2.4.4(同时包含Mybatis)框架的基础上，升级到较新的版本(4.1.0.RELEASE及以上,本文所选版本为Spring-5.0.4.RELEASE)。<br>更新Spring相关依赖文件后，启动项目。发现项目出现：</p>
+<pre><code>java.lang.NoSuchMethodError: org.springframework.cache.ehcache.EhCach
+eFactoryBean.setMaxEntriesLocalHeap(J)V
+</code></pre><p>报错。</p>
+<p>具体如下: </p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/">Spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ehcache/">ehcache</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-SpringMVC接收不到前端FormData对象属性问题的解决" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -890,77 +962,6 @@ sudo apt-get install software-properties-common
         <p class="article-more-link">
           <a href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Nginx做为反向代理时，服务器缓存清空的方法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/" class="article-date">
-      <time datetime="2017-11-26T14:27:39.000Z" itemprop="datePublished">2017-11-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">Nginx做为反向代理时，服务器缓存清空的方法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <a id="more"></a>
-<p>有些时候为了不让其他人知道自己使用的服务器IP的时候我们喜欢使用反向代理避免这种问题。</p>
-<p>通常我们使用的反向代理大多数是nginx设置的。但是在我们对网站的图片等信息更新时候会出现信息更改后仍然不能正常显示，那可能是因为反向代理的原因，所以在我们更新了信息后，同时也要更新代理服务器上的缓存。</p>
-<p>这里讲下我们常用的nginx的缓存存在的位置。</p>
-<p>操作方法是：</p>
-<p>通常nginx的缓存文件是存放在/home/cache/缓存文件下。我只只需要删除里面的内容，重新访问生成就可以了。</p>
-<p>命令如下：</p>
-<pre><code>rm -rf /home/cache/*
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>

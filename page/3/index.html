@@ -276,6 +276,77 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Nginx做为反向代理时，服务器缓存清空的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/" class="article-date">
+      <time datetime="2017-11-26T14:27:39.000Z" itemprop="datePublished">2017-11-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">Nginx做为反向代理时，服务器缓存清空的方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>有些时候为了不让其他人知道自己使用的服务器IP的时候我们喜欢使用反向代理避免这种问题。</p>
+<p>通常我们使用的反向代理大多数是nginx设置的。但是在我们对网站的图片等信息更新时候会出现信息更改后仍然不能正常显示，那可能是因为反向代理的原因，所以在我们更新了信息后，同时也要更新代理服务器上的缓存。</p>
+<p>这里讲下我们常用的nginx的缓存存在的位置。</p>
+<p>操作方法是：</p>
+<p>通常nginx的缓存文件是存放在/home/cache/缓存文件下。我只只需要删除里面的内容，重新访问生成就可以了。</p>
+<p>命令如下：</p>
+<pre><code>rm -rf /home/cache/*
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Nginx_[emerg]getpwnam(www)failed错误的处理方法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -885,74 +956,6 @@ sql_mode = only_full_group_by 不兼容
       
         <p class="article-more-link">
           <a href="/2017/11/24/产品设计和优化的五个原则/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Ubuntu下MySQL数据库自执行备份脚本的实现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/" class="article-date">
-      <time datetime="2017-11-18T12:22:15.000Z" itemprop="datePublished">2017-11-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/">Ubuntu下MySQL数据库自执行备份脚本的实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>为保证数据的安全，防止异常问题造成数据库文件破坏/丢失，大型项目通常需要每天执行1~2次数据库备份。<br>因为数据库的备份工作有其重复性和规律性，所以通过自执行脚本的方式可以提高备份的效率和可靠性。<br>本文介绍了在Ubuntu下设置mysql自动定时备份的方法。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/工作记录/">工作记录</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库备份/">数据库备份</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

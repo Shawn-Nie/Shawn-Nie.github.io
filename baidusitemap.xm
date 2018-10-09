@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/10/09/Nginx%E5%AE%89%E8%A3%85upstream-fair%E6%A8%A1%E5%9D%97(%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F)/</loc>
+    <lastmod>2018-10-09T12:35:31.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2018-10-09T14:50:53.433Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/10/08/Nginx_Lua_Module%E6%89%A9%E5%B1%95%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2018-10-08T14:35:35.000Z</lastmod>
     <data>
