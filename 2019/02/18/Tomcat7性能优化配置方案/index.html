@@ -414,9 +414,13 @@ export LD_RUN_PATH=$LD_RUN_PATH:/usr/local/APR-1.6.5/lib
 <li>调整Executor参数，如:</li>
 </ol>
 <blockquote>
-<executor name="tomcatThreadPool" minsparethreads="4" maxthreads="500" nameprefix="catalina-exec-">
-
-</executor></blockquote>
+<p>&lt; Executor </p>
+<p>name=”tomcatThreadPool” </p>
+<p>minSpareThreads=”4” </p>
+<p>maxThreads=”500” </p>
+<p>namePrefix=”catalina-exec-“</p>
+<p>/ &gt;</p>
+</blockquote>
 <h4 id="tomcat-Connector并发处理-缓存参数优化"><a href="#tomcat-Connector并发处理-缓存参数优化" class="headerlink" title="tomcat-Connector并发处理/缓存参数优化"></a>tomcat-Connector并发处理/缓存参数优化</h4><table><br>    <tbody><br>        <tr><td>maxThreads</td><td>客户请求最大线程数</td></tr><br>        <tr><td>minSpareThreads</td><td>Tomcat初始化时创建的 socket 线程数</td></tr><br>        <tr><td>maxSpareThreads</td><td>Tomcat连接器的最大空闲 socket 线程数</td></tr><br>        <tr><td>enableLookups</td><td>是否反查域名，取值为： true 或 false 。为了提高处理能力，应设置为 false</td></tr><br>        <tr><td>redirectPort</td><td>在需要基于安全通道的场合，把客户请求转发到基于SSL 的 redirectPort 端口</td></tr><br>        <tr><td>acceptAccount</td><td>监听端口队列最大数，满了之后客户请求会被拒绝（不能小于maxSpareThreads ）</td></tr><br>        <tr><td>connectionTimeout</td><td>连接超时</td></tr><br>        <tr><td>minProcessors</td><td>服务器创建时的最小处理线程数</td></tr><br>        <tr><td>maxProcessors</td><td>服务器同时最大处理线程数</td></tr><br>        <tr><td>URIEncoding</td><td>URL统一编码</td></tr><br>    </tbody><br></table>
 
 <blockquote>
