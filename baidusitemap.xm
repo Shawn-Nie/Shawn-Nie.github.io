@@ -4,12 +4,36 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-02-18T04:30:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu系统安装Tomcat7教程</title>
+        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2018/10/10/Nginx%E5%AE%89%E8%A3%85upstream-fair%E6%A8%A1%E5%9D%97_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2018-10-10T08:06:42.000Z</lastmod>
+    <lastmod>2018-10-10T08:33:13.000Z</lastmod>
     <data>
         <display>
         <title></title>
-        <pubTime>2018-10-10T08:06:54.151Z</pubTime>
+        <pubTime>2018-10-10T08:33:14.731Z</pubTime>
         
          
            
@@ -31,30 +55,6 @@
         <tag>Lua</tag>
          
         <tag>LuaJIT</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2018-10-07T13:18:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu系统安装Tomcat7教程</title>
-        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>程序安装</tag>
-         
-        <tag>Java</tag>
          
          
            
