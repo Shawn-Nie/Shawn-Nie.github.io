@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2019/03/08/Windows10%E5%AE%89%E8%A3%85%E5%86%85%E7%BD%AEUbuntu%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2019-03-08T13:43:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows10安装内置Ubuntu系统</title>
+        <pubTime>2019-03-08T13:43:40.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/03/08/Nginx%E5%AE%89%E8%A3%85upstream-fair%E6%A8%A1%E5%9D%97_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2019-03-08T12:46:51.000Z</lastmod>
     <data>
