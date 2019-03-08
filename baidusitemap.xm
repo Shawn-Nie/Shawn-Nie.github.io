@@ -4,8 +4,52 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2019/03/08/Ubuntu%E6%B8%85%E7%90%86%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2019-03-08T12:30:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu清理冗余备份文件</title>
+        <pubTime>2019-03-08T12:30:10.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>服务器，系统运维</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2019/03/08/Ubuntu%E5%85%A8%E7%9B%98%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</loc>
+    <lastmod>2019-03-08T12:11:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu全盘备份与恢复</title>
+        <pubTime>2019-03-08T12:11:02.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>服务器，系统运维</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/02/18/Tomcat7%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2019-02-18T06:38:56.000Z</lastmod>
+    <lastmod>2019-03-08T11:06:08.000Z</lastmod>
     <data>
         <display>
         <title>Tomcat7性能优化配置方案</title>
@@ -23,6 +67,32 @@
            
              
               <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2019-03-08T10:57:37.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
+        <pubTime>2017-11-18T12:22:15.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>数据库备份</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
           
         </display>
     </data>
@@ -747,32 +817,6 @@
            
              
               <breadCrumb title="经验整理" url="http://shawn-nie.github.io/categories/%E7%BB%8F%E9%AA%8C%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2017-11-19T08:23:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
-        <pubTime>2017-11-18T12:22:15.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
-         
-        <tag>数据库备份</tag>
-         
-         
-           
-             
-              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
           
         </display>
     </data>
