@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Shawn的技术博客">
 <meta property="og:description" content="如果系统设置了定期系统备份/数据库备份，则有必要定期清理历史备份文件。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-08T12:30:10.000Z">
+<meta property="og:updated_time" content="2019-03-11T05:51:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu清理冗余备份文件">
 <meta name="twitter:description" content="如果系统设置了定期系统备份/数据库备份，则有必要定期清理历史备份文件。">
@@ -331,14 +331,13 @@ function remove_redundant_dump_file_dirs(){
 #自定义函数: 删除指定路径下选定文件类型除最新修订文件外全部其他文件
 function remove_redundant_dump_files(){
     check_path=$1
-    check_subpath=${check_path}&apos;*&apos;
     file_suffix=$2
     #查找当前目录下选定类型最近更新的文件
-    newest_file_name=`cd ${check_path} ; ls -l | grep &quot;^-&quot; | tail -n 1 | awk &apos;{print $9}&apos;`
+    newest_file_name=`cd ${check_path} ; ls -l | grep \.${file_suffix} | tail -n 1 | awk &apos;{print $9}&apos;`
     newest_file_path=${check_path}${newest_file_name}
     echo ${newest_file_path}
     ##删除当前路径下选定类型除最新文件之外的全部文件
-    [ `find ${check_subpath} -name &quot;*.${file_suffix}&quot; -type f  | wc -l` -gt 1 ]  &amp;&amp; (echo &quot;more than one dump files,removing other histories&quot;;find ${check_subpath} -name ${newest_file_name} -prune -o -name &quot;*.${file_suffix}&quot; -type f -exec rm {} \;) || (echo &quot;not many dump files, keeping the histories&quot;;)
+    [ `find ${check_path} -name &quot;*.${file_suffix}&quot; -type f  | wc -l` -gt 1 ]  &amp;&amp; (echo &quot;more than one dump files,removing other histories&quot;;find ${check_path} -name ${newest_file_name} -prune -o -name &quot;*.${file_suffix}&quot; -type f -exec rm {} \;) || (echo &quot;not many dump files, keeping the histories&quot;;)
 }
 
 
@@ -356,13 +355,14 @@ remove_redundant_dump_files &lt;selected_path&gt; &lt;selected_file_suffix&gt;
     [ `find ${check_subpath} -type d  | wc -l` -gt 1 ]  &amp;&amp; (echo &quot;more than one dump files,removing other histories&quot;;find ${check_subpath} -name ${newest_folder_name} -prune -o -type d -exec rm -r {} \;) || (echo &quot;not many dump files, keeping the histories&quot;;)
 }
 function remove_redundant_dump_files(){
-    check_path=$1
-    check_subpath=${check_path}&apos;*&apos;
-    file_suffix=$2
-    newest_file_name=`cd ${check_path} ; ls -l | grep &quot;^-&quot; | tail -n 1 | awk &apos;{print $9}&apos;`
-    newest_file_path=${check_path}${newest_file_name}
-    echo ${newest_file_path}
-    [ `find ${check_subpath} -name &quot;*.${file_suffix}&quot; -type f  | wc -l` -gt 1 ]  &amp;&amp; (echo &quot;more than one dump files,removing other histories&quot;;find ${check_subpath} -name ${newest_file_name} -prune -o -name &quot;*.${file_suffix}&quot; -type f -exec rm {} \;) || (echo &quot;not many dump files, keeping the histories&quot;;)
+check_path=$1
+file_suffix=$2
+#查找当前目录下最近更新的目录
+newest_file_name=`cd ${check_path} ; ls -l | grep \.${file_suffix} | tail -n 1 | awk &apos;{print $9}&apos;`
+newest_file_path=${check_path}${newest_file_name}
+echo ${newest_file_path}
+##删除当前路径下除最新文件之外的全部文件
+[ `find ${check_path} -name &quot;*.${file_suffix}&quot; -type f  | wc -l` -gt 1 ]  &amp;&amp; (echo &quot;more than one dump files,removing other histories&quot;;find ${check_path} -name ${newest_file_name} -prune -o -name &quot;*.${file_suffix}&quot; -type f -exec rm {} \;) || (echo &quot;not many dump files, keeping the histories&quot;;)
 }
 
 
@@ -382,7 +382,7 @@ remove_redundant_dump_files /usr/local/mysqlDB_dumps_remote/47-100-64-208/ tar
         <p><span>本文标题:</span><a href="/2019/03/08/Ubuntu清理冗余备份文件/">Ubuntu清理冗余备份文件</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
         <p><span>发布时间:</span>2019-03-08, 20:30:10</p>
-        <p><span>最后更新:</span>2019-03-08, 20:30:10</p>
+        <p><span>最后更新:</span>2019-03-11, 13:51:20</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/03/08/Ubuntu清理冗余备份文件/" title="Ubuntu清理冗余备份文件">http://shawn-nie.github.io/2019/03/08/Ubuntu清理冗余备份文件/</a>
             <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2019/03/08/Ubuntu清理冗余备份文件/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

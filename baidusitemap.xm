@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2019/03/08/Ubuntu%E6%B8%85%E7%90%86%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2019-03-11T05:51:20.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu清理冗余备份文件</title>
+        <pubTime>2019-03-08T12:30:10.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+        <tag>服务器，系统运维</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/03/08/Windows10%E5%AE%89%E8%A3%85%E5%86%85%E7%BD%AEUbuntu%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2019-03-08T13:43:40.000Z</lastmod>
     <data>
@@ -33,28 +55,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2019/03/08/Ubuntu%E6%B8%85%E7%90%86%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6/</loc>
-    <lastmod>2019-03-08T12:30:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu清理冗余备份文件</title>
-        <pubTime>2019-03-08T12:30:10.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>服务器，系统运维</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
         </display>
     </data>
     </url>
