@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2019/03/12/MySQL%E6%9B%B4%E6%8D%A2%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2019-03-12T12:13:46.000Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL更换数据存储路径的方法</title>
+        <pubTime>2019-03-12T12:13:46.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/03/08/Ubuntu%E6%B8%85%E7%90%86%E5%86%97%E4%BD%99%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6/</loc>
     <lastmod>2019-03-11T05:51:20.000Z</lastmod>
     <data>
