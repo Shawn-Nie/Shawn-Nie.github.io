@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2019/03/18/Windows%E7%B3%BB%E7%BB%9F%E4%B8%BA%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9Aip%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
+    <lastmod>2019-03-18T08:15:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows系统为电脑设置固定ip的方法</title>
+        <pubTime>2019-03-18T08:15:04.000Z</pubTime>
+        
+        <tag>服务器</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2019-03-18T07:38:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
+        <pubTime>2017-11-18T12:22:15.000Z</pubTime>
+        
+        <tag>MySQL</tag>
+         
+        <tag>Ubuntu</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>数据库备份</tag>
+         
+         
+           
+             
+              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/03/12/MySQL%E6%9B%B4%E6%8D%A2%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-03-12T12:13:46.000Z</lastmod>
     <data>
@@ -122,32 +168,6 @@
            
              
               <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2017/11/18/Ubuntu%E4%B8%8BMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E6%89%A7%E8%A1%8C%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0/</loc>
-    <lastmod>2019-03-08T10:57:37.000Z</lastmod>
-    <data>
-        <display>
-        <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
-        <pubTime>2017-11-18T12:22:15.000Z</pubTime>
-        
-        <tag>Ubuntu</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
-         
-        <tag>数据库备份</tag>
-         
-         
-           
-             
-              <breadCrumb title="工作记录" url="http://shawn-nie.github.io/categories/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/"/>
           
         </display>
     </data>
