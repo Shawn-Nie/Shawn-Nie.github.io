@@ -4,6 +4,52 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2018/10/03/Windows10%E7%B3%BB%E7%BB%9FGit%E4%BB%93%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8AEclipse-Git%E6%8F%92%E4%BB%B6%E7%9A%84%E6%95%B4%E5%90%88/</loc>
+    <lastmod>2019-07-05T06:12:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows10系统Git仓库的安装及Eclipse-Git插件的整合</title>
+        <pubTime>2018-10-02T16:11:22.000Z</pubTime>
+        
+        <tag>程序安装</tag>
+         
+        <tag>Git</tag>
+         
+        <tag>Eclipse</tag>
+         
+        <tag>EGit</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shawn-nie.github.io/2019/07/05/Linux_Ubuntu%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-07-05T02:57:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Linux_Ubuntu系统搭建Git服务器教程</title>
+        <pubTime>2019-07-05T02:57:47.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/03/18/Windows%E7%B3%BB%E7%BB%9F%E4%B8%BA%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AE%E5%9B%BA%E5%AE%9Aip%E7%9A%84%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2019-03-18T08:15:04.000Z</lastmod>
     <data>
@@ -235,32 +281,6 @@
         <tag>Eclipse</tag>
          
         <tag>JVM</tag>
-         
-         
-           
-             
-              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2018/10/03/Windows10%E7%B3%BB%E7%BB%9FGit%E4%BB%93%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85%E5%8F%8AEclipse-Git%E6%8F%92%E4%BB%B6%E7%9A%84%E6%95%B4%E5%90%88/</loc>
-    <lastmod>2018-10-03T11:41:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Windows10系统Git仓库的安装及Eclipse-Git插件的整合</title>
-        <pubTime>2018-10-02T16:11:22.000Z</pubTime>
-        
-        <tag>程序安装</tag>
-         
-        <tag>Git</tag>
-         
-        <tag>Eclipse</tag>
-         
-        <tag>EGit</tag>
          
          
            
