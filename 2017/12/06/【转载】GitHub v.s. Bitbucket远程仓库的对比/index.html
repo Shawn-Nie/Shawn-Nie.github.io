@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Shawn Nie" />
+
+
+
+<meta name="description" content="对于目前的技术发展阶段来说，主流的远程Git仓库一般有GitHub和BitBucket仓库相对受开发者推崇。因此本文分享下我们以往收集的使用buckets和octocats的经验。主要结论如下：">
+<meta name="keywords" content="Git,GitHub,BitBucket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转载】GitHub v.s. Bitbucket远程仓库的对比">
+<meta property="og:url" content="http://shawn-nie.github.io/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/index.html">
+<meta property="og:site_name" content="Shawn的技术博客">
+<meta property="og:description" content="对于目前的技术发展阶段来说，主流的远程Git仓库一般有GitHub和BitBucket仓库相对受开发者推崇。因此本文分享下我们以往收集的使用buckets和octocats的经验。主要结论如下：">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="data:image/png;base64,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">
+<meta property="og:updated_time" content="2017-12-06T14:28:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【转载】GitHub v.s. Bitbucket远程仓库的对比">
+<meta name="twitter:description" content="对于目前的技术发展阶段来说，主流的远程Git仓库一般有GitHub和BitBucket仓库相对受开发者推崇。因此本文分享下我们以往收集的使用buckets和octocats的经验。主要结论如下：">
+<meta name="twitter:image" content="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgsAAAHwCAIAAAHQh4tIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAC7XSURBVHhe7d2NsbM60q7hk8ZE8mU0gUyGE8COZU6bR24aqRHgZWyB76t2Ua2WsC2LRutv+/1//7uFMo1/Lu5eq/EW//ekWMn9dK5RrKSJ8RpWYyRMYyRlGv+eeGAUT50XwEU1EqaxYtrBHkr7iPSsmFx72HwafyluPdNr0+izx1x7WC6qkdxrGtOOV+rBY8+Mj4tqJExjhW7tazf4jmlXePHcxTT+WNnx6V94KfLaiVxUI2Ea7/ZyOZkyjaqs37J/62Xtf3E20gcriJk+LqqR3GsaVgxpPbxcJLqspaS2+GA/xYNNXFQjYRqZ/VfzmtceYZ6GV/PLZf1GRyfDRdUov078hnutxrvq4e8lHr2y/WkmdvQpebDf9+9Ul8Y0RjKX+AuVMA4uqpEwjRVv3AHtoaKSzSQlPkKt60XHl75rGlfHNEZS14YC43kFezzKcFLaB+nE107nohoJ0xjJPI1Y1oo9+CRK/PruMI3HHMrPqy7rLuvwRo+vQJ5fSjh1HVVO3nE66zAG5jCGxxziVxYef/7LDbenjiOupTEwh8zOjWlNda4/mgJRl0vmoGr+7rcQiqcXXJIetLiWxnCXObQF8MUN7gVcS2NgDku6nbuS3e2FU2RR0zLl/+S1V6OzXjiXa2kMzKHxcl3+xVzTaXCUzcGnoSBmdvIT1dzEtTSGd87h6DXzLvMcHttbVg+KY2bT0Qta4ll+rgUer+FaGgNzWNq8cPt06ZvS3m1R0358gT/3Cy/CvfYgXEtB+f3eN9xlHdoa+EpVVKfsf4TVdXhtGi+89NShx6Gmx3CvmrajTPlXvKsYjuJaGgNzeKtYThY7NZVPLebwl4Ju+Ss45IVTuJbGcJc5qAym/a3Ug2fU3MOv/hcuaPETjz4C19IYmMMYFnOYqvqd29xncC2N4Q5zuAdWYhSsxCiGXonH18PhK+J4rHS6roKaGAUrMQpWYhSsxF5nb0K7VqL6hvWi38K+7DNfDlATo2AlRjHuSlz6m4MX7F2JuDd8cZP45PL49pA+aZVfi/fj7jQKVmIUrMQorrES0z253LWVOZU/iz+pB1P6FPNK+J4cg6mn8LxiBZ936tux6bxn5+40ihFXovzR/Y+hJkbRW4lBdgUp7Q/Sk37s2fOV0Fv/xQWoxPfiM++L+9jTcXcaBSsxinFX4sN3oa9brES1PXizCj7AlyFdDyXjMQZ/95Un5e40ClZiFKzEKEZfiXgjtlhKO2RMSb2JP2D14Hvi1+Qr4TtzukvH3ip4u/5sPfP3N2Kntdfw9xfA3WkUrMQoWIlRLFZCt3s7xvt+jD/D7rl+21Vs1PwMf0YPqvgM1MQoWIlRsBKjGH0ldHcWzyj4gPhciv2o4I2SHdup+di+s538VD7VOOE28xn+jKc+NXenUbASo2AlRjH0Snx+S3Cff+p5JdZ2Y9+o2+BUX1yG6F//+W8VnIS70yhYiVGwEqNI9gnfBmJGwcfYJqF9QoGpYm8qfq/4yDGOlEy7XkNNjIKVGAUrMYoLrMQb78X7+TYgnjnPYsfWzuz7cxt8hb8X98bdaRQjrkT5XwB/DDUxClZiFPlKxL1avBmPMvXgr6iJUbASo2AlRsFKjKKsRPmaFl8yrwS+jpUYBSsxiqFXovopbBV7U0HM/F31aG281vuyQVfiLXN7TfVGx2b1qtLky7g7jYKVGAUrMQpWYhSsxChYiVGwEhve9UXqJlZiFPNK6Peg/gvRNIjNn2KVcXZxLGrC32s/KqgyP6J6689eDO5Oo2AlRsFKjIKVGAUrMQpWYhSjr4R/7XjqV5B/oVdoSvvJkx707V2Jb31X4XPYM5l3SZ9LST8q8ExrLb/mwEr48QPaaTymfnBuf6Sni0/qcQwUx2MM9mOfGAUrMQpWYhSsxChYiVGwEqO4xkr414gvfHX4An8WBX5UcJJ5Jfx7Bf/WYS34sFPn36qe7mPPnqyE25M5SZy/4o+9I/5E8Xk/8OzsE6NgJUbBSoxixJUo/xfgL7FZUxOjYCVGMfRK2NeOUsUf4E/0sWecV+Ir37Wl4rvgqryCM0zPNj+dN89W14SvhwWKPfNJPvkYiJrn0VP4E03PefqTmt7d6StrEOkt8PdCxw+onugzz8uOPQpWYhSsxChYiVGwEqNgJUbBSqz62BfNMq/E9J1c4c00+AB/F2Lg8dm+8qRlJfxdToPHiBB8QDV/NWPyY2/Qx56Uu9MoWIlRsBKjYCVGwUqMgpUYxdArYV81Vl9ExqYoaUr7z9YeqvMU0/P/9QXMK+HfPVSBYgWRD/Dg7doZqqm8icl30SNXSt+KPWM2rdaEv7n+RnvmAzSxdnpppk3+kT+ggv7jv+vZ2SdGwUqMgpUYBSsxClZiFKzEKEZcCfu6UBQr+S3+Ss62WIn4fcPjm4hl8DFx8oqNmh/gz/Xh551Xwt9uBbHp8WfE+X/yvXB60g8/NfvEKFiJUbASoxhxJcr/BfhLbNbUxChYiVGMuBLVV7FS2t9TXsdpr2SxEvH7hs73EN/69uK8d6Gvet7HakxK+02SmtAbbcfqHfe8mmfTVDVnU8WfEZ+uihW80bwS0zu/eK87wdnOmOrL2hdz7krgu1iJUbASo2AlRsFKjIKVGMWgKzHUV7GfMa9E+82Ex1I1TzXUSvzrP/+1/0rjNIuaqN59jxVMnZ9bjBFoAXwlTl0P9olRsBKjYCVGwUqMgpUYBSsxinFX4jO/FdjJntqfXbHpxC+YV6L9pqHNfEycUjo3DTClfY74FB4rMMobj2PyqLom/H1vg9+RvrMWqxmTb8Q+MQpWYhSsxChYiVGwEqNgJUYx+kqc+oXjpsfXrZ96AfNKVN89pIEdY+Ykmr+JTcUf0HmuU1/Goib0FpvSnlTNX9C+449r4eSrgX1iFKzEKFiJUYy4EuX/AvwlNmtqYhSsxChYiVGsrkT7jcXP0jcTUlInmFfC33o/Kmh5fm3A/ZR1+Nj32KZ9ly1Q7BnXZm7p1AVw7BOjYCVGwUqMgpUYBSsBLFASwAIlASxQEsACJQEsUBIv0k/J9/ys/DM/T8e7UBLH+PXdlsSeWNqM9M/6ov3T2T+F/SM/jJLYS8vmi1c1Tcys5SXGUf+sL4ovpn1JMXN0pLQjv4iSGJddKONcK0O9mFNREsACJQEsUBLAAiUBLFASwAIlgXe6wQ+mkpKY/veth9LOMpF3xQFVLKWN+1JJSEldzd6S8GOn6RlTxWrGJK4uXvRr8RXxhROwQEkAC5QEsEBJ7FI+EA53Z2tNSQALlASwQEkcVv3AsaKk9yq4h850qi5/H0RJ8eZa/uveXBLV7x/a4LraNVPGji7mY3B7caaK45tQxaKMazOReuPxPElJ2OW7eQXHMW1sqqZR5tJsMdr16GTarouKE9mMY+CxKCMlNamaomQ8fsZZXzjFGrhNSaR8tSxoVy5NXlE1C59XlXdp3pNVb2y2Y6rBxjKupN6H7yWABUoCWKAkgAVKAligJIAFSuKwM37KgXFQEu8R66SqmRuUUDuFtfneYO5JSejXCCZtGm9WyRKFARLjS7MFXlvjmK/GrJ1yIf0p3GzuvV2if1lXmXawZ9pzr6uzxtYlafPq2rnEjGKTNq+FL5yABUoCWKAkgAVKAligJIAFSuKwi/4gBTtREqfQjyClpKili1gtifb3DJVb/trhXVQMRrEnFVxRfPFV7Erq4uqS6FRCVQNrzXvrL3zsVdxmLs2mUM3Cm1X+uvjCCVigJIAFSgJYoCSABUoCWKAkgAVK4k+mn0nOP4WMsYLb8NkpMJ5XcBtJSfz7qbRXMn5UIGnzrqorQ9Q0Hitou/r5odhL6rwq71IQR8bMWn40+S4RL2jFRk1T2k0mxqLMnVSr6M3N9W4HSDXMtJkRpK9ZQfWC05GmGmbazAj4wglYoCSABUoCWKAkdin/uB/uztaakgAWKAlggZI4zH90aIFUcbQn4zpdX+evLX2R+195OzJm9j/OeV4pCf3Cof+bh06XbA4YzdpapqvoydhrsSupldMHpJftSnZSUpOSemozTl3TSQ8x+V17S2K6/hcX8VpTQTzK2vgoTY4jLp5RHDPOk1VvOziObHsHodcWeb46VtpkP5M+yIcdKIkSTdT0pAUetzpdv6NaeOeZKhhWfIWHXu3a4Jcf8CR8LwEsUBLAAiUBLFASwAIlASxQEnv5D0Oqn4qM8EOSr1h7Q66Okjjsl0sinWxMWqymAqP8heQlod8zGI+Vl7bpSurWqmVW84pr/y43e0O2S0JNPyqoMibGP8XWPi7/dS+Ft7jB9PnCCVigJIAFSgJYoCSABUoCWKAkgAVKYpfpB60Ppf3kmdg1DXyo4hvwiWhSRk2njOdjECk5pqQkpt86PJT2U5uRdKR4U8H9aHW1zEbJylr+WjSLnXNpB8fMzgf5lrwkYvC4tJ/BlJ4zEmMXx6QDrstW1Be1DVqdrmtZm4jlqy5lTGk/tZkB8YUTsEBJAAuUBLBASQALlASwQEkAC5TEMZf4MeJ5qun/6z//tf88VnB1SUlUv0/wowLPODWn/nmAqHknjx+2/15V+Kw7c48lcenyWC0Jv6Cna3txcStjvOlJZUyMTdV7aZ3L4t76E79zSQC/jJIAFigJYIGS2KX84364O1trSgJYoCSABUrigMcP559Kal0cU8VRyV6WTyEGihUY5aVqDigpidv8AuE8cV2nRZ/1kzHw5oVUr9marqRW+IA4sjqr0/VJq7uEF8b0S7YHNaWkumPuZ22dLC9VM1KXlNT3Vv1dyjQmJTUpqZD0ZjyOaXWX8Ou7DYzFbdOU9u20S9jJWFD1Vk1Jk9fiU1ibSztgc9Y2oBqzecp78b0EsEBJAAuUBLBASQALlASwQEn81Yd/HjKUW86dkvirx48Mn1dGjG8pzk6TdZ5UYGJ8IUlJlF8xhF9HiJqmtMMABU69prSDtfylpRfEj+hM+T4lIX7h6iI2aro2I2v5W7JVd95U1+3FmXZmfbk3hC+cgAVKAligJIAFSgJYoCSABUoCWKAk8DaPn0AvlY5LSUpi+iVEUWW86ccYuCpjzXSMlDYuKF70qgGnjLquJd8l+leqen3M47peZireGwdUTVxXVQNqytR/MXzhBCxQEsACJQEsUBLAAiUBLFASwIx6AGbUAzCjHoBZXQ/lH2ABfo9d/+wPwIx6AGbUAzCjHoAZ9QDMqAdgRj3s8vb/2eWi//eM6MWvTeHSU6MedrE1lipWU4GoOfX38h6IN6vATP1fVl7K88WUxpMy6jJKmtKexIzHCoziqfPLqIdd4mq1K9fvNUquDeucXjW/y1+MgrWX3b7mnSPbEz+Petils4pms1fJ2LUnNlXzu/zFKFh72e1r3jmyPfHzqIdd+iva73V7hnVO+Tp/MQral93mpR0p1cj2xM+jHoY2wiXihnoxJ6EeBmUX3zjX31Av5lTUAzCjHoAZ9QDMqAdgRj0AM+oBmFEPwIx6AGbUAzCjHoAZ9YBTXPTvO6gHvKi64vvNq6Ae8CK/4hXY0TMmxheS10P7TyGa0l75txJNaU9is+3FDawVgPJGzWup68GvXb+ClRFlxJsK2l7PxBi3UV30VQFUzatI9ofq8q2aqf4Y9ZrSxl1U9eDNmL+W7XowbcYooy5RvlW6qYfbidd9VQx29MyF8P00MKMegBn1AMyoB2BGPQAz6gGYUQ+7lH9wD7dmC009ADPqAZhRD8CMegBm1AMwox7+RH+15ko2SJNXpAlKSa3MTslp4IOSe6SDY3ItfiPq4Zh2SezovDn134rPTk3pzHTneMtUPF8FMg2ZlewzXxp/8P56qP6u+2Z/5l2tgY5O+ShNXpEmUk1nz+x8jAWRJxVU2gGPc8LgGJuq92V1Pejy9Ys4Xs1VMj2Kxfejtzu+6R7HrjjAVM3rsolIaU+qZpSOfJw/UdJ4HJMmza/Fb5TUg3hTgYnJNG/UZUo7y9xGumZy0mp9hc1FSnup6qqaFfWa0g5vVJuPTakGlOitXt8fpBpvLK6aJbq+ag282V+5e7AZaVI+NQ9kLb/JH9ZP9ODzTvn+oaoHKe0biUtoFMekYqPmbazNSPlpxvOAGItnOkGHjXEl9T7vrwfguqgHYEY9ADPqAZhRD8CMegBm1AMwox6AGfUAzKgHYEY9ADPqAZhRD8dUf0MWm9MfmM1/l+aUubR2IlUmNhWLMhdCPRwT17iz5Gv5S2snlU7z0nPP6yH+ebb+WtuUdpMpjaZpPKPgumyNtczVYldN5/m1AVfUziWd3aXnXteDX8d+ESsjbTPNmKopbebq1pb8ipfCpnZS6TQvPfdkf6gu5appYkaxKOM8k/Ze0c4Lwlz6mlizc/qXnvt2PZgqk/aa0s70e68rrr3F3lQsylxanIiCmDGxqViUuRC+nwZm1AMwox6AGfUAzKgHYEY9ADPqYZfyD+7h1myhqQdgRj0AM+oBmFEPwIx6AGbUw+vK36wFnoy909hr0yw0HaPkLVEPx7RXQ5Xx5uPCmahpYnxFev3VLK4+qcquerjrX2u/oLq+K57UALMWX5pP5DHVQMlLS+ph8+pvByhz77LRererPl0Jc7Id4Dpdl1C9fjXtKEpeXV4P4k0Foi5T2lheKLe5Mtx0ta9OSr2mtC9utR5KY+Wuvz95J+2qKxPznSvjuhfNdV/5UXu/XqoqRBQr+YOqMlAzJm/DZyftHNvMRe36fhr4EdQDMKMegBn1AMyoB2BGPQAz6gGYUQ/AjHoAZtQDMKMegBn1AMyoh2OqP2vzpmKj5gv+cu7Z4tQUGzVf8Jdzz0Y9HONrWQVxjY+ud/sIQ/EX1r7Cm83UJPWgv+U2VdOoqbxr84+hk9K+PlvC/lr6AMXVUfpxzAzOX2p85fH19+OYGc1qPZRGsHZ9+/g4IMa/o13p/pUhittzh5W+1P7sRHF6+iDqepiu7aKknjzT9raZW0qXOU26td42bs8dhL+w/itsZyRt3H+c7zpQDy7trTLtgPuxdfWl9dgz0jaViXklTWmPJ315VaZtKhPzSprSHg/fTwMz6gGYUQ/AjHoAZtQDMKMegBn1sEv5B/dwa7bQ1AMwox6AGfUAzKgHYEY9ADPq4XX+p2kKjPIv+Mu5n+ev9rWXPfJkqYdj4lparGZ7VOBivqIBUekYjL+wNmhVXZ1TYpdT5iu262HtL7djfvOvu3f++ff4fyWerpaS8ZiyLldST21mNHrZUlLLpHhegahZJeVxzrLXg69I6sEuSintpdI38YwC1888znyqMmpK1fy6atmi2LW2nJavlI5wSkyOY3qxNeXb3umMeiJV06QZV1LfsGt/iJemmlJSy2s3xi5NusdjdQcMrizjtJA6drQDNk/5usfclkrHimpAO37zEb5lbz2Y2FTgGQV9nWGPR9z3IN+VLrMdYz7GFXVVg6W0u6cPYs8rrMZ4sw1Gc2B/6FyyPqYV85tj1gYMbm11Y76KO10lupQ9L9vHjDzH7XoAfgf1AMyoB2BGPQAz6gGYUQ/AjHoAZtQDMKMegBn1AMyoB2BGPbzNRf/06JDNOVYDLveeUA/H2AJLaT+1mR+hd8N4U8FFUQ+7VMvcb/6CzXfAMlLaF1HXQ/oX15bs/CW2ek1p35EvrR/XTMPvzyfrRwWVNDmyvB6qi3u62udM2mtK+6bi0l5umf/ucb0vZx2bVZdbyw9rtR7i9a2mKe2mJG7vcS08l/Zya/wuceLT+5G8ITF/Rcn3D7r0TWlnfEB/2J1omeNR1uL7qWYX34p04ld8N/h+GphRD8CMegBm1AMwox6AGfUAzKiHXco/uIdbs4WmHoAZ9QDMqAdgRj0AM+oBB1zxT5IOoR4Oi9eExZXSMamaN5DOqJ11VLIXQT3sUtZ2a3U1wEcqkKn/Psqsds+rjJ6U1JBW6yH+IXf/j7rT3pv9HbgvZH8545jHCWOv/X7tRHx2VZfnxWPlRZkx1fVg17HzjIJKNSAOa0+xjJT2BWkh47Hl+f6we4hzrCbuLvcObNeDibG0mcr0AItHiM0rsqXdXN1qgE4xpX1l7UTajFHGu3S8kLweFHhGgetnLHYl9UyWxgX5AvdpjB8V3EacztrslPReHS9k1/fT7dUcM4qNmuIZP8rUeUm+xpKudJVMx9zG4+1o3pCYuaJd9QD8COoBmFEPwIx6AGbUAzCjHoAZ9QDMqAdgRj0AM+oBmFEPwIx6eMXV/0rnZbefOPWAF/3rP//Vf6V9C9QDXhHLIC2Ji9ZJXg/xD7P1d9qmtCexqdgzj6FPnvEj7mGzBu5TD9OV/BCbikVNT079vWtdvf0xGJx95xC/eVi79D2+Tz2s8Qv6cfkfubg13pT2ZcULIsY/Yk89uLvVg1++VbDnsrYxUtq3UBXAj9eDsSte/5X2xDNt1yXw/TQwox6AGfUAzKgHYEY9ADPqAZhRD7uUf3APt2YLTT0AM+oBmFEPwIx6AGbUAw64/V9tUQ972aUQlezEm1XexMzjtKXScR17XrOm5jypoLXW1TnlPNTDXq8tT3rWV1b6DIcmYoOjNmPSpJke4BNW66H9a21lbvZX3PutrYoWTEoqS8b4ctJXrhm5mFRsFHtm6qwfqs24TtdJtuvBAqeMiU3FRs27mpayKKlJSU1KakUZFJSOC9KL1yyMkibGpmqm0jF7TjxDUg/tla2MH6OYeQz9Ae2SuzbjlI+909jLSF+zkqa0l3P0Zt/amD3nvt2f6mHqLBnFNxaXJ42r9VOzHVkNu5A9r9zn6MGU7knH7D/9vep6aK9sXe5SUsth6jKlfUedhfGuNnAx03moi/rj7KpTvvv+rH7/APwg6gGYUQ/AjHoAZtQDMKMegBn1AMyoB2BGPQAz6gGYUQ/AjHrAAekfF3X+4ui7f4z0AurhT2y9teSXW/g/0sSjKunDFFwF9fAn1cJfbvn/wibrSmoSM1XX+JJ6KH+9/fz77dJomibNxGDqf6iS3rwKrXFF+dg7jf1F1dy9ebn3ZLsenGeqXjWlbUq/eV3XXfijbIJ75qhhxmPlryKvBz9Ga1dwNd4Cp8yNXXHJX9bOtDP9TtfIVuuh5fk4QLEdRUkT499xxStgv2p23mxnrcwV3w2+nwZm1AMwox6AGfUAzKgHYEY9ADPqYZfyD+7h1myhqQdgRj0AM+oBmFEPwIx6AGbUA17U/tHeFf+Ar0I94EXt1W8ZJRUY5S9kVz3s/ONtDfPB7Vkxs/MxMSy/3K943a+p68EuU+cZz8eMUzNNRmun46KqMnhsB5PSvqakHkq0zsZIaWe8VyPFMwpwXTe49FNv+Hqp6n1c+FPG8x5I1cTlqBK8HtrCeNTKNatlux7Sy9eSnlds1JSqKZ5UkI7BVVz0iu/btT8AP4J6AGbUAzCjHoAZ9QDMqAdgRj0AM+oBmFEPwIx6AADk2CEAADl2CABAjh0CAJBjhwAA5NghAAA5dggAQI4dAgCQY4cAAOTYIQAAOXYIvNPaB4Gn+Xd9avgtP338Nt6y9Czxt7BD4J02KzkOeFfZH3oc7jXf8pelZ9W+hR0C72SVHIvZ4zYwj6HdwXIof2hw1Bkfu6o4Nn/c2jvTBmbqXzSrQGI+dsXYVUlvdvKxq22W6LexQ+CdqrryZhuYzcGylnfKt2dVPK+gUuXXxvebv2zzDYwDNgfLZj5Kk+a1x1x7tF/DDoF32qzGOGBzsKzlXcwfGhxV+bXH6Td/2eYbGAdsDpbNfJQmzWuPufZov4YdAu+kurKjKGk8Vt54Uk0z9RclFYaJklJSywHGm9OoQhlT2mGMAqO8lNRygGiAUawkjN4Wo9iTHkhMSmxOQx4Ue1JHUVJiU71SUpOSmpTU8kTTb/4sdgjgAO4ja3hnbokdAgCQY4cAAOTYIQAAOXYIAECOHQIAkGOHwNv8A+AuVNTsEACAHDsEACDHDgEAyLFDAABy7BAAgBw7BIDT/d8OZehycNV0GomzsUMA+LT+Ld57FTw2hCX14gP27hD//ve/S7Ric4D5+5i1XsvHrrVhAL6i3Nq3+GA/xkCqJk61a4fwG25651WyPVY82famXTuHudjrlAEwlGoPqFR7Qzt47US83YEdwm+47Z03domaprSXSt+TMvEYPU54JmNvlfRjbAIYTbUBtCyvrrUjPubA7yH85ttS3nvbYbGr02s8boeZNGmUTx8HwDjiLb663XtzLW+qLpxte4ewW21155XSnlSZqlc0xpXsyuCj/EGmx55jBQC+y+7s6c1deedJBVI1TZvBSQ58DwEA+CnsEACAHDsEACDHDgEAyLFDAABy7BAAgBw7BAAgxw4BAMixQwAAcuwQAIAcOwQAIMcOgdOtfYpO59N1+GSee+gv0+YqS+dBNi+DzQGVo+NNespfXvNQ2CFwrv2lsmekBSn14ovKSkxKarlwCqIqmY5x6UO1j7BTOaERu6q4Ujqa1+CO5t3mgE9ih8C5NuukDUx1VtVVKR34qrIYXWXoU5VpB5j+Wekp0j/RVcnOA4oPsCCl3o7NMXse5GO2d4j4GdpVHJXsvnxJPZVslvdjDFzsanvxebq44yXeXu7VmDYw1VnWVEZBSiPxdXEtPE4XqEr2FzE+VEV5p8xavvI4/0lN5U2MXZv0TNW19lDtI0Tq7Y/5pNd3CFm7L/dH9h/TWZco9qMC8aYCDGLzQvcuC1Le60eZOhdKBwZQrYjimHGejGPSkSbm12LT6TJtxniyCtLBpsrHZqcrWsuP6Ts7xJrqudRsj1LFsYkRWCV0iiF2Kd4zOAaRkhhBXI5qdY7Grk2mw6Kdp3gy9raxHUVJOdQ0yrT5kQ2xQ1iXlPaTMvHoPFnlMZROMcQujy2IeaNmPCrwGOPQoqRLU3XFMZ3xbm28xa6knv6eUdyOMf1hVRybl8NvqgEAOXYIAECOHQIAkGOHAADk2CEAADl2CABAjh0Cb/MPgLtQUbNDAABy7BAAgBw7BAAgxw4BAMixQ+B0l/5cGuCXsUPgdOwQwEWxQ+Bcne3h8aGXTW8/0/aaNIkPq1Zhz0rFZju+32vSJN5r7w6x+SHbez6Fuz+m6k0Hdx7BuiqlA59V1W2/jA8NNumAzbPwAUeX0viYzcHpgD1PgT/atUP43Ta97SrZHiuebHvbs6ox1QALPHZKRqUDHxdLt1/GVW/bdG3GqQvfVS1EZ12mRXso7exc12acunCqAzuE33Pbm2/sEjWjNGl8fHVUEHmXmpXpjIXSgW9QAW+WcTVgbbzn0wGbz4IP2LmUUX9ZTX/AnqfAHx34PUTntqu891bDHqdlSvfEMx44ZSqlLygdQenAl1gBb9ZwO6CfSR9w81nwAdUq7Fmp2GzH93tNmsR7be8Q1d1WTVPakypT9RoNEDWVj2JyGrj6IKUdlI5G6QYAHHfgewgAwE9hhwAA5NghAAA5dggAQI4dAgCQY4cAAOTYIQAAOXYIAECOHQIAkGOHAADk2CEAADl2CJzu6CesHRrPx7cNorMQm2vEIg6LHQLn2lP8/THeq6AanJ5ryTSPs/nbHt//ai0ea7NPOQHfww6Bc+2p83ZMzCj2TDW4PddYMs3jJO27HTOdteifiK/btUPET9JuP1Jbva3S/aRMmzfT8MKb6sK1qLx33h1ce1bkeR9WUW+0lsfZ/G3XEkTKO2XW8hjEgR3ClWygpHpFeRczGmBKe5kpUfMIuJa1+k/1B3s+DquSGEFci7XYdLpMm8EXbe8Qulnrrm08E6krKh1PMdPpfZz5pAyuy0p9T7X7mGpwlW+HVeMj6+r04iTte765Ci+cgk/a+3sI3bJ17zZKuipzaIBiO1bUi0vrV3vVu9Zs85I28UVxFarYldTTngy+iN9UAwBy7BAAgBw7BAAgxw4BAMixQwAAcuwQAIAcOwTe5h8Ad6GiZocAAOTYIQAAOXYIAECOHQIAkGOHwOn4pB3gotghcLq1HYKd435Y05thh8C50luGkn5UIDGudLr+budrwBq9aX5U0Krya8PeIj74qU90Y7t2iPJ53EHpeGozqc1h/QFV784nxYdt3gI80+lqVWfZUTwpakpJTUpq63SjZkxOQ9Dj71L/7ap6q7PsKJ4UNaWkJiW1dbpRMyanIdi2d4co0SRtxmMMjMVSxRVPtr3KxHz6CBhErMC1apzq9KG0J2vNmH/hFHMovzYGffZGSWkvVfnY7HQZb/4lvzYGfds7hN2LdTv2m7JnYqwg0gCJzarLdfLqqo4KMCZVYL8OvXdtWDqgGrzW/Et+bQw2+Xu1+R7GTH+wN/+SXxuDvsM7hDedN9suF/PtmOm8ROmeeMYDDM6KcK0OlY9HSeOYNDubf8mvjUGH3qV4jPpv6c7mX/JrY9B34DfV8dac3qOVnEY9KGliLGnGqal8FJPTwGQMLoQqvR/W9GYO7BAAgJ/CDgEAyLFDAABy7BAAgBw7BAAgxw4BAMixQwAAcuwQAIAcOwQAIMcOAQDIsUMAAHLsEDjdC5/Vs/OUzWFHn5qPFfqj9g3svKVV16lv/v6X4U59PVfBDoFzpWUWkx6nSWOxK6mnNmM0sq8MbcSuzjCkprd21maMRpoqbpW+oE1qpJTUUsx3xriSmlTN38QOgXOlZRaTHqdJkw6QPZlKNaDfxE7p2xiTR+OKuqoBh5rSJjuZNvhBb9gh2g/lNqU9SZtV0jxOC0p2qdMl/V7TGTA99kLpWCp9z97S2HreH6FaihWVVpclI08qMFXsPFMFL5setVBTeRNjvKD/Bq71ds6qutKmHWPQqsb40XmzDX7Qe3YIvz8qFmWMx8qbmDSe8WBKL3iXB1O65gPWdHrV5QPWRqbD1gb/rLT2XFp7m3GbjJlWemKlHaOgcwqOqt7M/jvceefTx3HpiZunVJT03ir4QW/7HsKO4hnnzak/GSDqjUpHkCadejtjHg8alOyTMp5vB+CQR8GtlJbnNcZUSQUy9Rcl9dRmIu/tDEvHrMXYo33H0vewSnqz84avnSLpiS+McWv5n7K9QzxupY3SN1HTk1N/cm9VPiodTzHT9spa3lRdbbNV+gJPrg3AIYdq74XBO09Za7anx4zidgw2Ve9w+h62yc5gSU9xJfUUM4rbMfI4OetaG/9T+E01ACDHDgEAyLFDAABy7BAAgBw7BAAgxw4BAMixQ+Bt/gFwFypqdggAQI4dAgCQY4cAAOTYIQAAOXYIAGfho42ujh0Cb3b0Q9DaLst0xuNC0nXcnzQxb3GqdOME7BB4m1KvQenoisN2noJLaFfzcU0slY4VZdBTyeKDdu0Q8XOw9bHYprSDNCmdrsr+kRiQyjgWc1XYbZ23p+CiNtfatMu9dlYbmLXBOMn2DvHYDRql76nKrA14nJltAJ5UEI+4orWSTuvZk1T7DWwut6wNq+LKWhLn2bVDxKNMPbW1Ls8rcOo1HiuIXbiiUrvP6lXgzUqVXxuGq+gvt1iveNOPrbU8PuDA9xCl/cyUxsqAEj3t7FXQDsBVpKW+s/4tSGNcTmf5lK9606R4shPgPAd+U715l3cltbSZn059xAqM8rgcla4d2xpuk+0Y3J4WfboWVq+Qqkv5VBmBExzYIQAAP4UdAgCQY4cAAOTYIQAAOXYIAECOHQIAkGOHAADk2CEAADl2CABAjh0CAJBjhwAA5Ngh8Gbt5+S8/Mk5e07kY3lGlq7O0Svk0PijD44+dgi8WSxIi1ulb0cxtwMi7+0Pw7esrUvMW9wqfRM1PdkGOBU7BN4prdu1qlbTjikfUPEu7/UAQ0nXpZ+MvW3Sgpa6JDbXYhyyvUNUn8KtZvvR3I9P6w5KtlG6s8cU9ZrSbpTuSUk1SQ/wSY96DTyjXuPJ2HSPoZPSzgb4UUFFeXyF3v+4Cu2KPBYp8Ix6jSfVNB4/xgWeVCCxuRbjkAM7hG67JiaNZzyY0jPvcrHpvfFY8S4P/ChTT6304ePW6nYzXwXVeBMz7VkYwdraRVVvZynTrrXx1lxTRuCgwztEzETqjUrHRM0q6Ty/NsDER4hH6ffiM0otTkrqqc2YzWFrTQVVE+OwFUkXRXkpqac2I56PA9qkBXtoMPbb+3sIu+FWSsdTzKz1dsZYs81UgVG8NlKqJj4vluJabB4lu8VHKog0oFL68G39tYi9a7GsPY7ya72m04X9+E01ACDHDgEAyLFDAABy7BAAgBw7BAAgxw4BAMixQ+Bt/gFwFypqdggAQI4dAgCQY4cAAOTYIQAAOXYIAGfhw5Gujh0C72R3hE1lKH4Ay3117BA4ETeIX7a2+v/6z39L9NRmOg4Nxh/t3SHSj92Odn4Ed/8RRLGSh+h0V7L4oMf3CDuU0biXamXThd68v8cBFvt/axmcatcO4XfbNjBtHDPSnrh2Vjy21vLGuqKSxVfpHsGW8DviWu/ZIdo7fhtU1vI4w8YOUW63zxuuB5GSfnRTZxGbVZeZhtdK39Ja3sSuzjB8jN8g2CF+ipZ7bdE37/vtAMvE5Noj4AzHvocw7c1XGTtW1CuxWXWZafiDNxW0Ol2V/SNxhniDqG4WbBi3Z0vcWeV0DyhRiKtha3mc6vAOIf3779FeZewYu2K8qTpXDj0C3mLt1qC8K1kAY9v7m2oAwK9hhwAA5NghAAA5dggAQI4dAgCQY4cAAOTYIQAAOXYIAECOHQIAkGOHAADk2CEAADl2CHzI5scx7fy8pmpYeta7ngt/9JaFaMd0zqq69jy+2TlMDg2+OnYIvF9aQm3p7nR0sMRY2gxOlS7BTuWE54N4pg0qVT42104xnbNSR8dfFzsE3i8tmE4VtV2bJbe/Jm1kq/ThTP33ue2tMt6MQUtdUjVNm5H+ia+ddUu7dgh9tnZUOiYltVT6nko2KB3r9ozBmNLK6STbrs1HWItdldwcjz/Su7rnfW5HSjrekxZEnoyBN03MxLxUmX4zil2dYbfxnh2iOlaBVEkF+Fn9Sktrb+2UzcH4JL3zm4vSDuifkp5bndLmOyP7yriMevtjbuPADhFjo6ZRHI8xMG0y9rb6vbiEtn46FXVosGjA5mOmwzpn4S3sHd58k9sB6SmejL1p0lhTGQUV5aeBtbV8qv9QN7P39xCdm7sy8RgD6feadDyuqF85aW+bXHsQy6eD02SJngOi0oHTbL7J7YD0lLXHUb7q3fmYrT3DbEw6THlT2vfCb6oBADl2CABAjh0CAJBjhwAA5NghAAA5dggAQI4dAm/zD4C7UFGzQwAAcuwQAIAcOwQAIMcOAQDIsUMAOMtdP63od7BD4Muqm8j0GWhFSeGy+ovovTvX+nFNZEo3TsAOgW/y8u4EuKg9K7hzlTWsvTZ2no6X7dohXvho7s7ne3dOj11rwzqnY3xVSXvlezClcUnV8u1Zzc0x8cLwwW2AkxzYIfzWXN2jrZkq3YEn13qVj0fxeG1AVOX7TXyL1XZFSfWaGOMq+itomT3K6CfPdAKcZO9PmfzG2t5hlbGjxKS0ydgryrRH8bjtwqVZhavIvdSrJi6nv4KW7yvjnjxTBe1InOETO4RRV1Q6Jmr6UUHkGQXtAFxRLHLq/05s+TZXMA5IB/eTbYAzbO8Qjxt2uCO3d2cf4EeZOou2WWVMzMQBMVCswCiPK4qFrbgtdYr/ZmxB+2u6NiDNK2lKGyfY+z0EAODXsEMAAHLsEACAHDsEACDHDgEAyLFDAABy7BAAgBw7BAAgxw4BAMixQwAAcuwQAIAcOwSAT9vzYUp84NII2CEAfML0IXuryqCnNhP1e/FG7BAAPm3nBhCHrcU41YEdYvPTtnd+HHc77PFB3o3S9+SZtd5W6ZuU1MSb6gJwNrun71FGP8XMWoxTbe8QfieNt9T29poOc+25aUaUjJRUb6ReU9rPjAJvmqmzVvoAfNBjK5hu8Zs3+jhgLcapdu0QqdId7My3YzyjYG2AHWNgps6H0l4Oi7yrOgL4GL+z77ndK3/oFLzd237K5LfddFhMtgPSUyIN6DyINZ1nFJgYm6oJ4FR2Q6/u6e0tPmbSwZ0BOA+/qQYA5NghAAA5dggAQI4dAgCQY4cAAOTYIQAAuY0d4h8AwO/RFsD3EACAHDsEACDHDgEAyPzvf/8fWb9bl0iuGgcAAAAASUVORK5CYII=">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>【转载】GitHub v.s. Bitbucket远程仓库的对比 | Shawn的技术博客</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a083ef331560171"></script>
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?8774f9ff652162d07e351d261f84de64";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Shawn Nie</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">Make it a better place.</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:nie_yushuang@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Shawn-Nie/" title="GitHub"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BitBucket/">BitBucket</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMD/">CMD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DOS/">DOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/EGit/">EGit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse/">Eclipse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Findstr/">Findstr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/">JVM</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LuaJIT/">LuaJIT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Maven/">Maven</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NoSQL/">NoSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Server/">Server</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SpringMVC/">SpringMVC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Win10/">Win10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Windows/">Windows</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apache2/">apache2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dump/">dump</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ehcache/">ehcache</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ngx-pagespeed/">ngx_pagespeed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">scp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sed/">sed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/中文路径/">中文路径</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/字段检索/">字段检索</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工作方法/">工作方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/并发/">并发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据库备份/">数据库备份</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/文件上传/">文件上传</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器/">服务器</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器调优/">服务器调优</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/服务器，系统运维/">服务器，系统运维</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/程序安装/">程序安装</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/腾讯云/">腾讯云</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/Shawn-Nie/">GitHub</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">行成于思</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Shawn Nie</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Shawn Nie</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">Make it a better place.</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:nie_yushuang@outlook.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Shawn-Nie/" title="GitHub"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-【转载】GitHub v.s. Bitbucket远程仓库的对比" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/" class="article-date">
+      <time datetime="2017-12-06T14:28:06.000Z" itemprop="datePublished">2017-12-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【转载】GitHub v.s. Bitbucket远程仓库的对比
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BitBucket/">BitBucket</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p> 对于目前的技术发展阶段来说，主流的远程Git仓库一般有GitHub和BitBucket仓库相对受开发者推崇。因此本文分享下我们以往收集的使用buckets和octocats的经验。<br>主要结论如下：</p>
+<a id="more"></a>
+<p>具体对比：</p>
+<p><img src="data:image/png;base64,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" alt=""></p>
+<p>常见问题：</p>
+<h2 id="代码是否一定要公开？"><a href="#代码是否一定要公开？" class="headerlink" title="代码是否一定要公开？"></a>代码是否一定要公开？</h2><blockquote>
+<p>否。</p>
+<p>Bitbucket提供免费的私人仓库，而Github提供付费的私人仓库。只有公开仓库的代码才是公开的。</p>
+</blockquote>
+<p>Bitbucket和Github对于私人和公开项目采用了不同的方法。Bitbucket提供无限的免费私人仓库，而Github对此是收费的。在两家服务里，公开仓库是无限且免费的，并且不限制贡献者的数量。</p>
+<h2 id="就开源项目而言，哪里更加容易配合团队工作？"><a href="#就开源项目而言，哪里更加容易配合团队工作？" class="headerlink" title="就开源项目而言，哪里更加容易配合团队工作？"></a>就开源项目而言，哪里更加容易配合团队工作？</h2><blockquote>
+<p>Github更适合开源、多人的开发项目</p>
+</blockquote>
+<p>两家在价格上的第二个区别在于合作者的数量。Bitbucket在私人仓库上主要提供一共5人一个免费账户，而Github更加关注其公开仓库，因此它有自己的界限。尽管它们提供许多相似的代码托管特性，Github关注于开源，而Bitbucket看起来更加关注企业开发者，尤其是在2010年被Atlassian注资后。</p>
+<h2 id="fork技术哪一个更强？"><a href="#fork技术哪一个更强？" class="headerlink" title="fork技术哪一个更强？"></a>fork技术哪一个更强？</h2><blockquote>
+<p>就fork而言，两者没有明显差异</p>
+</blockquote>
+<p>GitHub在流行度上远优于Bitbucket，GitHub拥有超过4百万的用户数。不过Bitbucket也不算输，它依然提供了良好的使用体验，成为了Atlassian产品套件的一部分。GitHub和Bitbucket都有漂亮的前端，提供了问题单跟踪、wiki、简单易用的REST API以及rich GUI和各种操作系统上命令行工具（Windows/Mac/Linux甚至移动端）。</p>
+<ul>
+<li>就特性维度而言，Gist是GitHub相对于Bitbucket的一个杀手锏，通过gist能够能够便捷地分享代码片段，并实现有效的版本管理。</li>
+<li>双向认证是另一个评价颇高的GitHub特性，Bitbucket也没有实现。</li>
+<li>但是Bitbucket有spoon功能，GitHub暂时还没有这一功能。</li>
+</ul>
+<h2 id="页面——2048的影响"><a href="#页面——2048的影响" class="headerlink" title="页面——2048的影响"></a>页面——2048的影响</h2><blockquote>
+<p>两家服务均可支持</p>
+</blockquote>
+<p>两家服务的一个很赞的特性是页面——托管简单的HTML页面，向那些不一定是开发者的用户展示项目。<br>两家的这个特性基本上是一样的。你可以创建一个username.bitbucket.com或github.io，得到一个你自己的漂亮的URL。<br>github.io URL正在变成大量开源库和项目的半义务性质的服务，一般会和相关的“Fork me onGithub”标语相配合。但要注意，如果你使用的是自定义域名，它可能会花费更多的载入时间。</p>
+<h2 id="去寻找还是被发现"><a href="#去寻找还是被发现" class="headerlink" title="去寻找还是被发现"></a>去寻找还是被发现</h2><blockquote>
+<p>Bitbucket上的项目几乎不可能被发现。</p>
+</blockquote>
+<p>GitHub和Bitbucket的差异也表现在搜索页面上。<br>Bitbucket只显示了一个简单的搜索界面。而GitHub却展示了目前最流行的代码仓以及最受欢迎的主题，更不用说它为开发者提供项目专辑和公开的工作台功能。<br>因此，对于希望被更多人发现的项目，目前来看，非GitHub莫属。</p>
+<h2 id="从哪些社区可以获取有力支持？"><a href="#从哪些社区可以获取有力支持？" class="headerlink" title="从哪些社区可以获取有力支持？"></a>从哪些社区可以获取有力支持？</h2><blockquote>
+<p>这一点，GitHub以它的开源本质和社交特性，远远优于BitBucket</p>
+</blockquote>
+<p>在Stackoverflow上随便瞟一眼最新的问题，你会发现每隔几分钟就会有关于GitHub的问题出现，然而关于Bitbucket的问题要一两个小时才能碰到。你能在Stackoverflow找到几乎所有你可能遇到问题的答案。 当然各自的主页上也有很多资源和在线社区的支持，但是很明显，GitHub是遥遥领先的。统计一下最流行的开发库，无论是Java、Ruby还是JS，毫无疑问他们都是在GitHub上。更为重要的是，GitHub的开源本质也为他赢得了良好的声誉。</p>
+<h2 id="两个站点间是否可以切换？"><a href="#两个站点间是否可以切换？" class="headerlink" title="两个站点间是否可以切换？"></a>两个站点间是否可以切换？</h2><blockquote>
+<p>可以，从GitHub迁移到Bitbucket相对容易一些</p>
+</blockquote>
+<p>Bitbucket提供了简单方便的方式，用于从GitHub上导入代码仓。通过其他的方式，如先保存远程仓库项目至本地再上传到另外一个远程仓库，仍然是可行的。</p>
+<h2 id="如何评价Git和Mercurial"><a href="#如何评价Git和Mercurial" class="headerlink" title="如何评价Git和Mercurial?"></a>如何评价Git和Mercurial?</h2><blockquote>
+<p>Mercurial更好上手，而Git 提供了更为丰富的操控细节。</p>
+</blockquote>
+<p>Bitbucket是基于Mercurial实现，直到2011年才开始支持Git。与此相反，GitHub从一开始就是围绕着Git来构建。当然没有绝对正确的决策，实际上Git和Mercurial也非常相像。<br>权衡点在于，Mercurial更注重易用性，而Git更注重操控性。<br>如果你是刚刚从cvs或者svn迁移到分布式版本管理系统，通常会发现Mercurial更容易用。</p>
+<h2 id="从价格来看，哪一个更据优势？"><a href="#从价格来看，哪一个更据优势？" class="headerlink" title="从价格来看，哪一个更据优势？"></a>从价格来看，哪一个更据优势？</h2><p>除去企业套餐之外，Bitbucket的价格区间在$10 ~$200之间，可支持的用户数从5个到不限。<br>Git的资费分为个人账户和组织账号两种。组织账号的价格在每月$25 ~$200之间，提供了团队管理功能和10 ~125个私人代码仓。个人账号的价格在每月$7 ~$50之间，可以创建5~50个私人代码仓。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/">【转载】GitHub v.s. Bitbucket远程仓库的对比</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
+        <p><span>发布时间:</span>2017-12-06, 22:28:06</p>
+        <p><span>最后更新:</span>2017-12-06, 22:28:06</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/" title="【转载】GitHub v.s. Bitbucket远程仓库的对比">http://shawn-nie.github.io/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/01/23/Javascript-window.open()方法采用post传值的改写方式/">
+                    Javascript:window.open()方法采用post传值的改写方式
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/12/06/GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程/">
+                    GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#代码是否一定要公开？"><span class="toc-number">1.</span> <span class="toc-text">代码是否一定要公开？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#就开源项目而言，哪里更加容易配合团队工作？"><span class="toc-number">2.</span> <span class="toc-text">就开源项目而言，哪里更加容易配合团队工作？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fork技术哪一个更强？"><span class="toc-number">3.</span> <span class="toc-text">fork技术哪一个更强？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面——2048的影响"><span class="toc-number">4.</span> <span class="toc-text">页面——2048的影响</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#去寻找还是被发现"><span class="toc-number">5.</span> <span class="toc-text">去寻找还是被发现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从哪些社区可以获取有力支持？"><span class="toc-number">6.</span> <span class="toc-text">从哪些社区可以获取有力支持？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#两个站点间是否可以切换？"><span class="toc-number">7.</span> <span class="toc-text">两个站点间是否可以切换？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何评价Git和Mercurial"><span class="toc-number">8.</span> <span class="toc-text">如何评价Git和Mercurial?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从价格来看，哪一个更据优势？"><span class="toc-number">9.</span> <span class="toc-text">从价格来看，哪一个更据优势？</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+
+    
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
+    
+</div>
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/01/23/Javascript-window.open()方法采用post传值的改写方式/" title="上一篇: Javascript:window.open()方法采用post传值的改写方式">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/12/06/GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程/" title="下一篇: GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/07/05/Git简明使用教程/">Git简明使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/07/05/Linux_Ubuntu系统搭建Git服务器教程/">Linux_Ubuntu系统搭建Git服务器教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/Windows系统为电脑设置固定ip的方法/">Windows系统为电脑设置固定ip的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/MySQL更换数据存储路径的方法/">MySQL更换数据存储路径的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/08/Windows10安装内置Ubuntu系统/">Windows10安装内置Ubuntu系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/08/Nginx安装upstream-fair模块_适用于Ubuntu系统/">Nginx安装upstream-fair模块_适用于Ubuntu系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/08/Ubuntu清理冗余备份文件/">Ubuntu清理冗余备份文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/08/Ubuntu全盘备份与恢复/">Ubuntu全盘备份与恢复</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/18/Tomcat7性能优化配置方案/">Tomcat7性能优化配置方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/08/Nginx_Lua_Module扩展的安装与配置_适用于Ubuntu系统/">Nginx_Lua_Module扩展的安装与配置_适用于Ubuntu系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/Eclipse运行J2EE项目出现java_lang_VerifyError__Inconsistent_stackmap_frames_at_branch _target_XXXX报错情况的修复/">Eclipse运行J2EE项目出现java_lang_VerifyError__Inconsistent_stackmap_frames_at_branch _target_XXXX报错情况的修复</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/03/Windows10系统Git仓库的安装及Eclipse-Git插件的整合/">Windows10系统Git仓库的安装及Eclipse-Git插件的整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/30/Windows10系统安装Tomcat7教程及Eclipse-Tomcat的整合/">Windows10系统安装Tomcat7教程及Eclipse-Tomcat的整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/30/Windows10系统安装Maven及Eclipse-Maven的集成/">Windows10系统安装Maven及Eclipse-Maven的集成</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/28/Ubuntu系统安装Redis数据库/">Ubuntu系统安装Redis数据库</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/30/Ubuntu_Shell脚本'`r'command_not_found错误的解决方法/">Ubuntu_Shell脚本'r'command_not_found错误的解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/30/Ubuntu系统使用sed命令替换字符串的常用语法/">Ubuntu系统使用sed命令替换字符串的常用语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/29/Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建/">Ubuntu系统_Apache2+PHP+MySQL服务环境的搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/24/高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决/">高版本Spring_EhCacheFactoryBean报错-java_lang_NoSuchMethodError-org_springframework_cache_ehcache_EhCacheFactoryBean_setMaxEntriesLocalHeap(J)V的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/23/SpringMVC接收不到前端FormData对象属性问题的解决/">SpringMVC接收不到前端FormData对象属性问题的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/10/SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property问题的解决/">SetPropertiesRule_Server_Service_Engine_Host_Context_Setting_property问题的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/10/java_lang_VerifyError_Expecting_a_stackmap_frame_at_branch_target问题的解决/">java_lang_VerifyError_Expecting_a_stackmap_frame_at_branch_target问题的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/02/Ubuntu系统安装Tomcat7教程/">Ubuntu系统安装Tomcat7教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/02/02/Ubuntu系统安装Java教程(apt-get方法)/">Ubuntu系统安装Java教程(apt-get方法)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/23/Javascript-window.open()方法采用post传值的改写方式/">Javascript:window.open()方法采用post传值的改写方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/【转载】GitHub v.s. Bitbucket远程仓库的对比/">【转载】GitHub v.s. Bitbucket远程仓库的对比</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/06/GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程/">GitHub或BitBucket远程仓库在Eclipse中的管理及EGit主要功能使用教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/">MySQL Host is blocked because of many connection errors错误的解决方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">Nginx做为反向代理时，服务器缓存清空的方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/">Nginx_[emerg]getpwnam(www)failed错误的处理方法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统/">Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Tomcat服务器中文路径名解析错误的解决方式/">Tomcat服务器中文路径名解析错误的解决方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/MySQL_select列表的表达式＃1不在GROUP BY子句中，并且包含nonaggre的问题的解决/">MySQL_select列表的表达式＃1不在GROUP BY子句中，并且包含nonaggre的问题的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/25/Mysql 时间 '0000-00-00'异常的解决/">MySQL 时间 '0000-00-00'异常的解决</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/【转载】用户真实评测：阿里云腾讯云谁性价比更高/">【转载】用户真实评测：阿里云腾讯云谁性价比更高调整示意</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意/">Eclipse开发平台下Java普通DynamicWebProject转为MavenWebProject的方式及文件位置调整示意</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/手风琴谱整理_春天花园鲜花盛开/">手风琴谱整理-《春天花园鲜花盛开》</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/24/产品设计和优化的五个原则/">产品设计和优化的五个原则</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/">Ubuntu下MySQL数据库自执行备份脚本的实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/">Linux系统发送本机文件至远程服务器_以SSH方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/18/MySQL数据库_备份用户必备权限/">MySQL数据库_备份用户必备权限</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/17/腾讯云服务器Ubuntu系统设置允许root用户登录/">腾讯云服务器Ubuntu系统设置允许root用户登录</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Windows系统下使用DOS命令检索包含指定字符串的所有文件/">Windows系统下使用DOS命令检索包含指定字符串的所有文件</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/Ubuntu下安装Maven/">Ubuntu下安装Maven</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/13/Ubuntu系统的常用命令/">Ubuntu系统的常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/12/Nginx服务器的安装_适用于Ubuntu 16.04系统/">Nginx服务器的安装_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/07/MySQL数据库安装与配置_适用于Ubuntu16.04系统/">MySQL数据库安装与配置_适用于Ubuntu 16.04系统</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/MySQL数据库安装与配置_适用于Windows7系统/">MySQL数据库安装与配置_适用于Windows7系统</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <!-- <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 Shawn Nie
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div> -->
+	<div class="footer-right">
+                <i class="fa fa-copyright"></i> 
+                2016-2019 Shawn Nie
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
