@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://shawn-nie.github.io/2019/07/05/Git%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-07-10T10:26:43.000Z</lastmod>
+    <lastmod>2020-01-05T15:04:39.000Z</lastmod>
     <data>
         <display>
         <title>Git简明使用教程</title>
@@ -97,13 +97,13 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
-        <tag>MySQL</tag>
-         
-        <tag>数据库备份</tag>
-         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
+         
+        <tag>MySQL</tag>
+         
+        <tag>数据库备份</tag>
          
          
            
