@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2020/02/17/Nginx%E5%AE%89%E8%A3%85upstream-fair%E6%A8%A1%E5%9D%97_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2020-02-17T04:38:43.000Z</lastmod>
+    <data>
+        <display>
+        <title></title>
+        <pubTime>2020-02-17T04:38:45.029Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2020/02/17/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B(%E5%9F%BA%E4%BA%8EJSAPI%E6%94%AF%E4%BB%98%E6%9C%BA%E5%88%B6)/</loc>
     <lastmod>2020-02-17T04:30:31.000Z</lastmod>
     <data>
@@ -217,21 +232,6 @@
              
               <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shawn-nie.github.io/2019/03/08/Nginx%E5%AE%89%E8%A3%85upstream-fair%E6%A8%A1%E5%9D%97_%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2019-03-08T12:46:51.000Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2019-03-08T12:47:08.812Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
