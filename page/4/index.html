@@ -276,6 +276,221 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-MySQL Host is blocked because of many connection errors错误的解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/" class="article-date">
+      <time datetime="2017-12-05T15:03:06.000Z" itemprop="datePublished">2017-12-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/">MySQL Host is blocked because of many connection errors错误的解决方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>错误：Host ‘aaa’ is blocked because of many connection errors; unblock with ‘mysqladmin flush-hosts’</p>
+<p>原因：</p>
+<p>　　出现这种情况是因为同一个ip在短时间内产生太多（超过mysql数据库max_connection_errors的最大值）中断的数据库连接而导致的阻塞。</p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/12/05/MySQL Host is blocked because of many connection errors错误的解决方法/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Nginx做为反向代理时，服务器缓存清空的方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/" class="article-date">
+      <time datetime="2017-11-26T14:27:39.000Z" itemprop="datePublished">2017-11-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/26/Nginx做为反向代理时，服务器缓存清空的方法/">Nginx做为反向代理时，服务器缓存清空的方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>有些时候为了不让其他人知道自己使用的服务器IP的时候我们喜欢使用反向代理避免这种问题。</p>
+<p>通常我们使用的反向代理大多数是nginx设置的。但是在我们对网站的图片等信息更新时候会出现信息更改后仍然不能正常显示，那可能是因为反向代理的原因，所以在我们更新了信息后，同时也要更新代理服务器上的缓存。</p>
+<p>这里讲下我们常用的nginx的缓存存在的位置。</p>
+<p>操作方法是：</p>
+<p>通常nginx的缓存文件是存放在/home/cache/缓存文件下。我只只需要删除里面的内容，重新访问生成就可以了。</p>
+<p>命令如下：</p>
+<pre><code>rm -rf /home/cache/*
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Nginx_[emerg]getpwnam(www)failed错误的处理方法" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/" class="article-date">
+      <time datetime="2017-11-26T14:13:17.000Z" itemprop="datePublished">2017-11-26</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/26/Nginx_[emerg]getpwnam(www)failed错误的处理方法/">Nginx_[emerg]getpwnam(www)failed错误的处理方法</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <a id="more"></a>
+<p>在配置nginx 时，有时会提示如下错误：</p>
+<pre><code>nginx: [emerg] getpwnam(&quot;www&quot;) failed
+</code></pre><p>这里有两种解决方案：</p>
+<h2 id="去除user-nobody配置"><a href="#去除user-nobody配置" class="headerlink" title="去除user nobody配置"></a>去除user nobody配置</h2><p>在nginx.conf中 把user nobody的注释去掉既可</p>
+<h2 id="创建www用户"><a href="#创建www用户" class="headerlink" title="创建www用户"></a>创建www用户</h2><p>错误的原因是没有创建www这个用户，应该在服务器系统中添加www用户组和用户www，如下命令：</p>
+<pre><code>/usr/sbin/groupadd -f www
+/usr/sbin/useradd -g www www
+</code></pre><p>以上方法测试通过，启动后，在浏览器里输入服务器IP，即可查看到：</p>
+<pre><code>Welcome to nginx!
+</code></pre><p>的欢迎界面。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Nginx/">Nginx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Server/">Server</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Nginx下PageSpeed前端优化模块的安装与配置_基于Ubuntu系统" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -761,213 +976,9 @@ sql_mode = only_full_group_by 不兼容
 
 
   
-    <article id="post-产品设计和优化的五个原则" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/24/产品设计和优化的五个原则/" class="article-date">
-      <time datetime="2017-11-24T14:34:50.000Z" itemprop="datePublished">2017-11-24</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/24/产品设计和优化的五个原则/">产品设计和优化的五个原则</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>【团队成果，请勿随意转载】本文提及的五项经验为见习期间公司带教前辈加以整理而成。以此记录，作为后续团队项目标准及新成员的培训所用，非本人独立原创，请勿转载。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/经验整理/">经验整理</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工作方法/">工作方法</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/24/产品设计和优化的五个原则/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Ubuntu下MySQL数据库自执行备份脚本的实现" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/" class="article-date">
-      <time datetime="2017-11-18T12:22:15.000Z" itemprop="datePublished">2017-11-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/">Ubuntu下MySQL数据库自执行备份脚本的实现</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>为保证数据的安全，防止异常问题造成数据库文件破坏/丢失，大型项目通常需要每天执行1~2次数据库备份。<br>因为数据库的备份工作有其重复性和规律性，所以通过自执行脚本的方式可以提高备份的效率和可靠性。<br>本文介绍了在Ubuntu下设置mysql自动定时备份的方法。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/工作记录/">工作记录</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据库备份/">数据库备份</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/18/Ubuntu下MySQL数据库自执行备份脚本的实现/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Linux系统发送本机文件至远程服务器_以SSH方式" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/" class="article-date">
-      <time datetime="2017-11-18T10:44:46.000Z" itemprop="datePublished">2017-11-18</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/">Linux系统发送本机文件至远程服务器_以SSH方式</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>在Linux系统(包含Ubuntu/Centos)下进行远程拷贝文件，可以使用scp命令。<br>scp是secure copy的简写，是linux 系统下基于ssh登录进行安全的远程文件拷贝命令。</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/教程整理/">教程整理</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSH/">SSH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scp/">scp</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/11/18/Linux系统发送本机文件至远程服务器_以SSH方式/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
     </nav>
   
 </div>
