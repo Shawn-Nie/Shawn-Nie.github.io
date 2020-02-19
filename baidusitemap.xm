@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2020/02/17/JUnit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E9%80%82%E7%94%A8%E4%BA%8EJUnit4%E5%8F%8A%E6%9B%B4%E4%BD%8E%E7%89%88%E6%9C%AC)/</loc>
+    <lastmod>2020-02-17T14:03:11.000Z</lastmod>
+    <data>
+        <display>
+        <title>JUnit单元测试框架使用教程(适用于JUnit4及更低版本)</title>
+        <pubTime>2020-02-17T14:03:11.000Z</pubTime>
+        
+        <tag>单元测试</tag>
+         
+        <tag>Java</tag>
+         
+        <tag>JUnit</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2019/07/05/Git%E7%AE%80%E6%98%8E%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-01-05T15:04:39.000Z</lastmod>
     <data>
