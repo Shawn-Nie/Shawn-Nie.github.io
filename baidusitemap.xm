@@ -24,12 +24,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2020/02/17/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B(%E5%9F%BA%E4%BA%8EJSAPI%E6%94%AF%E4%BB%98%E6%9C%BA%E5%88%B6)/</loc>
+    <loc>http://shawn-nie.github.io/2020/02/19/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B(%E5%9F%BA%E4%BA%8EJSAPI%E6%94%AF%E4%BB%98%E6%9C%BA%E5%88%B6)/</loc>
     <lastmod>2019-12-16T19:35:08.000Z</lastmod>
     <data>
         <display>
         <title>微信支付平台开发教程(基于JSAPI支付机制)</title>
-        <pubTime>2020-02-17T04:47:37.083Z</pubTime>
+        <pubTime>2020-02-19T02:54:35.136Z</pubTime>
         
         <tag>Wechat</tag>
          
@@ -44,12 +44,12 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2020/02/17/%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%8F%B7%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://shawn-nie.github.io/2020/02/19/%E5%BE%AE%E4%BF%A1%E6%9C%8D%E5%8A%A1%E5%8F%B7%E7%BD%91%E9%A1%B5%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2019-12-16T16:06:40.000Z</lastmod>
     <data>
         <display>
         <title>微信服务号网页开发教程</title>
-        <pubTime>2020-02-17T04:47:20.740Z</pubTime>
+        <pubTime>2020-02-19T02:54:11.772Z</pubTime>
         
         <tag>Wechat</tag>
          
