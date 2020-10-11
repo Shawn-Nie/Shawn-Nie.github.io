@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://shawn-nie.github.io/2020/10/11/Docker%E5%AE%89%E8%A3%85%E5%8F%8A%E7%AE%80%E6%98%93%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E9%80%82%E7%94%A8%E4%BA%8EUbuntu%E5%8F%8AWindows%2010%E7%B3%BB%E7%BB%9F)/</loc>
+    <lastmod>2020-10-11T12:27:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Docker安装及简易使用教程(适用于Ubuntu及Windows 10系统)</title>
+        <pubTime>2020-10-10T16:54:26.000Z</pubTime>
+        
+        <tag>Docker</tag>
+         
+        <tag>DevOps</tag>
+         
+         
+           
+             
+              <breadCrumb title="教程整理" url="http://shawn-nie.github.io/categories/%E6%95%99%E7%A8%8B%E6%95%B4%E7%90%86/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://shawn-nie.github.io/2020/02/17/JUnit%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B(%E9%80%82%E7%94%A8%E4%BA%8EJUnit4%E5%8F%8A%E6%9B%B4%E4%BD%8E%E7%89%88%E6%9C%AC)/</loc>
     <lastmod>2020-02-17T14:03:11.000Z</lastmod>
     <data>
@@ -161,11 +183,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
+        <tag>MySQL</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
@@ -290,18 +312,14 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-02-18T04:30:06.000Z</lastmod>
+    <loc>http://shawn-nie.github.io/2020/02/29/Unit_Test%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/</loc>
+    <lastmod>2019-03-01T15:21:46.000Z</lastmod>
     <data>
         <display>
-        <title>Ubuntu系统安装Tomcat7教程</title>
-        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
+        <title>Unit_Test单元测试概述</title>
+        <pubTime>2020-02-29T15:23:40.957Z</pubTime>
         
-        <tag>Ubuntu</tag>
-         
-        <tag>程序安装</tag>
-         
-        <tag>Java</tag>
+        <tag>Unit Test</tag>
          
          
            
@@ -314,14 +332,18 @@
 
     
   <url>
-    <loc>http://shawn-nie.github.io/2020/02/17/Unit_Test%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E6%A6%82%E8%BF%B0/</loc>
-    <lastmod>2019-02-16T03:44:56.000Z</lastmod>
+    <loc>http://shawn-nie.github.io/2018/02/02/Ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85Tomcat7%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-02-18T04:30:06.000Z</lastmod>
     <data>
         <display>
-        <title>Unit_Test单元测试概述</title>
-        <pubTime>2020-02-17T04:46:06.870Z</pubTime>
+        <title>Ubuntu系统安装Tomcat7教程</title>
+        <pubTime>2018-02-02T14:10:23.000Z</pubTime>
         
-        <tag>Unit Test</tag>
+        <tag>Ubuntu</tag>
+         
+        <tag>程序安装</tag>
+         
+        <tag>Java</tag>
          
          
            
