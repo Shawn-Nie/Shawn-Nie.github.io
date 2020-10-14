@@ -266,13 +266,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -378,7 +378,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-Git简明使用教程" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -835,17 +835,17 @@ git stash drop
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2019/07/05/Git简明使用教程/">Git简明使用教程</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Shawn Nie</a></p>
-        <p><span>发布时间:</span>2019-07-05, 17:01:03</p>
-        <p><span>最后更新:</span>2020-01-05, 23:04:39</p>
+        <p><span>Title:</span><a href="/2019/07/05/Git简明使用教程/">Git简明使用教程</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Shawn Nie</a></p>
+        <p><span>Created:</span>2019-07-05, 17:01:03</p>
+        <p><span>Updated:</span>2020-01-05, 23:04:39</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2019/07/05/Git简明使用教程/" title="Git简明使用教程">http://shawn-nie.github.io/2019/07/05/Git简明使用教程/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://shawn-nie.github.io/2019/07/05/Git简明使用教程/　　作者: Shawn Nie" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2019/07/05/Git简明使用教程/" title="Git简明使用教程">http://shawn-nie.github.io/2019/07/05/Git简明使用教程/</a>
+            <span class="copy-path" data-clipboard-text="From http://shawn-nie.github.io/2019/07/05/Git简明使用教程/　　By Shawn Nie" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -872,7 +872,7 @@ git stash drop
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
             <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Git的基本概念及分布式-集中式版本控制系统的简介"><span class="toc-number">1.</span> <span class="toc-text">Git的基本概念及分布式/集中式版本控制系统的简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是Git"><span class="toc-number">1.1.</span> <span class="toc-text">什么是Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集中式与分布式版本管理系统的特征和区别"><span class="toc-number">1.2.</span> <span class="toc-text">集中式与分布式版本管理系统的特征和区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#集中式版本控制系统；关键词-中央服务器"><span class="toc-number">1.2.1.</span> <span class="toc-text">集中式版本控制系统；关键词:中央服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分布式版本控制系统；关键词-脱机独立版本库"><span class="toc-number">1.2.2.</span> <span class="toc-text">分布式版本控制系统；关键词:脱机独立版本库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本控制系统有一个共同的局限-仅适用于文本格式文件的版本跟踪而不适用于二进制文件的版本管理"><span class="toc-number">1.2.3.</span> <span class="toc-text">版本控制系统有一个共同的局限: 仅适用于文本格式文件的版本跟踪而不适用于二进制文件的版本管理</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git仓库的常用操作命令及重要概念解析"><span class="toc-number">2.</span> <span class="toc-text">Git仓库的常用操作命令及重要概念解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git仓库的创建及初始化：-git-init"><span class="toc-number">2.1.</span> <span class="toc-text">Git仓库的创建及初始化： git init</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git仓库的常规版本维护命令"><span class="toc-number">2.2.</span> <span class="toc-text">Git仓库的常规版本维护命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#提交项目文件至本地仓库-git-add-和-git-commit"><span class="toc-number">2.2.1.</span> <span class="toc-text">提交项目文件至本地仓库: git add 和 git commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作区、暂存区和版本库"><span class="toc-number">2.2.2.</span> <span class="toc-text">工作区、暂存区和版本库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#工作区"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">工作区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#版本库"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">版本库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#暂存区"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">暂存区</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#工作区-→-暂存区-→-版本库-的推送过程"><span class="toc-number">2.2.2.4.</span> <span class="toc-text">工作区 → 暂存区 → 版本库 的推送过程</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-status-查看版本变更状态"><span class="toc-number">2.2.3.</span> <span class="toc-text">git status 查看版本变更状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本的回顾-提交日志-git-log"><span class="toc-number">2.2.4.</span> <span class="toc-text">版本的回顾/提交日志: git log</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本的回退-git-reset"><span class="toc-number">2.2.5.</span> <span class="toc-text">版本的回退: git reset</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本的历史命令查看-git-reflog"><span class="toc-number">2.2.6.</span> <span class="toc-text">版本的历史命令查看: git reflog</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本的对比-git-diff"><span class="toc-number">2.2.7.</span> <span class="toc-text">版本的对比: git diff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改的丢弃-git-checkout-–"><span class="toc-number">2.2.8.</span> <span class="toc-text">修改的丢弃: git checkout – </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已暂存修改的撤销-unstage-git-reset-HEAD"><span class="toc-number">2.2.9.</span> <span class="toc-text">已暂存修改的撤销(unstage): git reset HEAD </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#已commit文件的移除-git-rm"><span class="toc-number">2.2.10.</span> <span class="toc-text">已commit文件的移除: git rm </span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git远程仓库的相关维护"><span class="toc-number">2.3.</span> <span class="toc-text">Git远程仓库的相关维护</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#为工作区添加-关联远程仓库-git-remote-add-lt-远程仓库别名-gt-lt-远程仓库地址-gt"><span class="toc-number">2.3.1.</span> <span class="toc-text">为工作区添加/关联远程仓库: git remote add <远程仓库别名> <远程仓库地址></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看远程库的信息-git-remote"><span class="toc-number">2.3.2.</span> <span class="toc-text">查看远程库的信息: git remote</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将本地仓库内容推送至远程仓库-git-push-lt-远程仓库别名-gt-lt-远程仓库分支-gt"><span class="toc-number">2.3.3.</span> <span class="toc-text">将本地仓库内容推送至远程仓库: git push <远程仓库别名> <远程仓库分支></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从仓库抓取-仓库的克隆-git-clone-lt-本地-远程仓库地址-gt"><span class="toc-number">2.3.4.</span> <span class="toc-text">从仓库抓取/仓库的克隆: git clone <本地/远程仓库地址></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#远程仓库分支的获取-git-pull-lt-远程仓库别名-gt-lt-远程仓库分支-gt"><span class="toc-number">2.3.5.</span> <span class="toc-text">远程仓库分支的获取: git pull <远程仓库别名> <远程仓库分支></span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git分支-branch-的维护"><span class="toc-number">2.4.</span> <span class="toc-text">Git分支(branch) 的维护</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git分支-branch-和指针-HEAD-的概念"><span class="toc-number">2.4.1.</span> <span class="toc-text">Git分支(branch)和指针(HEAD)的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#branch"><span class="toc-number">2.4.1.1.</span> <span class="toc-text">branch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HEAD"><span class="toc-number">2.4.1.2.</span> <span class="toc-text">HEAD</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git仓库分支的查看和创建-git-branch"><span class="toc-number">2.4.2.</span> <span class="toc-text">Git仓库分支的查看和创建: git branch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git仓库分支的切换-git-checkout-lt-分支名称-gt"><span class="toc-number">2.4.3.</span> <span class="toc-text">Git仓库分支的切换: git checkout <分支名称></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git仓库分支的合并-git-merge"><span class="toc-number">2.4.4.</span> <span class="toc-text">Git仓库分支的合并: git merge</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git仓库分支的删除-git-branch-d-lt-分支名称-gt"><span class="toc-number">2.4.5.</span> <span class="toc-text">Git仓库分支的删除: git branch -d <分支名称></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git仓库分支合并时冲突的解决"><span class="toc-number">2.4.6.</span> <span class="toc-text">Git仓库分支合并时冲突的解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git分支管理的策略"><span class="toc-number">2.4.7.</span> <span class="toc-text">Git分支管理的策略</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git分支合并的两种模式-fast-forward-、–squash-和-–no-ff"><span class="toc-number">2.4.8.</span> <span class="toc-text">Git分支合并的两种模式: fast-forward 、–squash 和 –no-ff</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工作现场的暂存-git-stash"><span class="toc-number">2.4.9.</span> <span class="toc-text">工作现场的暂存: git stash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查看暂存的工作-git-stash-list"><span class="toc-number">2.4.9.1.</span> <span class="toc-text">查看暂存的工作: git stash list</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#已暂存的工作的恢复-git-stash-apply-stash-git-stash-pop"><span class="toc-number">2.4.9.2.</span> <span class="toc-text">已暂存的工作的恢复: git stash apply stash@{} / git stash pop</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本历史的压缩-git-rebase"><span class="toc-number">2.4.10.</span> <span class="toc-text">版本历史的压缩: git rebase</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git标签-tag-的维护"><span class="toc-number">2.5.</span> <span class="toc-text">Git标签(tag) 的维护</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列出标签-git-tag"><span class="toc-number">2.5.1.</span> <span class="toc-text">列出标签: git tag</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建标签-git-tag-lt-标签名称-gt-a-m-lt-标签描述信息-gt-lt-标签所指commit-id-gt"><span class="toc-number">2.5.2.</span> <span class="toc-text">创建标签: git tag <标签名称> -a  -m <标签描述信息> <标签所指commit_id></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除标签-git-tag-d-lt-标签名称-gt"><span class="toc-number">2.5.3.</span> <span class="toc-text">删除标签: git tag -d <标签名称></span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签改动推送至远程版本库-git-push-origin"><span class="toc-number">2.5.4.</span> <span class="toc-text">标签改动推送至远程版本库: git push origin</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git的其他自定义配置"><span class="toc-number">2.6.</span> <span class="toc-text">Git的其他自定义配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#忽略特殊文件-gitignore"><span class="toc-number">2.6.1.</span> <span class="toc-text">忽略特殊文件: .gitignore</span></a></li></ol></li></ol></li></ol>
         
@@ -888,10 +888,10 @@ git stash drop
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -920,15 +920,15 @@ git stash drop
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2020/02/17/JUnit单元测试框架使用教程(适用于JUnit4及更低版本)/" title="上一篇: JUnit单元测试框架使用教程(适用于JUnit4及更低版本)">
+            <a href="/2020/02/17/JUnit单元测试框架使用教程(适用于JUnit4及更低版本)/" title="Pre: JUnit单元测试框架使用教程(适用于JUnit4及更低版本)">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2019/07/05/Linux_Ubuntu系统搭建Git服务器教程/" title="下一篇: Linux_Ubuntu系统搭建Git服务器教程">
+            <a href="/2019/07/05/Linux_Ubuntu系统搭建Git服务器教程/" title="Next: Linux_Ubuntu系统搭建Git服务器教程">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -951,7 +951,7 @@ git stash drop
                 2016-2020 Shawn Nie
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div> -->
 	<div class="footer-right">
                 <i class="fa fa-copyright"></i> 
@@ -962,7 +962,7 @@ git stash drop
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -971,7 +971,7 @@ git stash drop
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -1027,9 +1027,9 @@ MathJax.Hub.Queue(function() {
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
