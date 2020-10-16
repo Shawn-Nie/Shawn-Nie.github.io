@@ -183,11 +183,11 @@
         <title>Ubuntu下MySQL数据库自执行备份脚本的实现</title>
         <pubTime>2017-11-18T12:22:15.000Z</pubTime>
         
+        <tag>MySQL</tag>
+         
         <tag>Ubuntu</tag>
          
         <tag>Linux</tag>
-         
-        <tag>MySQL</tag>
          
         <tag>数据库备份</tag>
          
@@ -980,7 +980,7 @@
     <lastmod>2017-11-24T15:20:17.000Z</lastmod>
     <data>
         <display>
-        <title>【转载】用户真实评测：阿里云腾讯云谁性价比更高调整示意</title>
+        <title>【转载】用户真实评测：阿里云腾讯云谁性价比更高</title>
         <pubTime>2017-11-24T15:20:17.000Z</pubTime>
         
         <tag>Server</tag>
