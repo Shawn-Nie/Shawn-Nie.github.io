@@ -522,6 +522,27 @@
   </url>
   
   <url>
+    <loc>https://shawn-nie.github.io/tags/SpringMVC/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://shawn-nie.github.io/tags/js/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://shawn-nie.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
+    <lastmod>2023-06-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://shawn-nie.github.io/tags/Tomcat/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
@@ -558,27 +579,6 @@
   
   <url>
     <loc>https://shawn-nie.github.io/tags/sed/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://shawn-nie.github.io/tags/SpringMVC/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://shawn-nie.github.io/tags/js/</loc>
-    <lastmod>2023-06-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://shawn-nie.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</loc>
     <lastmod>2023-06-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
